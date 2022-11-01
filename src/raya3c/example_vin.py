@@ -1,5 +1,4 @@
 import sys, os
-from typing_extensions import override
 sys.path.append(os.path.normpath( os.path.dirname(__file__) +"/../" ))
 import gym
 from mazeenv import maze_register
@@ -69,7 +68,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         return obs * 2.0, []
     
     
-    @override
     def value_function(self): #dont think this is currently being used
 
         """ Needs to consider VI values"""
@@ -130,8 +128,9 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #probably dont need to run this so often, maybe just once?
         #print(self.VIP(s, self.Phi(s)))
 
-        _,_, p = self.Phi(s)
-        plt.imshow(p)
+        #to plot p
+        #_,_, p = self.Phi(s)
+        #plt.imshow(p)
 
         #v = self.VIP(s, self.Phi(s))
 
@@ -211,7 +210,7 @@ def my_experiment(a):
 
 
     # config.
-    config = config.callbacks(MyCallbacks)
+    config = config.callbacks(MyCallbacks) #not sure i understand callbacks
     # Set up alternative model (gridworld).
     # config = config.model(custom_model="my_torch_model", use_lstm=False)
 
