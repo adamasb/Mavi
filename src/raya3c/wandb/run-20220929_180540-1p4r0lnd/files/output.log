@@ -1,0 +1,31 @@
+2022-09-29 18:05:42,593	INFO trainable.py:160 -- Trainable.setup took 43.069 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-29 18:05:42,595	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+[33m(raylet)[39m [2022-09-29 18:05:44,225 E 92050 92082] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-04-59_610413_91946 is over 95% full, available space: 4617625600; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 0 4 35.0 23.5
+training epoch 1 11 71.0 28.90909090909091
+[33m(raylet)[39m [2022-09-29 18:05:54,260 E 92050 92082] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-04-59_610413_91946 is over 95% full, available space: 4617314304; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 2 25 71.0 26.44
+training epoch 3 38 71.0 23.57894736842105
+[33m(raylet)[39m [2022-09-29 18:06:04,282 E 92050 92082] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-04-59_610413_91946 is over 95% full, available space: 4617170944; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 4 45 71.0 22.4
+training epoch 5 54 71.0 23.72222222222222
+[33m(raylet)[39m [2022-09-29 18:06:14,317 E 92050 92082] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-04-59_610413_91946 is over 95% full, available space: 4616921088; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 6 91 93.0 24.802197802197803
+training epoch 7 100 93.0 23.99
+[33m(raylet)[39m [2022-09-29 18:06:24,336 E 92050 92082] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-04-59_610413_91946 is over 95% full, available space: 4616593408; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 8 100 109.0 27.96
+training epoch 9 100 126.0 28.84
+[33m(raylet)[39m [2022-09-29 18:06:34,350 E 92050 92082] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-04-59_610413_91946 is over 95% full, available space: 4616347648; capacity: 125844406272. Object creation will fail if spilling is required.
+[22.0, 14.0, 14.0, 30.0, 17.0, 19.0, 37.0, 20.0, 17.0, 16.0, 26.0, 19.0, 21.0, 25.0, 11.0, 47.0, 12.0, 20.0, 16.0, 14.0, 13.0, 14.0, 25.0, 14.0, 18.0, 13.0, 19.0, 28.0, 20.0, 86.0, 11.0, 14.0, 26.0, 35.0, 52.0, 21.0, 25.0, 33.0, 26.0, 25.0, 27.0, 23.0, 46.0, 36.0, 39.0, 95.0, 22.0, 24.0, 15.0, 60.0, 30.0, 20.0, 64.0, 22.0, 15.0, 23.0, 28.0, 13.0, 55.0, 47.0, 33.0, 109.0, 32.0, 126.0, 66.0, 20.0, 49.0, 14.0, 53.0, 17.0, 17.0, 21.0, 23.0, 20.0, 12.0, 12.0, 12.0, 14.0, 25.0, 33.0, 13.0, 16.0, 53.0, 56.0, 25.0, 32.0, 24.0, 22.0, 36.0, 28.0, 9.0, 14.0, 55.0, 15.0, 27.0, 21.0, 11.0, 15.0, 18.0, 47.0]
+['self', 'mode']
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+
+ 20%|██        | 2/10 [00:07<00:27,  3.41s/it, Episode=1, Accumulated Reward=66, Average Reward=1, Length=66, Steps=112]
+
+
+
+
+100%|██████████| 10/10 [00:16<00:00,  1.62s/it, Episode=9, Accumulated Reward=20, Average Reward=1, Length=20, Steps=340]
+[None]
+Job done

@@ -1,0 +1,155 @@
+
+Main training step 0
+2022-10-20 13:11:26,245	INFO trainable.py:160 -- Trainable.setup took 30.630 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-10-20 13:11:26,253	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+training epoch 0 50 106.0 30.16
+ep len:  106
+Main training step 1
+training epoch 1 100 106.0 26.12
+ep len:  106
+Main training step 2
+training epoch 2 100 62.0 23.61
+ep len:  62
+Main training step 3
+training epoch 3 100 64.0 23.66
+ep len:  64
+Main training step 4
+training epoch 4 100 74.0 25.96
+ep len:  74
+Main training step 5
+training epoch 5 100 91.0 28.12
+ep len:  91
+Main training step 6
+training epoch 6 100 91.0 28.56
+ep len:  91
+Main training step 7
+training epoch 7 100 91.0 28.32
+ep len:  91
+Main training step 8
+training epoch 8 100 86.0 27.44
+ep len:  86
+Main training step 9
+training epoch 9 100 174.0 29.87
+ep len:  174
+Main training step 10
+training epoch 10 100 174.0 30.83
+ep len:  174
+Main training step 11
+training epoch 11 100 174.0 29.23
+ep len:  174
+Main training step 12
+training epoch 12 100 174.0 28.77
+ep len:  174
+Main training step 13
+training epoch 13 100 81.0 27.42
+ep len:  81
+Main training step 14
+training epoch 14 100 94.0 30.11
+ep len:  94
+Main training step 15
+training epoch 15 100 192.0 31.45
+ep len:  192
+Main training step 16
+training epoch 16 100 192.0 31.99
+ep len:  192
+Main training step 17
+training epoch 17 100 192.0 30.02
+ep len:  192
+Main training step 18
+training epoch 18 100 125.0 29.96
+ep len:  125
+Main training step 19
+training epoch 19 100 125.0 30.83
+ep len:  125
+Main training step 20
+training epoch 20 100 169.0 32.98
+ep len:  169
+Main training step 21
+training epoch 21 100 169.0 33.55
+ep len:  169
+Main training step 22
+training epoch 22 100 169.0 35.1
+ep len:  169
+Main training step 23
+training epoch 23 100 169.0 37.62
+ep len:  169
+Main training step 24
+training epoch 24 100 144.0 35.47
+ep len:  144
+Main training step 25
+training epoch 25 100 144.0 36.73
+ep len:  144
+Main training step 26
+training epoch 26 100 144.0 35.7
+ep len:  144
+Main training step 27
+training epoch 27 100 126.0 34.32
+ep len:  126
+Main training step 28
+training epoch 28 100 106.0 32.39
+ep len:  106
+Main training step 29
+training epoch 29 100 135.0 33.98
+ep len:  135
+Main training step 30
+training epoch 30 100 141.0 36.05
+ep len:  141
+Main training step 31
+training epoch 31 100 141.0 34.47
+ep len:  141
+Main training step 32
+training epoch 32 100 141.0 34.81
+ep len:  141
+Main training step 33
+training epoch 33 100 141.0 32.94
+ep len:  141
+Main training step 34
+training epoch 34 100 127.0 32.3
+ep len:  127
+Main training step 35
+training epoch 35 100 127.0 34.04
+ep len:  127
+Main training step 36
+training epoch 36 100 127.0 34.96
+ep len:  127
+Main training step 37
+training epoch 37 100 121.0 36.72
+ep len:  121
+Main training step 38
+training epoch 38 100 120.0 35.7
+ep len:  120
+Main training step 39
+training epoch 39 100 120.0 37.97
+ep len:  120
+Main training step 40
+training epoch 40 100 140.0 40.18
+ep len:  140
+Main training step 41
+training epoch 41 100 140.0 36.61
+ep len:  140
+Main training step 42
+training epoch 42 100 140.0 39.28
+ep len:  140
+Main training step 43
+training epoch 43 100 114.0 37.1
+ep len:  114
+Main training step 44
+training epoch 44 100 115.0 37.83
+ep len:  115
+Main training step 45
+training epoch 45 100 161.0 32.86
+ep len:  161
+Main training step 46
+training epoch 46 100 161.0 37.54
+ep len:  161
+Main training step 47
+training epoch 47 100 150.0 34.98
+ep len:  150
+Main training step 48
+training epoch 48 100 150.0 40.64
+ep len:  150
+Main training step 49
+training epoch 49 100 175.0 38.57
+ep len:  175
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Job done

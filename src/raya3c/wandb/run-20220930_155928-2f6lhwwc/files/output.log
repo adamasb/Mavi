@@ -1,0 +1,96 @@
+
+Main trainign step 0
+2022-09-30 15:59:30,154	INFO trainable.py:160 -- Trainable.setup took 18.358 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 15:59:30,156	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Algorithm.train() result: A3C -> 41 episodes
+Backend TkAgg is interactive backend. Turning interactive mode on.
+[33m(raylet)[39m [2022-09-30 15:59:36,475 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4591706112; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 0 41 104.0 29.829268292682926
+Main trainign step 1
+[33m(raylet)[39m [2022-09-30 15:59:46,487 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4591595520; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 34 episodes
+training epoch 1 75 123.0 33.986666666666665
+Main trainign step 2
+Algorithm.train() result: A3C -> 23 episodes
+[33m(raylet)[39m [2022-09-30 15:59:56,503 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4590747648; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 2 98 123.0 32.44897959183673
+Main trainign step 3
+Algorithm.train() result: A3C -> 60 episodes
+training epoch 3 100 123.0 27.45
+Main trainign step 4
+[33m(raylet)[39m [2022-09-30 16:00:06,512 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4600856576; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 56 episodes
+training epoch 4 100 54.0 22.85
+Main trainign step 5
+Algorithm.train() result: A3C -> 25 episodes
+training epoch 5 100 70.0 24.66
+Main trainign step 6
+[33m(raylet)[39m [2022-09-30 16:00:16,535 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4599980032; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 33 episodes
+training epoch 6 100 80.0 25.2
+Main trainign step 7
+[33m(raylet)[39m [2022-09-30 16:00:26,572 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4599390208; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 32 episodes
+training epoch 7 100 80.0 25.15
+Main trainign step 8
+Algorithm.train() result: A3C -> 36 episodes
+[33m(raylet)[39m [2022-09-30 16:00:36,588 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4598292480; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:00:46,612 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4598284288; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:00:56,638 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4598648832; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:01:06,650 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4597338112; capacity: 125844406272. Object creation will fail if spilling is required.
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.920718193054199, 'policy_loss': 28.09341812133789, 'vf_loss': 117.75067901611328, 'total_loss': 86.89955139160156}
+training epoch 8 100 98.0 26.89
+Main trainign step 9
+Algorithm.train() result: A3C -> 28 episodes
+training epoch 9 100 98.0 27.75
+Main trainign step 10
+[33m(raylet)[39m [2022-09-30 16:01:16,664 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4596854784; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 52 episodes
+training epoch 10 100 89.0 30.02
+Main trainign step 11
+Algorithm.train() result: A3C -> 39 episodes
+[33m(raylet)[39m [2022-09-30 16:01:26,675 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4596535296; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 11 100 119.0 29.3
+Main trainign step 12
+Algorithm.train() result: A3C -> 30 episodes
+training epoch 12 100 119.0 30.53
+Main trainign step 13
+[33m(raylet)[39m [2022-09-30 16:01:36,699 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4593823744; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 18 episodes
+[33m(raylet)[39m [2022-09-30 16:01:46,732 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4589658112; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:01:56,748 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4586258432; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:02:06,763 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4583710720; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:02:16,782 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4588871680; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:02:26,804 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4588658688; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:02:36,822 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4587323392; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:02:46,840 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4586426368; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:02:56,859 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4586172416; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:03:06,881 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4586156032; capacity: 125844406272. Object creation will fail if spilling is required.
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.871024131774902, 'policy_loss': 29.42892837524414, 'vf_loss': 113.22547149658203, 'total_loss': 85.97295379638672}
+training epoch 13 100 119.0 30.3
+Main trainign step 14
+[33m(raylet)[39m [2022-09-30 16:03:16,904 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4585910272; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 35 episodes
+training epoch 14 100 112.0 32.96
+Main trainign step 15
+Algorithm.train() result: A3C -> 41 episodes
+[33m(raylet)[39m [2022-09-30 16:03:26,913 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4585537536; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 15 100 112.0 32.61
+Main trainign step 16
+Algorithm.train() result: A3C -> 39 episodes
+[33m(raylet)[39m [2022-09-30 16:03:36,925 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4585353216; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:03:46,950 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4585336832; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:03:56,970 E 34623 34642] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-59-11_850656_34525 is over 95% full, available space: 4585332736; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 101, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 39, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 397, in train
+    self.log_result(result)
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 195, in log_result
+    return super().log_result(result)
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 1561, in log_result
+    self.callbacks.on_train_result(algorithm=self, result=result, trainer=self)
+  File "/home/tuhe/Documents/mavi/src/raya3c/my_callback.py", line 133, in on_train_result
+    print("> CALLBACK HAD NON-ZERO INFO", lstats)

@@ -1,0 +1,16 @@
+{
+    "launch": {
+
+        "configurations": [   {
+            "name": "Python: Python loader",
+            "type": "python",
+            "request": "launch",
+            "program": "src/raya3c/example_vin.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ],
+        "compounds": []
+        
+    }
+}

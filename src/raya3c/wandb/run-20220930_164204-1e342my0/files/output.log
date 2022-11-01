@@ -1,0 +1,42 @@
+2022-09-30 16:42:06,268	INFO trainable.py:160 -- Trainable.setup took 43.098 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 16:42:06,272	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main trainign step 0
+[33m(raylet)[39m [2022-09-30 16:42:11,602 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4562345984; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 0 31 85.0 25.193548387096776
+Main trainign step 1
+training epoch 1 57 91.0 23.614035087719298
+Main trainign step 2
+[33m(raylet)[39m [2022-09-30 16:42:21,669 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4562120704; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 2 92 91.0 20.706521739130434
+Main trainign step 3
+training epoch 3 100 91.0 18.21
+Main trainign step 4
+[33m(raylet)[39m [2022-09-30 16:42:31,669 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561928192; capacity: 125844406272. Object creation will fail if spilling is required.
+Backend TkAgg is interactive backend. Turning interactive mode on.
+[33m(raylet)[39m [2022-09-30 16:42:41,705 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561752064; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:42:51,722 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561731584; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:43:01,762 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561739776; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:43:11,802 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561743872; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:43:21,829 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561739776; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:43:31,842 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561723392; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:43:41,854 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4561686528; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:43:51,869 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4568248320; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:44:01,908 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4568236032; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:44:11,922 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4568227840; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:44:21,946 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4568240128; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:44:31,967 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4568207360; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:44:41,987 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4568170496; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:44:52,002 E 38656 38688] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-41-23_284837_38540 is over 95% full, available space: 4568162304; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 101, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 39, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 397, in train
+    if monitor_data:
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 187, in log_result
+    return super().log_result(result)
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 1561, in log_result
+    self.callbacks.on_train_result(algorithm=self, result=result, trainer=self)
+  File "/home/tuhe/Documents/mavi/src/raya3c/my_callback.py", line 133, in on_train_result
+    print("> CALLBACK HAD NON-ZERO INFO", lstats)

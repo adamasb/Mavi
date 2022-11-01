@@ -1,0 +1,1585 @@
+Algorithm.train() result: A3C -> 46 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 1070, 'num_env_steps_trained': 1070, 'num_agent_steps_sampled': 1070, 'num_agent_steps_trained': 1070}
+training epoch 0 46 48.0 22.32608695652174
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 stepson_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+log_result(...)
+Algorithm.train() result: A3C -> 40 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 2140, 'num_env_steps_trained': 2140, 'num_agent_steps_sampled': 2140, 'num_agent_steps_trained': 2140}
+training epoch 1 86 67.0 24.348837209302324
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 14:18:59,606 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4608806912; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 40 episodes
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.721060276031494, 'policy_loss': 2.8252294063568115, 'vf_loss': 31.869192123413086, 'total_loss': 18.69261360168457}}}, 'num_env_steps_sampled': 3220, 'num_env_steps_trained': 3220, 'num_agent_steps_sampled': 3220, 'num_agent_steps_trained': 3220}
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+training epoch 2 100 82.0 26.22
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 41 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 4290, 'num_env_steps_trained': 4290, 'num_agent_steps_sampled': 4290, 'num_agent_steps_trained': 4290}
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+training epoch [36m(RolloutWorker pid=24154)[39m postprocessed 4 steps3
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+ 100 82.0 26.71
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 14:19:09,622 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4608253952; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 stepsed sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 39 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 5380, 'num_env_steps_trained': 5380, 'num_agent_steps_sampled': 5380, 'num_agent_steps_trained': 5380}
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+training epoch 4 100 93.0 25.45
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 stepsed sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 stepsed sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+Algorithm.train() result: A3C -> 43 episodesepsed sample batch of size 10
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.77436637878418, 'policy_loss': -19.787235260009766, 'vf_loss': 157.69976806640625, 'total_loss': 58.994903564453125}}}, 'num_env_steps_sampled': 6450, 'num_env_steps_trained': 6450, 'num_agent_steps_sampled': 6450, 'num_agent_steps_trained': 6450}
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+training epoch 5 100 133.0 26.42
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+Algorithm.train() result: A3C -> 43 episodesepsed sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 stepsd sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 stepssd sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 42 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 7480, 'num_env_steps_trained': 7480, 'num_agent_steps_sampled': 7480, 'num_agent_steps_trained': 7480}
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+training epoch 6 100 133.0 25.06
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 stepsd sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 5 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 stepsd sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 stepsd sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=24154)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=24154)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 14:19:39,679 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606791680; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:19:49,698 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606509056; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:19:59,714 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606492672; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:20:09,730 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607664128; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:20:19,753 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607660032; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:20:29,770 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607651840; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:20:39,788 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607631360; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:20:49,807 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607614976; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:20:59,825 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607606784; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:21:09,845 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607606784; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:21:19,862 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607590400; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:21:29,878 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607586304; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:21:39,897 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607557632; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:21:49,914 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607569920; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:21:59,932 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607553536; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:22:09,950 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607553536; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:22:19,968 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607549440; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:22:29,986 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607553536; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:22:40,005 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607524864; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:22:50,023 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607516672; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:23:00,044 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607516672; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:23:10,064 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607508480; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:23:20,083 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607508480; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:23:30,101 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607488000; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:23:40,119 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607459328; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:23:50,138 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607442944; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:24:00,155 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607410176; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:24:10,175 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607361024; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:24:20,195 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607356928; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:24:30,213 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607332352; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:24:40,231 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4607295488; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:24:50,248 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606861312; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:25:00,266 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606820352; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:25:10,284 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606709760; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:25:20,302 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606697472; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:25:30,320 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606648320; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:25:40,340 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606586880; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:25:50,362 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606550016; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:26:00,382 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606529536; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:26:10,399 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606504960; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:26:20,418 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606472192; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:26:30,436 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606431232; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:26:40,453 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606398464; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:26:50,475 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606308352; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:27:00,495 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606279680; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:27:10,517 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606242816; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:27:20,536 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606242816; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:27:30,554 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606226432; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:27:40,573 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606197760; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:27:50,592 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606152704; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:28:00,611 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606115840; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:28:10,631 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606361600; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:28:20,659 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606046208; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:28:30,679 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606025728; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:28:40,696 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606009344; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:28:50,715 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4606001152; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:29:00,733 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605984768; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:29:10,752 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605972480; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:29:20,772 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605972480; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:29:30,790 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605980672; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:29:40,809 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605861888; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:29:50,830 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605718528; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:30:00,850 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605050880; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:30:10,867 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605071360; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:30:20,884 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605067264; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:30:30,901 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605054976; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:30:40,918 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4605034496; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:30:50,936 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604932096; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:31:00,951 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604755968; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:31:10,967 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604542976; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:31:20,983 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604420096; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:31:31,001 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604420096; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:31:41,016 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604387328; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:31:51,032 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604375040; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:32:01,048 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604375040; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:32:11,064 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604383232; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:32:21,079 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604383232; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:32:31,100 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604096512; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:32:41,117 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604342272; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:32:51,134 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604321792; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:33:01,156 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604305408; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:33:11,169 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604268544; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:33:21,188 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604268544; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:33:31,203 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604260352; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:33:41,216 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604223488; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:33:51,236 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604203008; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:34:01,251 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604121088; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:34:11,271 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604215296; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:34:21,289 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604215296; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:34:31,315 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604198912; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:34:41,332 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604661760; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:34:51,350 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603064320; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:35:01,368 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4612378624; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:35:11,385 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610506752; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:35:21,401 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610498560; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:35:31,415 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610498560; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:35:41,432 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610473984; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:35:51,449 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610437120; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:36:01,467 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610428928; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:36:11,483 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610355200; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:36:21,510 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610080768; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:36:31,526 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603510784; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:36:41,542 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4602748928; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:36:51,562 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4612009984; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:37:01,579 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4611203072; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:37:11,599 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4611223552; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:37:21,617 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610969600; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:37:31,652 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4616953856; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:37:41,674 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4616658944; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:37:51,698 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4616921088; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:38:01,722 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4612874240; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:38:11,741 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4610826240; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:38:21,765 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4608724992; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:38:31,799 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4604207104; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:38:41,815 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603228160; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:38:51,832 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603277312; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:39:01,849 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603928576; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:39:11,865 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603764736; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:39:21,882 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603723776; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:39:31,898 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603756544; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:39:41,915 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603604992; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:39:51,930 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4603359232; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:40:01,946 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4618907648; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:40:11,965 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623847424; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:40:21,983 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623634432; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:40:31,996 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623003648; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:40:42,022 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4622708736; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:40:52,040 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4622725120; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:41:02,058 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4622725120; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:41:12,078 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4622643200; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:41:22,093 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4622569472; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:41:32,109 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4621406208; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:41:42,136 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4621377536; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:41:52,153 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4621373440; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:42:02,174 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4621111296; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:42:12,191 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4621049856; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:42:22,209 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4622233600; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:42:32,231 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623806464; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:42:42,251 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623794176; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:42:52,261 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623765504; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:43:02,272 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623765504; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:43:12,294 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623740928; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:43:22,311 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623659008; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:43:32,327 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623335424; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:43:42,343 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623376384; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:43:52,358 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4623253504; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:44:02,377 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4618694656; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:44:12,396 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4618633216; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:44:22,417 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4618625024; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:44:32,439 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4618620928; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:44:42,457 E 23967 23992] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-18-37_533688_23860 is over 95% full, available space: 4618514432; capacity: 125844406272. Object creation will fail if spilling is required.

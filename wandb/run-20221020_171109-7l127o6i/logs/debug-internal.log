@@ -1,0 +1,146 @@
+2022-10-20 17:11:09,755 INFO    StreamThr :12576 [internal.py:wandb_internal():88] W&B internal server running at pid: 12576, started at: 2022-10-20 17:11:09.753790
+2022-10-20 17:11:09,762 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: status
+2022-10-20 17:11:09,765 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: status
+2022-10-20 17:11:09,771 INFO    WriterThread:12576 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\run-7l127o6i.wandb
+2022-10-20 17:11:09,771 DEBUG   SenderThread:12576 [sender.py:send():303] send: header
+2022-10-20 17:11:09,772 DEBUG   SenderThread:12576 [sender.py:send():303] send: run
+2022-10-20 17:11:10,521 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: check_version
+2022-10-20 17:11:10,534 INFO    SenderThread:12576 [dir_watcher.py:__init__():216] watching files in: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files
+2022-10-20 17:11:10,534 INFO    SenderThread:12576 [sender.py:_start_run_threads():928] run started: 7l127o6i with start time 1666278669.746786
+2022-10-20 17:11:10,535 DEBUG   SenderThread:12576 [sender.py:send():303] send: summary
+2022-10-20 17:11:10,535 INFO    SenderThread:12576 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-20 17:11:10,536 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: check_version
+2022-10-20 17:11:10,637 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: run_start
+2022-10-20 17:11:10,645 DEBUG   HandlerThread:12576 [meta.py:__init__():34] meta init
+2022-10-20 17:11:10,645 DEBUG   HandlerThread:12576 [meta.py:__init__():49] meta init done
+2022-10-20 17:11:10,645 DEBUG   HandlerThread:12576 [meta.py:probe():215] probe
+2022-10-20 17:11:10,663 DEBUG   HandlerThread:12576 [git.py:repo():40] git repository is invalid
+2022-10-20 17:11:10,663 DEBUG   HandlerThread:12576 [meta.py:_save_pip():53] save pip
+2022-10-20 17:11:10,664 DEBUG   HandlerThread:12576 [meta.py:_save_pip():67] save pip done
+2022-10-20 17:11:10,664 DEBUG   HandlerThread:12576 [meta.py:probe():253] probe done
+2022-10-20 17:11:10,766 DEBUG   SenderThread:12576 [sender.py:send():303] send: files
+2022-10-20 17:11:10,766 INFO    SenderThread:12576 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-10-20 17:11:10,784 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-20 17:11:10,784 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: stop_status
+2022-10-20 17:11:10,988 DEBUG   SenderThread:12576 [sender.py:send():303] send: telemetry
+2022-10-20 17:11:11,375 INFO    Thread-27 :12576 [upload_job.py:push():143] Uploaded file C:\Users\adams\AppData\Local\Temp\tmpw3eezibjwandb\3lp9337c-wandb-metadata.json
+2022-10-20 17:11:11,551 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\output.log
+2022-10-20 17:11:11,552 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\requirements.txt
+2022-10-20 17:11:11,552 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\wandb-metadata.json
+2022-10-20 17:11:11,553 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\wandb-summary.json
+2022-10-20 17:11:13,558 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\output.log
+2022-10-20 17:11:15,837 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-20 17:11:15,839 DEBUG   SenderThread:12576 [sender.py:send():303] send: history
+2022-10-20 17:11:15,840 DEBUG   SenderThread:12576 [sender.py:send():303] send: summary
+2022-10-20 17:11:15,842 INFO    SenderThread:12576 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-20 17:11:16,572 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\wandb-summary.json
+2022-10-20 17:11:17,137 DEBUG   SenderThread:12576 [sender.py:send():303] send: exit
+2022-10-20 17:11:17,137 INFO    SenderThread:12576 [sender.py:send_exit():442] handling exit code: 0
+2022-10-20 17:11:17,137 INFO    SenderThread:12576 [sender.py:send_exit():444] handling runtime: 6
+2022-10-20 17:11:17,138 INFO    SenderThread:12576 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-20 17:11:17,139 INFO    SenderThread:12576 [sender.py:send_exit():450] send defer
+2022-10-20 17:11:17,140 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:17,140 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 0
+2022-10-20 17:11:17,140 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:17,140 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-10-20 17:11:17,140 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 1
+2022-10-20 17:11:17,141 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:17,141 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 1
+2022-10-20 17:11:17,239 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:17,239 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-10-20 17:11:17,240 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 2
+2022-10-20 17:11:17,241 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:17,241 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 2
+2022-10-20 17:11:17,241 DEBUG   SenderThread:12576 [sender.py:send():303] send: stats
+2022-10-20 17:11:17,241 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:17,241 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-10-20 17:11:17,241 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 3
+2022-10-20 17:11:17,242 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:17,242 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 3
+2022-10-20 17:11:17,242 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:17,242 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-10-20 17:11:17,242 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 4
+2022-10-20 17:11:17,243 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:17,243 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 4
+2022-10-20 17:11:17,243 DEBUG   SenderThread:12576 [sender.py:send():303] send: summary
+2022-10-20 17:11:17,244 INFO    SenderThread:12576 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-20 17:11:17,244 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:17,245 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-10-20 17:11:17,245 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 5
+2022-10-20 17:11:17,245 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:17,245 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 5
+2022-10-20 17:11:17,246 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:17,246 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-10-20 17:11:17,490 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 6
+2022-10-20 17:11:17,490 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:17,491 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 6
+2022-10-20 17:11:17,491 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:17,491 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-10-20 17:11:17,580 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\output.log
+2022-10-20 17:11:17,580 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\config.yaml
+2022-10-20 17:11:17,580 INFO    Thread-23 :12576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\wandb-summary.json
+2022-10-20 17:11:18,164 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-20 17:11:19,134 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 7
+2022-10-20 17:11:19,144 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: poll_exit
+2022-10-20 17:11:19,144 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:19,144 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 7
+2022-10-20 17:11:19,144 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:19,144 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-10-20 17:11:19,144 INFO    SenderThread:12576 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-10-20 17:11:19,167 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-20 17:11:19,599 INFO    SenderThread:12576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\output.log
+2022-10-20 17:11:19,599 INFO    SenderThread:12576 [dir_watcher.py:finish():392] scan: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files
+2022-10-20 17:11:19,599 INFO    SenderThread:12576 [dir_watcher.py:finish():406] scan save: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\config.yaml config.yaml
+2022-10-20 17:11:19,599 INFO    SenderThread:12576 [dir_watcher.py:finish():406] scan save: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\output.log output.log
+2022-10-20 17:11:19,602 INFO    SenderThread:12576 [dir_watcher.py:finish():406] scan save: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\requirements.txt requirements.txt
+2022-10-20 17:11:19,603 INFO    SenderThread:12576 [dir_watcher.py:finish():406] scan save: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\wandb-metadata.json wandb-metadata.json
+2022-10-20 17:11:19,604 INFO    SenderThread:12576 [dir_watcher.py:finish():406] scan save: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\wandb-summary.json wandb-summary.json
+2022-10-20 17:11:19,618 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 8
+2022-10-20 17:11:19,619 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: poll_exit
+2022-10-20 17:11:19,626 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:19,626 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 8
+2022-10-20 17:11:19,626 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:19,626 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-10-20 17:11:19,626 INFO    SenderThread:12576 [file_pusher.py:finish():168] shutting down file pusher
+2022-10-20 17:11:20,181 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-20 17:11:20,181 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: poll_exit
+2022-10-20 17:11:20,222 INFO    Thread-28 :12576 [upload_job.py:push():143] Uploaded file C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\config.yaml
+2022-10-20 17:11:20,231 INFO    Thread-30 :12576 [upload_job.py:push():143] Uploaded file C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\requirements.txt
+2022-10-20 17:11:20,259 INFO    Thread-31 :12576 [upload_job.py:push():143] Uploaded file C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\wandb-summary.json
+2022-10-20 17:11:20,275 INFO    Thread-29 :12576 [upload_job.py:push():143] Uploaded file C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221020_171109-7l127o6i\files\output.log
+2022-10-20 17:11:20,480 INFO    Thread-22 :12576 [sender.py:transition_state():463] send defer: 9
+2022-10-20 17:11:20,480 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:20,480 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 9
+2022-10-20 17:11:20,480 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:20,480 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-10-20 17:11:20,480 INFO    SenderThread:12576 [file_pusher.py:join():173] waiting for file pusher
+2022-10-20 17:11:20,480 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 10
+2022-10-20 17:11:20,480 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:20,480 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 10
+2022-10-20 17:11:20,480 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:20,480 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-10-20 17:11:20,756 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 11
+2022-10-20 17:11:20,757 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:20,757 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 11
+2022-10-20 17:11:20,757 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:20,757 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-10-20 17:11:20,757 INFO    SenderThread:12576 [sender.py:transition_state():463] send defer: 12
+2022-10-20 17:11:20,758 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: defer
+2022-10-20 17:11:20,758 INFO    HandlerThread:12576 [handler.py:handle_request_defer():161] handle defer: 12
+2022-10-20 17:11:20,758 DEBUG   SenderThread:12576 [sender.py:send():303] send: final
+2022-10-20 17:11:20,758 DEBUG   SenderThread:12576 [sender.py:send():303] send: footer
+2022-10-20 17:11:20,759 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: defer
+2022-10-20 17:11:20,759 INFO    SenderThread:12576 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-10-20 17:11:20,760 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-20 17:11:20,760 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: poll_exit
+2022-10-20 17:11:20,762 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-20 17:11:20,763 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: poll_exit
+2022-10-20 17:11:20,763 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: server_info
+2022-10-20 17:11:20,764 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: get_summary
+2022-10-20 17:11:20,764 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: sampled_history
+2022-10-20 17:11:20,765 DEBUG   SenderThread:12576 [sender.py:send_request():317] send_request: server_info
+2022-10-20 17:11:21,148 INFO    MainThread:12576 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-10-20 17:11:21,148 INFO    MainThread:12576 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-10-20 17:11:21,171 INFO    MainThread:12576 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-10-20 17:11:21,175 DEBUG   HandlerThread:12576 [handler.py:handle_request():138] handle_request: shutdown
+2022-10-20 17:11:21,176 INFO    HandlerThread:12576 [handler.py:finish():814] shutting down handler

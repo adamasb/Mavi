@@ -1,0 +1,177 @@
+
+Main trainign step 0
+2022-09-30 15:51:57,026	INFO trainable.py:160 -- Trainable.setup took 23.874 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 15:51:57,029	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+[33m(raylet)[39m [2022-09-30 15:51:57,390 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4604268544; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 12 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 240, 'num_env_steps_trained': 240, 'num_agent_steps_sampled': 240, 'num_agent_steps_trained': 240}
+training epoch 0 12 35.0 20.416666666666668
+Main trainign step 1
+log_result(...)
+Algorithm.train() result: A3C -> 16 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 590, 'num_env_steps_trained': 590, 'num_agent_steps_sampled': 590, 'num_agent_steps_trained': 590}
+training epoch 1 28 35.0 20.892857142857142
+Main trainign step 2
+[33m(raylet)[39m [2022-09-30 15:52:07,414 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4603441152; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 16 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 950, 'num_env_steps_trained': 950, 'num_agent_steps_sampled': 950, 'num_agent_steps_trained': 950}
+training epoch 2 44 39.0 21.477272727272727
+Main trainign step 3
+log_result(...)
+Algorithm.train() result: A3C -> 50 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 1990, 'num_env_steps_trained': 1990, 'num_agent_steps_sampled': 1990, 'num_agent_steps_trained': 1990}
+training epoch 3 94 57.0 21.24468085106383
+Main trainign step 4
+[33m(raylet)[39m [2022-09-30 15:52:17,435 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4602814464; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 35 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 2740, 'num_env_steps_trained': 2740, 'num_agent_steps_sampled': 2740, 'num_agent_steps_trained': 2740}
+training epoch 4 100 76.0 21.21
+Main trainign step 5
+[33m(raylet)[39m [2022-09-30 15:52:27,446 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4602589184; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 54 episodes
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.785246849060059, 'policy_loss': -9.422887802124023, 'vf_loss': 46.007198333740234, 'total_loss': 13.512859344482422}
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.785246849060059, 'policy_loss': -9.422887802124023, 'vf_loss': 46.007198333740234, 'total_loss': 13.512859344482422}}}, 'num_env_steps_sampled': 3890, 'num_env_steps_trained': 3890, 'num_agent_steps_sampled': 3890, 'num_agent_steps_trained': 3890}
+training epoch 5 100 76.0 20.94
+Main trainign step 6
+log_result(...)
+Algorithm.train() result: A3C -> 51 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 5000, 'num_env_steps_trained': 5000, 'num_agent_steps_sampled': 5000, 'num_agent_steps_trained': 5000}
+training epoch 6 100 48.0 21.35
+Main trainign step 7
+[33m(raylet)[39m [2022-09-30 15:52:37,457 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4601470976; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 40 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 5920, 'num_env_steps_trained': 5920, 'num_agent_steps_sampled': 5920, 'num_agent_steps_trained': 5920}
+training epoch 7 100 60.0 22.11
+Main trainign step 8
+log_result(...)
+Algorithm.train() result: A3C -> 29 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 6620, 'num_env_steps_trained': 6620, 'num_agent_steps_sampled': 6620, 'num_agent_steps_trained': 6620}
+training epoch 8 100 100.0 23.15
+Main trainign step 9
+[33m(raylet)[39m [2022-09-30 15:52:47,479 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4600303616; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 15 episodes
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.874261379241943, 'policy_loss': 35.626949310302734, 'vf_loss': 196.71932983398438, 'total_loss': 133.91787719726562}
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.874261379241943, 'policy_loss': 35.626949310302734, 'vf_loss': 196.71932983398438, 'total_loss': 133.91787719726562}}}, 'num_env_steps_sampled': 7020, 'num_env_steps_trained': 7020, 'num_agent_steps_sampled': 7020, 'num_agent_steps_trained': 7020}
+training epoch 9 100 100.0 23.32
+Main trainign step 10
+log_result(...)
+Algorithm.train() result: A3C -> 33 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 7900, 'num_env_steps_trained': 7900, 'num_agent_steps_sampled': 7900, 'num_agent_steps_trained': 7900}
+training epoch 10 100 100.0 25.49
+Main trainign step 11
+[33m(raylet)[39m [2022-09-30 15:52:57,489 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4598288384; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 61 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 9310, 'num_env_steps_trained': 9310, 'num_agent_steps_sampled': 9310, 'num_agent_steps_trained': 9310}
+training epoch 11 100 99.0 24.19
+Main trainign step 12
+log_result(...)
+Algorithm.train() result: A3C -> 33 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 10300, 'num_env_steps_trained': 10300, 'num_agent_steps_sampled': 10300, 'num_agent_steps_trained': 10300}
+training epoch 12 100 78.0 25.15
+Main trainign step 13
+[33m(raylet)[39m [2022-09-30 15:53:07,500 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4597153792; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 44 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 11490, 'num_env_steps_trained': 11490, 'num_agent_steps_sampled': 11490, 'num_agent_steps_trained': 11490}
+training epoch 13 100 84.0 27.78
+Main trainign step 14
+log_result(...)
+Algorithm.train() result: A3C -> 25 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 12330, 'num_env_steps_trained': 12330, 'num_agent_steps_sampled': 12330, 'num_agent_steps_trained': 12330}
+training epoch 14 100 84.0 29.77
+Main trainign step 15
+[33m(raylet)[39m [2022-09-30 15:53:17,524 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4596686848; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 28 episodes
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 5.894511699676514, 'policy_loss': 47.945899963378906, 'vf_loss': 372.76312255859375, 'total_loss': 234.2685089111328}
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 5.894511699676514, 'policy_loss': 47.945899963378906, 'vf_loss': 372.76312255859375, 'total_loss': 234.2685089111328}}}, 'num_env_steps_sampled': 13170, 'num_env_steps_trained': 13170, 'num_agent_steps_sampled': 13170, 'num_agent_steps_trained': 13170}
+training epoch 15 100 117.0 29.51
+Main trainign step 16
+log_result(...)
+Algorithm.train() result: A3C -> 44 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 14500, 'num_env_steps_trained': 14500, 'num_agent_steps_sampled': 14500, 'num_agent_steps_trained': 14500}
+training epoch 16 100 119.0 30.43
+Main trainign step 17
+[33m(raylet)[39m [2022-09-30 15:53:27,545 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4596178944; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 22 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 15470, 'num_env_steps_trained': 15470, 'num_agent_steps_sampled': 15470, 'num_agent_steps_trained': 15470}
+training epoch 17 100 134.0 32.36
+Main trainign step 18
+log_result(...)
+Algorithm.train() result: A3C -> 42 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 16560, 'num_env_steps_trained': 16560, 'num_agent_steps_sampled': 16560, 'num_agent_steps_trained': 16560}
+training epoch 18 100 134.0 32.37
+Main trainign step 19
+[33m(raylet)[39m [2022-09-30 15:53:37,556 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4595261440; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 21 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 17410, 'num_env_steps_trained': 17410, 'num_agent_steps_sampled': 17410, 'num_agent_steps_trained': 17410}
+training epoch 19 100 134.0 33.74
+Main trainign step 20
+log_result(...)
+Algorithm.train() result: A3C -> 35 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 18590, 'num_env_steps_trained': 18590, 'num_agent_steps_sampled': 18590, 'num_agent_steps_trained': 18590}
+training epoch 20 100 116.0 32.29
+Main trainign step 21
+[33m(raylet)[39m [2022-09-30 15:53:47,565 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4594737152; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 24 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 19300, 'num_env_steps_trained': 19300, 'num_agent_steps_sampled': 19300, 'num_agent_steps_trained': 19300}
+training epoch 21 100 116.0 32.7
+Main trainign step 22
+log_result(...)
+Algorithm.train() result: A3C -> 23 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 20340, 'num_env_steps_trained': 20340, 'num_agent_steps_sampled': 20340, 'num_agent_steps_trained': 20340}
+training epoch 22 100 157.0 36.33
+Main trainign step 23
+[33m(raylet)[39m [2022-09-30 15:53:57,578 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4594216960; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 36 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 21630, 'num_env_steps_trained': 21630, 'num_agent_steps_sampled': 21630, 'num_agent_steps_trained': 21630}
+training epoch 23 100 157.0 35.87
+Main trainign step 24
+log_result(...)
+Algorithm.train() result: A3C -> 37 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 22860, 'num_env_steps_trained': 22860, 'num_agent_steps_sampled': 22860, 'num_agent_steps_trained': 22860}
+training epoch 24 100 157.0 36.8
+Main trainign step 25
+[33m(raylet)[39m [2022-09-30 15:54:07,588 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4593680384; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 40 episodes
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.926186561584473, 'policy_loss': 25.21739387512207, 'vf_loss': 84.481689453125, 'total_loss': 67.38897705078125}
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.926186561584473, 'policy_loss': 25.21739387512207, 'vf_loss': 84.481689453125, 'total_loss': 67.38897705078125}}}, 'num_env_steps_sampled': 24050, 'num_env_steps_trained': 24050, 'num_agent_steps_sampled': 24050, 'num_agent_steps_trained': 24050}
+training epoch 25 100 162.0 31.45
+Main trainign step 26
+log_result(...)
+Algorithm.train() result: A3C -> 46 episodes
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.9298505783081055, 'policy_loss': 23.98711585998535, 'vf_loss': 76.1878890991211, 'total_loss': 62.01176452636719}
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.9298505783081055, 'policy_loss': 23.98711585998535, 'vf_loss': 76.1878890991211, 'total_loss': 62.01176452636719}}}, 'num_env_steps_sampled': 25440, 'num_env_steps_trained': 25440, 'num_agent_steps_sampled': 25440, 'num_agent_steps_trained': 25440}
+training epoch 26 100 162.0 30.96
+Main trainign step 27
+[33m(raylet)[39m [2022-09-30 15:54:17,599 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4593209344; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 38 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 26890, 'num_env_steps_trained': 26890, 'num_agent_steps_sampled': 26890, 'num_agent_steps_trained': 26890}
+training epoch 27 100 115.0 32.26
+Main trainign step 28
+log_result(...)
+Algorithm.train() result: A3C -> 41 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 28260, 'num_env_steps_trained': 28260, 'num_agent_steps_sampled': 28260, 'num_agent_steps_trained': 28260}
+training epoch 28 100 115.0 34.14
+Main trainign step 29
+[33m(raylet)[39m [2022-09-30 15:54:27,605 E 33641 33666] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-51-33_265189_33554 is over 95% full, available space: 4592697344; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 36 episodes
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.904546737670898, 'policy_loss': 21.998065948486328, 'vf_loss': 77.00497436523438, 'total_loss': 60.4315071105957}
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.904546737670898, 'policy_loss': 21.998065948486328, 'vf_loss': 77.00497436523438, 'total_loss': 60.4315071105957}}}, 'num_env_steps_sampled': 29710, 'num_env_steps_trained': 29710, 'num_agent_steps_sampled': 29710, 'num_agent_steps_trained': 29710}
+training epoch 29 100 115.0 36.73
+[None]
+Job done

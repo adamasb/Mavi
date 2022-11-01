@@ -1,0 +1,17 @@
+
+[33m(raylet)[39m [2022-09-30 12:26:40,803 E 7188 7220] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-10-34_718262_7078 is over 95% full, available space: 4581416960; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 12:26:50,821 E 7188 7220] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-10-34_718262_7078 is over 95% full, available space: 4581502976; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 12:27:00,836 E 7188 7220] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-10-34_718262_7078 is over 95% full, available space: 4581765120; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 12:27:10,849 E 7188 7220] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-10-34_718262_7078 is over 95% full, available space: 4581756928; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 12:27:20,862 E 7188 7220] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-10-34_718262_7078 is over 95% full, available space: 4581756928; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 12:27:30,883 E 7188 7220] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-10-34_718262_7078 is over 95% full, available space: 4581703680; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 12:27:40,895 E 7188 7220] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-10-34_718262_7078 is over 95% full, available space: 4581654528; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 100, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 39, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 397, in train
+    self.log_result(result)
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 205, in log_result
+    if 'default_policy' in lstats:

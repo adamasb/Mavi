@@ -1,0 +1,30 @@
+2022-09-29 17:44:55,261	INFO trainable.py:160 -- Trainable.setup took 26.150 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-29 17:44:55,265	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+training epoch 0 32 48.0 16.40625
+[33m(raylet)[39m [2022-09-29 17:45:02,503 E 90071 90103] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_17-44-29_167730_89978 is over 95% full, available space: 4612435968; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 1 73 48.0 15.273972602739725
+training epoch 2 100 48.0 15.88
+[33m(raylet)[39m [2022-09-29 17:45:12,515 E 90071 90103] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_17-44-29_167730_89978 is over 95% full, available space: 4612251648; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 3 100 41.0 17.1
+training epoch 4 100 41.0 18.83
+[33m(raylet)[39m [2022-09-29 17:45:22,526 E 90071 90103] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_17-44-29_167730_89978 is over 95% full, available space: 4612145152; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 5 100 108.0 19.72
+training epoch 6 100 108.0 21.41
+[33m(raylet)[39m [2022-09-29 17:45:32,540 E 90071 90103] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_17-44-29_167730_89978 is over 95% full, available space: 4611973120; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 7 100 108.0 23.37
+training epoch 8 100 108.0 22.68
+[33m(raylet)[39m [2022-09-29 17:45:42,560 E 90071 90103] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_17-44-29_167730_89978 is over 95% full, available space: 4611825664; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 9 100 108.0 24.29
+[19.0, 36.0, 14.0, 18.0, 14.0, 18.0, 9.0, 29.0, 33.0, 108.0, 19.0, 11.0, 12.0, 29.0, 25.0, 39.0, 18.0, 39.0, 20.0, 29.0, 31.0, 12.0, 15.0, 15.0, 14.0, 10.0, 40.0, 10.0, 14.0, 34.0, 33.0, 24.0, 18.0, 29.0, 47.0, 23.0, 11.0, 18.0, 59.0, 28.0, 13.0, 46.0, 46.0, 48.0, 17.0, 30.0, 66.0, 15.0, 20.0, 20.0, 17.0, 27.0, 13.0, 32.0, 49.0, 43.0, 13.0, 11.0, 12.0, 18.0, 16.0, 25.0, 12.0, 29.0, 14.0, 13.0, 14.0, 31.0, 23.0, 13.0, 25.0, 37.0, 37.0, 15.0, 15.0, 10.0, 18.0, 9.0, 13.0, 11.0, 8.0, 15.0, 10.0, 9.0, 16.0, 13.0, 25.0, 88.0, 14.0, 17.0, 42.0, 13.0, 36.0, 39.0, 15.0, 19.0, 15.0, 28.0, 18.0, 29.0]
+['self', 'mode']
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+ 10%|█         | 1/10 [00:01<00:17,  1.98s/it, Episode=0, Accumulated Reward=12, Average Reward=1, Length=12, Steps=12]
+
+
+
+
+ 90%|█████████ | 9/10 [00:08<00:00,  1.17it/s, Episode=8, Accumulated Reward=25, Average Reward=1, Length=25, Steps=158]
+100%|██████████| 10/10 [00:13<00:00,  1.34s/it, Episode=9, Accumulated Reward=121, Average Reward=1, Length=121, Steps=279]
+[None]
+Job done

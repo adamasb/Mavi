@@ -1,0 +1,51 @@
+2022-09-30 17:13:14,613 INFO    StreamThr :44323 [internal.py:wandb_internal():88] W&B internal server running at pid: 44323, started at: 2022-09-30 17:13:14.611276
+2022-09-30 17:13:14,619 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: status
+2022-09-30 17:13:14,627 DEBUG   SenderThread:44323 [sender.py:send_request():315] send_request: status
+2022-09-30 17:13:14,631 DEBUG   SenderThread:44323 [sender.py:send():301] send: header
+2022-09-30 17:13:14,632 INFO    WriterThread:44323 [datastore.py:open_for_write():75] open: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/run-k47q713n.wandb
+2022-09-30 17:13:14,633 DEBUG   SenderThread:44323 [sender.py:send():301] send: run
+2022-09-30 17:13:15,606 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: check_version
+2022-09-30 17:13:15,636 INFO    SenderThread:44323 [dir_watcher.py:__init__():216] watching files in: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files
+2022-09-30 17:13:15,636 INFO    SenderThread:44323 [sender.py:_start_run_threads():912] run started: k47q713n with start time 1664550794.597897
+2022-09-30 17:13:15,636 DEBUG   SenderThread:44323 [sender.py:send():301] send: summary
+2022-09-30 17:13:15,637 INFO    SenderThread:44323 [sender.py:_save_file():1155] saving file wandb-summary.json with policy end
+2022-09-30 17:13:15,639 DEBUG   SenderThread:44323 [sender.py:send_request():315] send_request: check_version
+2022-09-30 17:13:15,877 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: run_start
+2022-09-30 17:13:15,889 DEBUG   HandlerThread:44323 [meta.py:__init__():34] meta init
+2022-09-30 17:13:15,889 DEBUG   HandlerThread:44323 [meta.py:__init__():49] meta init done
+2022-09-30 17:13:15,890 DEBUG   HandlerThread:44323 [meta.py:probe():215] probe
+2022-09-30 17:13:15,894 DEBUG   HandlerThread:44323 [meta.py:_setup_git():205] setup git
+2022-09-30 17:13:15,914 DEBUG   HandlerThread:44323 [meta.py:_setup_git():212] setup git done
+2022-09-30 17:13:15,914 DEBUG   HandlerThread:44323 [meta.py:_save_pip():53] save pip
+2022-09-30 17:13:15,919 DEBUG   HandlerThread:44323 [meta.py:_save_pip():67] save pip done
+2022-09-30 17:13:15,919 DEBUG   HandlerThread:44323 [meta.py:probe():253] probe done
+2022-09-30 17:13:16,013 DEBUG   SenderThread:44323 [sender.py:send():301] send: files
+2022-09-30 17:13:16,013 INFO    SenderThread:44323 [sender.py:_save_file():1155] saving file wandb-metadata.json with policy now
+2022-09-30 17:13:16,035 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 17:13:16,038 DEBUG   SenderThread:44323 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 17:13:16,663 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/wandb-summary.json
+2022-09-30 17:13:16,664 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/wandb-metadata.json
+2022-09-30 17:13:16,665 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/requirements.txt
+2022-09-30 17:13:16,775 DEBUG   SenderThread:44323 [sender.py:send():301] send: telemetry
+2022-09-30 17:13:17,674 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:13:17,909 INFO    Thread-21 :44323 [upload_job.py:push():139] Uploaded file /tmp/tmpv3064mjxwandb/2vf20csl-wandb-metadata.json
+2022-09-30 17:13:19,676 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:13:23,684 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:13:27,689 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:13:31,853 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 17:13:31,855 DEBUG   SenderThread:44323 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 17:13:33,706 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:13:43,729 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:13:44,142 DEBUG   SenderThread:44323 [sender.py:send():301] send: stats
+2022-09-30 17:13:45,734 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/config.yaml
+2022-09-30 17:13:47,245 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 17:13:47,246 DEBUG   SenderThread:44323 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 17:13:53,747 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:14:02,760 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 17:14:02,760 DEBUG   SenderThread:44323 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 17:14:03,776 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:14:13,794 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log
+2022-09-30 17:14:14,343 DEBUG   SenderThread:44323 [sender.py:send():301] send: stats
+2022-09-30 17:14:18,070 DEBUG   HandlerThread:44323 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 17:14:18,073 DEBUG   SenderThread:44323 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 17:14:23,810 INFO    Thread-17 :44323 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_171314-k47q713n/files/output.log

@@ -1,0 +1,39 @@
+2022-09-29 18:48:08,322	INFO trainable.py:160 -- Trainable.setup took 11.920 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-29 18:48:08,323	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+[33m(raylet)[39m [2022-09-29 18:48:08,798 E 95473 95503] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-47-56_466953_95382 is over 95% full, available space: 4606799872; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 113, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 51, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 347, in train
+    result = self.step()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2378, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2190, in try_recover_from_step_attempt
+    raise error
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 261, in training_step
+    stats = x['default_policy']['learner_stats']
+KeyError: 'default_policy'
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 113, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 51, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 347, in train
+    result = self.step()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2378, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2190, in try_recover_from_step_attempt
+    raise error
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 261, in training_step
+    stats = x['default_policy']['learner_stats']
+KeyError: 'default_policy'

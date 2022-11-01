@@ -1,0 +1,51 @@
+2022-09-30 15:34:50,390	INFO trainable.py:160 -- Trainable.setup took 23.039 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 15:34:50,392	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+[33m(raylet)[39m [2022-09-30 15:34:50,587 E 30684 30716] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-34-27_387597_30555 is over 95% full, available space: 4613144576; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 14 episodes
+training epoch 0 14 47.0 21.857142857142858
+[33m(raylet)[39m [2022-09-30 15:35:00,653 E 30684 30716] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-34-27_387597_30555 is over 95% full, available space: 4613054464; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 10 episodes
+training epoch 1 24 47.0 21.458333333333332
+log_result(...)
+Algorithm.train() result: A3C -> 3 episodes
+training epoch 2 27 47.0 21.77777777777778
+[33m(raylet)[39m [2022-09-30 15:35:10,683 E 30684 30716] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-34-27_387597_30555 is over 95% full, available space: 4612374528; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 3 episodes
+training epoch 3 30 47.0 21.633333333333333
+log_result(...)
+Algorithm.train() result: A3C -> 7 episodes
+training epoch 4 37 47.0 22.43243243243243
+[33m(raylet)[39m [2022-09-30 15:35:20,717 E 30684 30716] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-34-27_387597_30555 is over 95% full, available space: 4612030464; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 10 episodes
+training epoch 5 47 95.0 24.595744680851062
+log_result(...)
+Algorithm.train() result: A3C -> 8 episodes
+training epoch 6 55 95.0 24.436363636363637
+[33m(raylet)[39m [2022-09-30 15:35:30,783 E 30684 30716] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-34-27_387597_30555 is over 95% full, available space: 4611510272; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 3 episodes
+training epoch 7 58 95.0 24.482758620689655
+[33m(raylet)[39m [2022-09-30 15:35:40,807 E 30684 30716] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-34-27_387597_30555 is over 95% full, available space: 4611031040; capacity: 125844406272. Object creation will fail if spilling is required.
+log_result(...)
+Algorithm.train() result: A3C -> 2 episodes
+training epoch 8 60 95.0 24.766666666666666
+log_result(...)
+Algorithm.train() result: A3C -> 3 episodes
+training epoch 9 63 95.0 25.49206349206349
+[33m(raylet)[39m [2022-09-30 15:35:50,858 E 30684 30716] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-34-27_387597_30555 is over 95% full, available space: 4609777664; capacity: 125844406272. Object creation will fail if spilling is required.
+[44.0, 16.0, 14.0, 24.0, 19.0, 19.0, 21.0, 21.0, 15.0, 47.0, 14.0, 17.0, 24.0, 11.0, 23.0, 19.0, 20.0, 23.0, 14.0, 15.0, 18.0, 18.0, 23.0, 36.0, 20.0, 13.0, 40.0, 17.0, 25.0, 19.0, 31.0, 34.0, 43.0, 12.0, 18.0, 32.0, 11.0, 35.0, 26.0, 95.0, 40.0, 21.0, 21.0, 17.0, 19.0, 28.0, 24.0, 18.0, 22.0, 10.0, 22.0, 48.0, 21.0, 17.0, 30.0, 34.0, 23.0, 19.0, 44.0, 22.0, 59.0, 24.0, 37.0]
+['self', 'mode']
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+
+
+ 50%|█████     | 5/10 [00:09<00:06,  1.30s/it, Episode=4, Accumulated Reward=16, Average Reward=1, Length=16, Steps=114]
+
+
+100%|██████████| 10/10 [00:15<00:00,  1.53s/it, Episode=9, Accumulated Reward=26, Average Reward=1, Length=26, Steps=230]
+[None]
+Job done

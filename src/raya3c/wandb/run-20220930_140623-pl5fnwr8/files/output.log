@@ -1,0 +1,16 @@
+
+Backend TkAgg is interactive backend. Turning interactive mode on.
+[33m(raylet)[39m [2022-09-30 14:06:25,682 E 20390 20421] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-06-01_916906_20272 is over 95% full, available space: 4615876608; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:06:35,703 E 20390 20421] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-06-01_916906_20272 is over 95% full, available space: 4615880704; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:06:45,717 E 20390 20421] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-06-01_916906_20272 is over 95% full, available space: 4615942144; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:06:55,738 E 20390 20421] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-06-01_916906_20272 is over 95% full, available space: 4615938048; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:07:05,751 E 20390 20421] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-06-01_916906_20272 is over 95% full, available space: 4615905280; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 99, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 38, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 397, in train
+    self.log_result(result)
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 220, in log_result
+    return super().log_result(result)

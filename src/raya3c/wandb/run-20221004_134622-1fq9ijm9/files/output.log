@@ -1,0 +1,152 @@
+2022-10-04 13:46:24,249	INFO trainable.py:160 -- Trainable.setup took 23.465 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-10-04 13:46:24,252	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main trainign step 0
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A
+[36m(RolloutWorker pid=33761)[39m    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[33m(raylet)[39m [2022-10-04 13:46:28,760 E 33561 33579] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-10-04_13-46-00_999029_33436 is over 95% full, available space: 3888988160; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+Backend TkAgg is interactive backend. Turning interactive mode on.
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[36m(RolloutWorker pid=33761)[39m [47m   [31m[49m*0*[39m         [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m       A    [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m   [49m            [47m   
+[36m(RolloutWorker pid=33761)[39m [47m                  
+[33m(raylet)[39m [2022-10-04 13:46:38,774 E 33561 33579] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-10-04_13-46-00_999029_33436 is over 95% full, available space: 3888832512; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-10-04 13:46:48,786 E 33561 33579] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-10-04_13-46-00_999029_33436 is over 95% full, available space: 3888807936; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-10-04 13:46:58,800 E 33561 33579] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-10-04_13-46-00_999029_33436 is over 95% full, available space: 3888807936; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example_maze.py", line 105, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example_maze.py", line 43, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 347, in train
+    result = self.step()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2386, in _run_one_training_iteration
+    return results, train_iter_ctx

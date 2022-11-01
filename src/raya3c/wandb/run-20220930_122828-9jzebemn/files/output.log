@@ -1,0 +1,18 @@
+
+training epoch 0 37 68.0 24.027027027027028
+[33m(raylet)[39m [2022-09-30 12:28:31,385 E 8915 8945] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-28-08_565855_8817 is over 95% full, available space: 4580892672; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 1 95 84.0 25.778947368421054
+[33m(raylet)[39m [2022-09-30 12:28:41,396 E 8915 8945] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-28-08_565855_8817 is over 95% full, available space: 4580921344; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 12:28:51,412 E 8915 8945] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_12-28-08_565855_8817 is over 95% full, available space: 4580904960; capacity: 125844406272. Object creation will fail if spilling is required.
+[25.0, 18.0, 10.0, 15.0, 19.0, 15.0, 46.0, 48.0, 33.0, 12.0, 19.0, 16.0, 18.0, 15.0, 12.0, 63.0, 68.0, 12.0, 19.0, 17.0, 22.0, 30.0, 17.0, 23.0, 59.0, 17.0, 15.0, 13.0, 17.0, 18.0, 22.0, 24.0, 15.0, 40.0, 14.0, 10.0, 33.0, 14.0, 19.0, 21.0, 19.0, 13.0, 14.0, 15.0, 84.0, 33.0, 24.0, 19.0, 39.0, 22.0, 8.0, 16.0, 19.0, 54.0, 36.0, 58.0, 13.0, 45.0, 13.0, 55.0, 32.0, 45.0, 33.0, 17.0, 19.0, 40.0, 17.0, 52.0, 19.0, 39.0, 22.0, 13.0, 16.0, 14.0, 28.0, 27.0, 24.0, 10.0, 18.0, 19.0, 16.0, 67.0, 14.0, 22.0, 16.0, 15.0, 16.0, 47.0, 13.0, 21.0, 28.0, 32.0, 34.0, 26.0, 36.0]
+['self', 'mode']
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+ 10%|█         | 1/10 [00:01<00:14,  1.63s/it, Episode=0, Accumulated Reward=14, Average Reward=1, Length=14, Steps=14]
+
+
+
+
+100%|██████████| 10/10 [00:10<00:00,  1.09s/it, Episode=9, Accumulated Reward=25, Average Reward=1, Length=25, Steps=231]
+[None]
+Job done

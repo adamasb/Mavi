@@ -1,0 +1,1 @@
+{"allreduce_latency": 0.0, "grad_gnorm": 6.511486530303955, "cur_lr": 0.001, "entropy_coeff": 0.01, "policy_entropy": 3.014244794845581, "policy_loss": -0.5326768755912781, "vf_loss": 0.027914246544241905, "total_loss": -0.5488621592521667, "_timestamp": 1664527403.9497154, "_runtime": 178.11785531044006, "_step": 2892}

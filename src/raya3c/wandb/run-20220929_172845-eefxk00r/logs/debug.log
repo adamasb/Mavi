@@ -1,0 +1,25 @@
+2022-09-29 17:28:45,736 INFO    MainThread:87653 [wandb_setup.py:_flush():68] Configure stats pid to 87653
+2022-09-29 17:28:45,737 INFO    MainThread:87653 [wandb_setup.py:_flush():68] Loading settings from /home/tuhe/.config/wandb/settings
+2022-09-29 17:28:45,737 INFO    MainThread:87653 [wandb_setup.py:_flush():68] Loading settings from /home/tuhe/Documents/mavi/src/raya3c/wandb/settings
+2022-09-29 17:28:45,737 INFO    MainThread:87653 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-09-29 17:28:45,737 INFO    MainThread:87653 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'src/raya3c/example.py', 'program': '/home/tuhe/Documents/mavi/src/raya3c/example.py'}
+2022-09-29 17:28:45,737 INFO    MainThread:87653 [wandb_init.py:_log_setup():476] Logging user logs to /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220929_172845-eefxk00r/logs/debug.log
+2022-09-29 17:28:45,738 INFO    MainThread:87653 [wandb_init.py:_log_setup():477] Logging internal logs to /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220929_172845-eefxk00r/logs/debug-internal.log
+2022-09-29 17:28:45,738 INFO    MainThread:87653 [wandb_init.py:init():516] calling init triggers
+2022-09-29 17:28:45,738 INFO    MainThread:87653 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2022-09-29 17:28:45,738 INFO    MainThread:87653 [wandb_init.py:init():569] starting backend
+2022-09-29 17:28:45,738 INFO    MainThread:87653 [wandb_init.py:init():573] setting up manager
+2022-09-29 17:28:45,746 INFO    MainThread:87653 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-09-29 17:28:45,756 INFO    MainThread:87653 [wandb_init.py:init():580] backend started and connected
+2022-09-29 17:28:45,759 INFO    MainThread:87653 [wandb_init.py:init():658] updated telemetry
+2022-09-29 17:28:45,778 INFO    MainThread:87653 [wandb_init.py:init():692] communicating run to backend with 30 second timeout
+2022-09-29 17:28:46,380 INFO    MainThread:87653 [wandb_run.py:_on_init():1974] communicating current version
+2022-09-29 17:28:46,592 INFO    MainThread:87653 [wandb_run.py:_on_init():1978] got version response 
+2022-09-29 17:28:46,592 INFO    MainThread:87653 [wandb_init.py:init():727] starting run threads in backend
+2022-09-29 17:28:46,691 INFO    MainThread:87653 [wandb_run.py:_console_start():1954] atexit reg
+2022-09-29 17:28:46,691 INFO    MainThread:87653 [wandb_run.py:_redirect():1812] redirect: SettingsConsole.WRAP_RAW
+2022-09-29 17:28:46,691 INFO    MainThread:87653 [wandb_run.py:_redirect():1877] Wrapping output streams.
+2022-09-29 17:28:46,691 INFO    MainThread:87653 [wandb_run.py:_redirect():1899] Redirects installed.
+2022-09-29 17:28:46,692 INFO    MainThread:87653 [wandb_init.py:init():764] run started, returning control to user process
+2022-09-29 17:29:09,905 WARNING MsgRouterThr:87653 [router.py:message_loop():77] message_loop has been closed

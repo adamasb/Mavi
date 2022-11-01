@@ -1,0 +1,32 @@
+2022-09-30 15:58:43,424 INFO    StreamThr :34472 [internal.py:wandb_internal():88] W&B internal server running at pid: 34472, started at: 2022-09-30 15:58:43.423669
+2022-09-30 15:58:43,433 DEBUG   HandlerThread:34472 [handler.py:handle_request():138] handle_request: status
+2022-09-30 15:58:43,433 DEBUG   SenderThread:34472 [sender.py:send_request():315] send_request: status
+2022-09-30 15:58:43,436 DEBUG   SenderThread:34472 [sender.py:send():301] send: header
+2022-09-30 15:58:43,437 INFO    WriterThread:34472 [datastore.py:open_for_write():75] open: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_155843-x54ea7o6/run-x54ea7o6.wandb
+2022-09-30 15:58:43,437 DEBUG   SenderThread:34472 [sender.py:send():301] send: run
+2022-09-30 15:58:44,069 DEBUG   HandlerThread:34472 [handler.py:handle_request():138] handle_request: check_version
+2022-09-30 15:58:44,077 INFO    SenderThread:34472 [dir_watcher.py:__init__():216] watching files in: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_155843-x54ea7o6/files
+2022-09-30 15:58:44,077 INFO    SenderThread:34472 [sender.py:_start_run_threads():912] run started: x54ea7o6 with start time 1664546323.408573
+2022-09-30 15:58:44,077 DEBUG   SenderThread:34472 [sender.py:send():301] send: summary
+2022-09-30 15:58:44,077 INFO    SenderThread:34472 [sender.py:_save_file():1155] saving file wandb-summary.json with policy end
+2022-09-30 15:58:44,078 DEBUG   SenderThread:34472 [sender.py:send_request():315] send_request: check_version
+2022-09-30 15:58:44,335 DEBUG   HandlerThread:34472 [handler.py:handle_request():138] handle_request: run_start
+2022-09-30 15:58:44,337 DEBUG   HandlerThread:34472 [meta.py:__init__():34] meta init
+2022-09-30 15:58:44,337 DEBUG   HandlerThread:34472 [meta.py:__init__():49] meta init done
+2022-09-30 15:58:44,337 DEBUG   HandlerThread:34472 [meta.py:probe():215] probe
+2022-09-30 15:58:44,339 DEBUG   HandlerThread:34472 [meta.py:_setup_git():205] setup git
+2022-09-30 15:58:44,347 DEBUG   HandlerThread:34472 [meta.py:_setup_git():212] setup git done
+2022-09-30 15:58:44,347 DEBUG   HandlerThread:34472 [meta.py:_save_pip():53] save pip
+2022-09-30 15:58:44,348 DEBUG   HandlerThread:34472 [meta.py:_save_pip():67] save pip done
+2022-09-30 15:58:44,348 DEBUG   HandlerThread:34472 [meta.py:probe():253] probe done
+2022-09-30 15:58:44,385 DEBUG   SenderThread:34472 [sender.py:send():301] send: files
+2022-09-30 15:58:44,386 INFO    SenderThread:34472 [sender.py:_save_file():1155] saving file wandb-metadata.json with policy now
+2022-09-30 15:58:44,392 DEBUG   HandlerThread:34472 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 15:58:44,392 DEBUG   SenderThread:34472 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 15:58:44,829 DEBUG   SenderThread:34472 [sender.py:send():301] send: telemetry
+2022-09-30 15:58:45,083 INFO    Thread-13 :34472 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_155843-x54ea7o6/files/requirements.txt
+2022-09-30 15:58:45,084 INFO    Thread-13 :34472 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_155843-x54ea7o6/files/wandb-metadata.json
+2022-09-30 15:58:45,084 INFO    Thread-13 :34472 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_155843-x54ea7o6/files/output.log
+2022-09-30 15:58:45,085 INFO    Thread-13 :34472 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_155843-x54ea7o6/files/wandb-summary.json
+2022-09-30 15:58:45,421 INFO    Thread-17 :34472 [upload_job.py:push():139] Uploaded file /tmp/tmpg8ywjetpwandb/32cublov-wandb-metadata.json
+2022-09-30 15:58:47,078 INFO    Thread-13 :34472 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_155843-x54ea7o6/files/output.log

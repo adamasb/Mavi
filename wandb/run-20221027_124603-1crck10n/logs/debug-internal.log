@@ -1,0 +1,32 @@
+2022-10-27 12:46:03,271 INFO    StreamThr :17156 [internal.py:wandb_internal():88] W&B internal server running at pid: 17156, started at: 2022-10-27 12:46:03.270018
+2022-10-27 12:46:03,288 DEBUG   HandlerThread:17156 [handler.py:handle_request():138] handle_request: status
+2022-10-27 12:46:03,295 DEBUG   SenderThread:17156 [sender.py:send_request():317] send_request: status
+2022-10-27 12:46:03,311 DEBUG   SenderThread:17156 [sender.py:send():303] send: header
+2022-10-27 12:46:03,312 INFO    WriterThread:17156 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\run-1crck10n.wandb
+2022-10-27 12:46:03,312 DEBUG   SenderThread:17156 [sender.py:send():303] send: run
+2022-10-27 12:46:03,985 DEBUG   HandlerThread:17156 [handler.py:handle_request():138] handle_request: check_version
+2022-10-27 12:46:04,016 INFO    SenderThread:17156 [dir_watcher.py:__init__():216] watching files in: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\files
+2022-10-27 12:46:04,020 INFO    SenderThread:17156 [sender.py:_start_run_threads():928] run started: 1crck10n with start time 1666867563.248662
+2022-10-27 12:46:04,021 DEBUG   SenderThread:17156 [sender.py:send():303] send: summary
+2022-10-27 12:46:04,022 INFO    SenderThread:17156 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-27 12:46:04,022 DEBUG   SenderThread:17156 [sender.py:send_request():317] send_request: check_version
+2022-10-27 12:46:04,177 DEBUG   HandlerThread:17156 [handler.py:handle_request():138] handle_request: run_start
+2022-10-27 12:46:04,199 DEBUG   HandlerThread:17156 [meta.py:__init__():34] meta init
+2022-10-27 12:46:04,200 DEBUG   HandlerThread:17156 [meta.py:__init__():49] meta init done
+2022-10-27 12:46:04,200 DEBUG   HandlerThread:17156 [meta.py:probe():215] probe
+2022-10-27 12:46:04,236 DEBUG   HandlerThread:17156 [git.py:repo():40] git repository is invalid
+2022-10-27 12:46:04,236 DEBUG   HandlerThread:17156 [meta.py:_save_pip():53] save pip
+2022-10-27 12:46:04,245 DEBUG   HandlerThread:17156 [meta.py:_save_pip():67] save pip done
+2022-10-27 12:46:04,245 DEBUG   HandlerThread:17156 [meta.py:probe():253] probe done
+2022-10-27 12:46:04,580 DEBUG   SenderThread:17156 [sender.py:send():303] send: files
+2022-10-27 12:46:04,580 INFO    SenderThread:17156 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-10-27 12:46:04,610 DEBUG   HandlerThread:17156 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-27 12:46:04,610 DEBUG   SenderThread:17156 [sender.py:send_request():317] send_request: stop_status
+2022-10-27 12:46:04,889 DEBUG   SenderThread:17156 [sender.py:send():303] send: telemetry
+2022-10-27 12:46:05,033 INFO    Thread-23 :17156 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\files\wandb-metadata.json
+2022-10-27 12:46:05,033 INFO    Thread-23 :17156 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\files\requirements.txt
+2022-10-27 12:46:05,033 INFO    Thread-23 :17156 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\files\output.log
+2022-10-27 12:46:05,033 INFO    Thread-23 :17156 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\files\wandb-summary.json
+2022-10-27 12:46:05,288 INFO    Thread-27 :17156 [upload_job.py:push():143] Uploaded file C:\Users\adams\AppData\Local\Temp\tmpkdqdmpkhwandb\2rzroed0-wandb-metadata.json
+2022-10-27 12:46:07,048 INFO    Thread-23 :17156 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\files\output.log
+2022-10-27 12:46:11,083 INFO    Thread-23 :17156 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221027_124603-1crck10n\files\output.log

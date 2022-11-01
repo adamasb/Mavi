@@ -1,0 +1,507 @@
+2022-09-30 15:29:28,302	INFO trainable.py:160 -- Trainable.setup took 19.998 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 15:29:28,303	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 15:29:32,803 E 28959 28984] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-29-08_368094_28861 is over 95% full, available space: 4621959168; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 18 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 360, 'num_env_steps_trained': 360, 'num_agent_steps_sampled': 360, 'num_agent_steps_trained': 360}
+training epoch 0 18 39.0 20.333333333333332
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 20 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 720, 'num_env_steps_trained': 720, 'num_agent_steps_sampled': 720, 'num_agent_steps_trained': 720}
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+training epoch 1 38 39.0 18.92105263157895
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 15:29:42,829 E 28959 28984] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-29-08_368094_28861 is over 95% full, available space: 4621746176; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 32 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 1380, 'num_env_steps_trained': 1380, 'num_agent_steps_sampled': 1380, 'num_agent_steps_trained': 1380}
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+training epoch 2 70 45.0 19.785714285714285
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 16 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 1790, 'num_env_steps_trained': 1790, 'num_agent_steps_sampled': 1790, 'num_agent_steps_trained': 1790}
+training epoch 3 86 52.0 20.96511627906977
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 15:29:52,847 E 28959 28984] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-29-08_368094_28861 is over 95% full, available space: 4618162176; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 20 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 2240, 'num_env_steps_trained': 2240, 'num_agent_steps_sampled': 2240, 'num_agent_steps_trained': 2240}
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+training epoch 4 100 89.0 21.37
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 25 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 2750, 'num_env_steps_trained': 2750, 'num_agent_steps_sampled': 2750, 'num_agent_steps_trained': 2750}
+training epoch 5 100 89.0 21.41
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 15:30:02,918 E 28959 28984] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-29-08_368094_28861 is over 95% full, available space: 4622635008; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 8 episodes
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.930357933044434, 'policy_loss': 35.52493667602539, 'vf_loss': 165.97679138183594, 'total_loss': 118.44403076171875}}}, 'num_env_steps_sampled': 2940, 'num_env_steps_trained': 2940, 'num_agent_steps_sampled': 2940, 'num_agent_steps_trained': 2940}
+training epoch 6 100 89.0 21.96
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 29 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 3560, 'num_env_steps_trained': 3560, 'num_agent_steps_sampled': 3560, 'num_agent_steps_trained': 3560}
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+training epoch 7 100 89.0 22.12
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[33m(raylet)[39m [2022-09-30 15:30:12,948 E 28959 28984] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-29-08_368094_28861 is over 95% full, available space: 4618326016; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 28 episodes
+ON TRAIN {'learner': {'default_policy': {'learner_stats': {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.931427955627441, 'policy_loss': 34.37286376953125, 'vf_loss': 151.9268798828125, 'total_loss': 110.2669906616211}}}, 'num_env_steps_sampled': 4180, 'num_env_steps_trained': 4180, 'num_agent_steps_sampled': 4180, 'num_agent_steps_trained': 4180}
+training epoch 8 100 63.0 21.09
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+[36m(RolloutWorker pid=29149)[39m on_sample_end, returned sample batch of size 10
+log_result(...)
+Algorithm.train() result: A3C -> 15 episodes
+ON TRAIN {'learner': {}, 'num_env_steps_sampled': 4580, 'num_env_steps_trained': 4580, 'num_agent_steps_sampled': 4580, 'num_agent_steps_trained': 4580}
+training epoch 9 100 63.0 22.51
+[33m(raylet)[39m [2022-09-30 15:30:22,965 E 28959 28984] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_15-29-08_368094_28861 is over 95% full, available space: 4614225920; capacity: 125844406272. Object creation will fail if spilling is required.
+[16.0, 39.0, 22.0, 17.0, 18.0, 13.0, 22.0, 10.0, 11.0, 28.0, 39.0, 31.0, 20.0, 17.0, 17.0, 25.0, 13.0, 20.0, 16.0, 21.0, 25.0, 21.0, 32.0, 21.0, 24.0, 20.0, 14.0, 25.0, 63.0, 33.0, 21.0, 14.0, 16.0, 13.0, 16.0, 36.0, 30.0, 17.0, 37.0, 20.0, 16.0, 10.0, 23.0, 15.0, 32.0, 21.0, 14.0, 10.0, 15.0, 22.0, 25.0, 12.0, 31.0, 20.0, 27.0, 17.0, 13.0, 44.0, 11.0, 21.0, 19.0, 12.0, 23.0, 10.0, 15.0, 14.0, 11.0, 13.0, 23.0, 30.0, 18.0, 20.0, 11.0, 12.0, 13.0, 37.0, 24.0, 31.0, 23.0, 28.0, 34.0, 35.0, 30.0, 21.0, 33.0, 35.0, 13.0, 42.0, 39.0, 17.0, 33.0, 14.0, 23.0, 32.0, 13.0, 42.0, 21.0, 11.0, 38.0, 26.0]
+['self', 'mode']
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+
+
+
+ 70%|███████   | 7/10 [00:08<00:02,  1.03it/s, Episode=6, Accumulated Reward=16, Average Reward=1, Length=16, Steps=138]
+100%|██████████| 10/10 [00:11<00:00,  1.11s/it, Episode=9, Accumulated Reward=22, Average Reward=1, Length=22, Steps=203]
+[None]
+Job done

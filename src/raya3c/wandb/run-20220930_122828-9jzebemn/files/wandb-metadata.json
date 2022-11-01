@@ -1,0 +1,22 @@
+{
+    "os": "Linux-5.15.0-48-generic-x86_64-with-glibc2.35",
+    "python": "3.10.4",
+    "heartbeatAt": "2022-09-30T10:28:29.777642",
+    "startedAt": "2022-09-30T10:28:28.717257",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/tuhe/Documents/mavi/src/raya3c/example.py",
+    "codePath": "src/raya3c/example.py",
+    "git": {
+        "remote": "https://lab.compute.dtu.dk/tuhe/mavi.git",
+        "commit": "5cbc363e5059922b0b1118e671dbf2d53607398f"
+    },
+    "email": "tuhe@dtu.dk\\n",
+    "root": "/home/tuhe/Documents/mavi",
+    "host": "thp",
+    "username": "tuhe",
+    "executable": "/usr/bin/python3.10"
+}

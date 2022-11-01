@@ -1,0 +1,224 @@
+2022-09-30 15:34:48,769 INFO    StreamThr :30966 [internal.py:wandb_internal():88] W&B internal server running at pid: 30966, started at: 2022-09-30 15:34:48.767653
+2022-09-30 15:34:48,788 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: status
+2022-09-30 15:34:48,795 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: status
+2022-09-30 15:34:48,798 DEBUG   SenderThread:30966 [sender.py:send():301] send: header
+2022-09-30 15:34:48,798 INFO    WriterThread:30966 [datastore.py:open_for_write():75] open: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/run-2t628ui3.wandb
+2022-09-30 15:34:48,799 DEBUG   SenderThread:30966 [sender.py:send():301] send: run
+2022-09-30 15:34:49,866 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: check_version
+2022-09-30 15:34:49,869 INFO    SenderThread:30966 [dir_watcher.py:__init__():216] watching files in: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files
+2022-09-30 15:34:49,870 INFO    SenderThread:30966 [sender.py:_start_run_threads():912] run started: 2t628ui3 with start time 1664544888.74502
+2022-09-30 15:34:49,871 DEBUG   SenderThread:30966 [sender.py:send():301] send: summary
+2022-09-30 15:34:49,871 INFO    SenderThread:30966 [sender.py:_save_file():1155] saving file wandb-summary.json with policy end
+2022-09-30 15:34:49,872 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: check_version
+2022-09-30 15:34:50,241 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: run_start
+2022-09-30 15:34:50,250 DEBUG   HandlerThread:30966 [meta.py:__init__():34] meta init
+2022-09-30 15:34:50,251 DEBUG   HandlerThread:30966 [meta.py:__init__():49] meta init done
+2022-09-30 15:34:50,251 DEBUG   HandlerThread:30966 [meta.py:probe():215] probe
+2022-09-30 15:34:50,255 DEBUG   HandlerThread:30966 [meta.py:_setup_git():205] setup git
+2022-09-30 15:34:50,266 DEBUG   HandlerThread:30966 [meta.py:_setup_git():212] setup git done
+2022-09-30 15:34:50,267 DEBUG   HandlerThread:30966 [meta.py:_save_pip():53] save pip
+2022-09-30 15:34:50,268 DEBUG   HandlerThread:30966 [meta.py:_save_pip():67] save pip done
+2022-09-30 15:34:50,268 DEBUG   HandlerThread:30966 [meta.py:probe():253] probe done
+2022-09-30 15:34:50,376 DEBUG   SenderThread:30966 [sender.py:send():301] send: files
+2022-09-30 15:34:50,377 INFO    SenderThread:30966 [sender.py:_save_file():1155] saving file wandb-metadata.json with policy now
+2022-09-30 15:34:50,389 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 15:34:50,390 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 15:34:50,876 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/requirements.txt
+2022-09-30 15:34:50,878 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/wandb-summary.json
+2022-09-30 15:34:50,879 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/wandb-metadata.json
+2022-09-30 15:34:51,174 DEBUG   SenderThread:30966 [sender.py:send():301] send: telemetry
+2022-09-30 15:34:51,871 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_created():275] file/dir created: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:34:52,269 INFO    Thread-17 :30966 [upload_job.py:push():139] Uploaded file /tmp/tmpiyaq86pvwandb/1yaqfyu7-wandb-metadata.json
+2022-09-30 15:34:53,872 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:34:58,876 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:01,879 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:02,879 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:06,192 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 15:35:06,192 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 15:35:08,884 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:11,888 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:14,890 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:18,459 DEBUG   SenderThread:30966 [sender.py:send():301] send: stats
+2022-09-30 15:35:18,893 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:20,895 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/config.yaml
+2022-09-30 15:35:21,897 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:22,266 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 15:35:22,266 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 15:35:24,901 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:30,905 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:31,908 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:34,909 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:37,890 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 15:35:37,891 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 15:35:41,918 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:42,918 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:46,933 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:48,626 DEBUG   SenderThread:30966 [sender.py:send():301] send: stats
+2022-09-30 15:35:51,939 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:52,941 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:54,869 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: stop_status
+2022-09-30 15:35:54,869 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: stop_status
+2022-09-30 15:35:55,944 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:56,945 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:35:58,949 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:00,952 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:01,954 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:02,958 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:04,958 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:05,507 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:05,507 DEBUG   SenderThread:30966 [sender.py:send():301] send: exit
+2022-09-30 15:36:05,507 INFO    SenderThread:30966 [sender.py:send_exit():437] handling exit code: 0
+2022-09-30 15:36:05,508 INFO    SenderThread:30966 [sender.py:send_exit():439] handling runtime: 75
+2022-09-30 15:36:05,508 INFO    SenderThread:30966 [sender.py:_save_file():1155] saving file wandb-summary.json with policy end
+2022-09-30 15:36:05,508 INFO    SenderThread:30966 [sender.py:send_exit():445] send defer
+2022-09-30 15:36:05,509 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:05,509 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:05,512 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 0
+2022-09-30 15:36:05,512 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:05,512 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 0
+2022-09-30 15:36:05,513 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 1
+2022-09-30 15:36:05,516 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:05,517 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 1
+2022-09-30 15:36:05,561 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:05,562 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 1
+2022-09-30 15:36:05,562 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 2
+2022-09-30 15:36:05,564 DEBUG   SenderThread:30966 [sender.py:send():301] send: stats
+2022-09-30 15:36:05,566 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:05,567 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 2
+2022-09-30 15:36:05,567 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:05,569 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 2
+2022-09-30 15:36:05,569 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 3
+2022-09-30 15:36:05,570 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:05,570 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 3
+2022-09-30 15:36:05,571 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:05,571 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 3
+2022-09-30 15:36:05,571 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 4
+2022-09-30 15:36:05,577 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:05,578 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 4
+2022-09-30 15:36:05,579 DEBUG   SenderThread:30966 [sender.py:send():301] send: summary
+2022-09-30 15:36:05,580 INFO    SenderThread:30966 [sender.py:_save_file():1155] saving file wandb-summary.json with policy end
+2022-09-30 15:36:05,582 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:05,582 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 4
+2022-09-30 15:36:05,583 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 5
+2022-09-30 15:36:05,585 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:05,585 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 5
+2022-09-30 15:36:05,585 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:05,586 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 5
+2022-09-30 15:36:05,586 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 6
+2022-09-30 15:36:05,588 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:05,589 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 6
+2022-09-30 15:36:05,594 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:05,595 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 6
+2022-09-30 15:36:05,613 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:05,959 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/wandb-summary.json
+2022-09-30 15:36:06,960 INFO    Thread-13 :30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:08,076 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 7
+2022-09-30 15:36:08,076 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:08,077 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:08,078 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 7
+2022-09-30 15:36:08,078 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:08,079 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 7
+2022-09-30 15:36:08,079 INFO    SenderThread:30966 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-09-30 15:36:08,180 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:08,966 INFO    SenderThread:30966 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:08,972 INFO    SenderThread:30966 [dir_watcher.py:finish():392] scan: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files
+2022-09-30 15:36:08,974 INFO    SenderThread:30966 [dir_watcher.py:finish():406] scan save: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log output.log
+2022-09-30 15:36:08,977 INFO    SenderThread:30966 [dir_watcher.py:finish():406] scan save: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/requirements.txt requirements.txt
+2022-09-30 15:36:08,995 INFO    SenderThread:30966 [dir_watcher.py:finish():406] scan save: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/config.yaml config.yaml
+2022-09-30 15:36:09,004 INFO    SenderThread:30966 [dir_watcher.py:finish():406] scan save: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/wandb-metadata.json wandb-metadata.json
+2022-09-30 15:36:09,004 INFO    SenderThread:30966 [dir_watcher.py:finish():406] scan save: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/wandb-summary.json wandb-summary.json
+2022-09-30 15:36:09,014 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 8
+2022-09-30 15:36:09,016 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,018 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:09,018 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 8
+2022-09-30 15:36:09,023 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:09,024 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 8
+2022-09-30 15:36:09,025 INFO    SenderThread:30966 [file_pusher.py:finish():168] shutting down file pusher
+2022-09-30 15:36:09,119 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,119 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,221 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,221 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,323 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,323 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,426 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,426 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,529 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,532 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,635 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,636 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,739 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,740 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,843 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,844 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:09,950 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:09,951 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,054 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,054 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,157 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,159 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,262 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,262 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,370 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,370 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,483 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,484 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,586 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,586 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,688 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,688 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,790 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,790 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,893 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,894 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:10,996 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:10,996 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:11,101 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:11,116 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:11,227 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:11,229 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:11,334 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:11,334 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:11,438 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:11,440 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:11,480 INFO    Thread-19 :30966 [upload_job.py:push():139] Uploaded file /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/requirements.txt
+2022-09-30 15:36:11,493 INFO    Thread-20 :30966 [upload_job.py:push():139] Uploaded file /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/config.yaml
+2022-09-30 15:36:11,508 INFO    Thread-18 :30966 [upload_job.py:push():139] Uploaded file /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/output.log
+2022-09-30 15:36:11,526 INFO    Thread-21 :30966 [upload_job.py:push():139] Uploaded file /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/files/wandb-summary.json
+2022-09-30 15:36:11,552 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:11,553 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:11,659 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:11,659 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:11,727 INFO    Thread-12 (_thread_body):30966 [sender.py:transition_state():458] send defer: 9
+2022-09-30 15:36:11,728 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:11,729 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 9
+2022-09-30 15:36:11,730 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:11,730 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 9
+2022-09-30 15:36:11,762 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:12,184 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 10
+2022-09-30 15:36:12,186 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:12,189 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:12,189 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 10
+2022-09-30 15:36:12,192 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:12,193 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 10
+2022-09-30 15:36:12,193 INFO    SenderThread:30966 [sender.py:transition_state():458] send defer: 11
+2022-09-30 15:36:12,200 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: defer
+2022-09-30 15:36:12,201 DEBUG   SenderThread:30966 [sender.py:send():301] send: final
+2022-09-30 15:36:12,201 INFO    HandlerThread:30966 [handler.py:handle_request_defer():161] handle defer: 11
+2022-09-30 15:36:12,201 DEBUG   SenderThread:30966 [sender.py:send():301] send: footer
+2022-09-30 15:36:12,202 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: defer
+2022-09-30 15:36:12,202 INFO    SenderThread:30966 [sender.py:send_request_defer():454] handle sender defer: 11
+2022-09-30 15:36:12,299 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: poll_exit
+2022-09-30 15:36:12,300 DEBUG   SenderThread:30966 [sender.py:send_request():315] send_request: poll_exit
+2022-09-30 15:36:12,301 INFO    SenderThread:30966 [file_pusher.py:join():173] waiting for file pusher
+2022-09-30 15:36:13,168 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: sampled_history
+2022-09-30 15:36:13,174 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: get_summary
+2022-09-30 15:36:13,177 INFO    MainThread:30966 [wandb_run.py:_footer_history_summary_info():3321] rendering history
+2022-09-30 15:36:13,178 INFO    MainThread:30966 [wandb_run.py:_footer_history_summary_info():3353] rendering summary
+2022-09-30 15:36:13,179 INFO    MainThread:30966 [wandb_run.py:_footer_sync_info():3277] logging synced files
+2022-09-30 15:36:13,184 DEBUG   HandlerThread:30966 [handler.py:handle_request():138] handle_request: shutdown
+2022-09-30 15:36:13,186 INFO    HandlerThread:30966 [handler.py:finish():807] shutting down handler
+2022-09-30 15:36:13,198 INFO    WriterThread:30966 [datastore.py:close():279] close: /home/tuhe/Documents/mavi/src/raya3c/wandb/run-20220930_153448-2t628ui3/run-2t628ui3.wandb
+2022-09-30 15:36:14,065 INFO    SenderThread:30966 [sender.py:finish():1315] shutting down sender
+2022-09-30 15:36:14,066 INFO    SenderThread:30966 [file_pusher.py:finish():168] shutting down file pusher
+2022-09-30 15:36:14,066 INFO    SenderThread:30966 [file_pusher.py:join():173] waiting for file pusher
+2022-09-30 15:36:14,191 INFO    MainThread:30966 [internal.py:handle_exit():78] Internal process exited

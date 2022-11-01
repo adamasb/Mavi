@@ -1,0 +1,18 @@
+2022-09-30 17:13:16,028	INFO trainable.py:160 -- Trainable.setup took 30.139 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 17:13:16,030	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main trainign step 0
+Backend TkAgg is interactive backend. Turning interactive mode on.
+[33m(raylet)[39m [2022-09-30 17:13:21,892 E 44076 44108] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_17-12-45_976499_43966 is over 95% full, available space: 4559314944; capacity: 125844406272. Object creation will fail if spilling is required.
+> training_step. No policy.
+[33m(raylet)[39m [2022-09-30 17:13:31,912 E 44076 44108] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_17-12-45_976499_43966 is over 95% full, available space: 4559327232; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 17:13:41,928 E 44076 44108] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_17-12-45_976499_43966 is over 95% full, available space: 4559343616; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 17:13:51,947 E 44076 44108] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_17-12-45_976499_43966 is over 95% full, available space: 4559290368; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 17:14:01,960 E 44076 44108] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_17-12-45_976499_43966 is over 95% full, available space: 4559265792; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 17:14:11,974 E 44076 44108] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_17-12-45_976499_43966 is over 95% full, available space: 4559253504; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 101, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 39, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 352, in train
+    #     print("No gradient information.s")

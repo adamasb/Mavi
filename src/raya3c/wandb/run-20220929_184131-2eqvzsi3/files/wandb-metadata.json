@@ -1,0 +1,35 @@
+{
+    "os": "Linux-5.15.0-48-generic-x86_64-with-glibc2.35",
+    "python": "3.10.4",
+    "heartbeatAt": "2022-09-29T16:41:32.294941",
+    "startedAt": "2022-09-29T16:41:31.314519",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "--node-ip-address=10.197.106.213",
+        "--node-manager-port=41723",
+        "--object-store-name=/tmp/ray/session_2022-09-29_18-41-13_327702_94507/sockets/plasma_store",
+        "--raylet-name=/tmp/ray/session_2022-09-29_18-41-13_327702_94507/sockets/raylet",
+        "--redis-address=None",
+        "--storage=None",
+        "--temp-dir=/tmp/ray",
+        "--metrics-agent-port=43397",
+        "--logging-rotate-bytes=536870912",
+        "--logging-rotate-backup-count=5",
+        "--gcs-address=10.197.106.213:56001",
+        "--redis-password=5241590000000000",
+        "--startup-token=4"
+    ],
+    "state": "running",
+    "program": "/home/tuhe/.local/lib/python3.10/site-packages/ray/_private/workers/default_worker.py",
+    "git": {
+        "remote": "https://lab.compute.dtu.dk/tuhe/mavi.git",
+        "commit": "ebb6973b7f6a902ba330693c589b78a42b99ebfa"
+    },
+    "email": "tuhe@dtu.dk\\n",
+    "root": "/home/tuhe/Documents/mavi",
+    "host": "thp",
+    "username": "tuhe",
+    "executable": "/usr/bin/python3.10"
+}

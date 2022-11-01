@@ -1,0 +1,167 @@
+2022-09-29 18:52:18,844	INFO trainable.py:160 -- Trainable.setup took 13.223 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-29 18:52:18,845	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+training epoch 0 74 67.0 19.87837837837838
+[33m(raylet)[39m [2022-09-29 18:52:27,824 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4604739584; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 1 100 102.0 21.94
+training epoch 2 100 102.0 22.94
+[33m(raylet)[39m [2022-09-29 18:52:37,855 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4604555264; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 3 100 60.0 21.89
+training epoch 4 100 60.0 23.84
+[33m(raylet)[39m [2022-09-29 18:52:47,869 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4604022784; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 5 100 60.0 23.33
+training epoch 6 100 55.0 21.5
+[33m(raylet)[39m [2022-09-29 18:52:57,887 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4603629568; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 7 100 91.0 21.27
+training epoch 8 100 91.0 22.97
+[33m(raylet)[39m [2022-09-29 18:53:07,905 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4603392000; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 9 100 91.0 25.67
+training epoch 10 100 130.0 27.37
+[33m(raylet)[39m [2022-09-29 18:53:17,929 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4603158528; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 11 100 130.0 27.4
+training epoch 12 100 66.0 26.55
+[33m(raylet)[39m [2022-09-29 18:53:27,937 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4602806272; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 13 100 73.0 25.7
+training epoch 14 100 82.0 27.52
+[33m(raylet)[39m [2022-09-29 18:53:37,943 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4602589184; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 15 100 82.0 29.37
+training epoch 16 100 87.0 29.84
+[33m(raylet)[39m [2022-09-29 18:53:47,965 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4602331136; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 17 100 87.0 33.09
+training epoch 18 100 87.0 31.84
+[33m(raylet)[39m [2022-09-29 18:53:57,971 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4601950208; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 19 100 84.0 29.18
+training epoch 20 100 165.0 33.69
+[33m(raylet)[39m [2022-09-29 18:54:07,978 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4601692160; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 21 100 165.0 34.26
+training epoch 22 100 108.0 33.78
+[33m(raylet)[39m [2022-09-29 18:54:17,988 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4601499648; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 23 100 107.0 35.11
+training epoch 24 100 108.0 33.84
+[33m(raylet)[39m [2022-09-29 18:54:27,995 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4601131008; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 25 100 108.0 33.74
+training epoch 26 100 107.0 34.35
+[33m(raylet)[39m [2022-09-29 18:54:37,999 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4600872960; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 27 100 135.0 35.49
+training epoch 28 100 135.0 37.56
+[33m(raylet)[39m [2022-09-29 18:54:48,004 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4600614912; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 29 100 118.0 37.61
+training epoch 30 100 125.0 37.4
+[33m(raylet)[39m [2022-09-29 18:54:58,010 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4600221696; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 31 100 128.0 35.48
+training epoch 32 100 128.0 36.99
+[33m(raylet)[39m [2022-09-29 18:55:08,015 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4599926784; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 33 100 118.0 35.84
+training epoch 34 100 118.0 37.2
+[33m(raylet)[39m [2022-09-29 18:55:18,021 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4597751808; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 35 100 158.0 37.73
+training epoch 36 100 158.0 36.83
+[33m(raylet)[39m [2022-09-29 18:55:28,034 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4597420032; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 37 100 158.0 37.01
+training epoch 38 100 184.0 38.05
+[33m(raylet)[39m [2022-09-29 18:55:38,045 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4597207040; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 39 100 184.0 37.28
+training epoch 40 100 184.0 39.29
+[33m(raylet)[39m [2022-09-29 18:55:48,056 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4597002240; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 41 100 136.0 37.93
+training epoch 42 100 138.0 36.07
+[33m(raylet)[39m [2022-09-29 18:55:58,066 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4596637696; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 43 100 138.0 38.63
+training epoch 44 100 152.0 38.08
+[33m(raylet)[39m [2022-09-29 18:56:08,072 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4596367360; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 45 100 152.0 41.31
+training epoch 46 100 152.0 39.34
+[33m(raylet)[39m [2022-09-29 18:56:18,079 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4596146176; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 47 100 152.0 41.71
+training epoch 48 100 142.0 41.17
+[33m(raylet)[39m [2022-09-29 18:56:28,092 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4595843072; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 49 100 126.0 39.76
+training epoch 50 100 126.0 42.66
+[33m(raylet)[39m [2022-09-29 18:56:38,114 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4593221632; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 51 100 130.0 39.8
+training epoch 52 100 130.0 38.84
+[33m(raylet)[39m [2022-09-29 18:56:48,130 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4592398336; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 53 100 130.0 41.7
+training epoch 54 100 130.0 44.9
+[33m(raylet)[39m [2022-09-29 18:56:58,149 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4595220480; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 55 100 153.0 45.22
+training epoch 56 100 153.0 47.46
+[33m(raylet)[39m [2022-09-29 18:57:08,170 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4593283072; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 57 100 153.0 48.96
+training epoch 58 100 153.0 50.45
+[33m(raylet)[39m [2022-09-29 18:57:18,196 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4591116288; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 59 100 153.0 47.04
+training epoch 60 100 153.0 48.47
+[33m(raylet)[39m [2022-09-29 18:57:28,220 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4598444032; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 61 100 153.0 49.75
+training epoch 62 100 153.0 51.69
+[33m(raylet)[39m [2022-09-29 18:57:38,256 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4591767552; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 63 100 152.0 50.56
+training epoch 64 100 152.0 47.04
+[33m(raylet)[39m [2022-09-29 18:57:48,285 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4591890432; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 65 100 158.0 47.37
+training epoch 66 100 158.0 48.79
+[33m(raylet)[39m [2022-09-29 18:57:58,304 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4598177792; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 67 100 158.0 47.44
+training epoch 68 100 167.0 48.68
+[33m(raylet)[39m [2022-09-29 18:58:08,331 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4597149696; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 69 100 167.0 49.66
+training epoch 70 100 167.0 51.0
+[33m(raylet)[39m [2022-09-29 18:58:18,356 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4596342784; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 71 100 167.0 53.69
+training epoch 72 100 167.0 51.23
+[33m(raylet)[39m [2022-09-29 18:58:28,388 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4596125696; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 73 100 167.0 49.55
+training epoch 74 100 193.0 52.2
+[33m(raylet)[39m [2022-09-29 18:58:38,413 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4595576832; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 75 100 193.0 50.19
+training epoch 76 100 193.0 49.28
+[33m(raylet)[39m [2022-09-29 18:58:48,438 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4593094656; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 77 100 248.0 52.54
+training epoch 78 100 248.0 51.16
+[33m(raylet)[39m [2022-09-29 18:58:58,452 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4592558080; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 79 100 248.0 50.09
+training epoch 80 100 248.0 51.18
+[33m(raylet)[39m [2022-09-29 18:59:08,471 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4591837184; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 81 100 248.0 50.73
+training epoch 82 100 248.0 49.73
+[33m(raylet)[39m [2022-09-29 18:59:18,491 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4595572736; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 83 100 131.0 49.06
+training epoch 84 100 131.0 46.31
+[33m(raylet)[39m [2022-09-29 18:59:28,513 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4596785152; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 85 100 246.0 50.59
+training epoch 86 100 246.0 52.57
+[33m(raylet)[39m [2022-09-29 18:59:38,527 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4596543488; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 87 100 246.0 51.8
+training epoch 88 100 246.0 51.35
+[33m(raylet)[39m [2022-09-29 18:59:48,545 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4593676288; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 89 100 246.0 52.88
+training epoch 90 100 246.0 51.0
+[33m(raylet)[39m [2022-09-29 18:59:58,580 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4593106944; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 91 100 246.0 51.94
+[33m(raylet)[39m [2022-09-29 19:00:08,603 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4590731264; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 92 100 246.0 52.2
+training epoch 93 100 246.0 52.49
+[33m(raylet)[39m [2022-09-29 19:00:18,634 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4573200384; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 94 100 287.0 54.27
+training epoch 95 100 287.0 53.79
+[33m(raylet)[39m [2022-09-29 19:00:28,666 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4599885824; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 96 100 287.0 50.27
+training epoch 97 100 287.0 51.04
+[33m(raylet)[39m [2022-09-29 19:00:38,691 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4599525376; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 98 100 287.0 48.02
+training epoch 99 100 287.0 48.02
+[33m(raylet)[39m [2022-09-29 19:00:48,712 E 96711 96741] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-52-05_677298_96624 is over 95% full, available space: 4598358016; capacity: 125844406272. Object creation will fail if spilling is required.
+[91.0, 23.0, 24.0, 45.0, 48.0, 28.0, 49.0, 16.0, 50.0, 56.0, 58.0, 47.0, 15.0, 36.0, 20.0, 45.0, 33.0, 13.0, 43.0, 24.0, 131.0, 82.0, 55.0, 62.0, 15.0, 41.0, 31.0, 22.0, 16.0, 23.0, 51.0, 28.0, 37.0, 71.0, 22.0, 37.0, 38.0, 37.0, 138.0, 20.0, 44.0, 83.0, 85.0, 98.0, 19.0, 11.0, 45.0, 44.0, 79.0, 287.0, 13.0, 19.0, 42.0, 16.0, 37.0, 31.0, 65.0, 30.0, 44.0, 41.0, 41.0, 13.0, 74.0, 36.0, 50.0, 95.0, 27.0, 112.0, 62.0, 135.0, 15.0, 22.0, 20.0, 85.0, 32.0, 49.0, 51.0, 58.0, 48.0, 99.0, 15.0, 16.0, 36.0, 35.0, 14.0, 58.0, 15.0, 67.0, 32.0, 49.0, 78.0, 75.0, 31.0, 31.0, 36.0, 62.0, 21.0, 65.0, 49.0, 39.0]
+['self', 'mode']
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|█         | 1/10 [00:01<00:15,  1.68s/it, Episode=0, Accumulated Reward=11, Average Reward=1, Length=11, Steps=11]
+ 20%|██        | 2/10 [00:04<00:19,  2.49s/it, Episode=1, Accumulated Reward=70, Average Reward=1, Length=70, Steps=81]
+ 30%|███       | 3/10 [00:06<00:16,  2.34s/it, Episode=2, Accumulated Reward=48, Average Reward=1, Length=48, Steps=129]
+ 30%|███       | 3/10 [00:06<00:16,  2.34s/it, Episode=2, Accumulated Reward=48, Average Reward=1, Length=48, Steps=129]
+ 40%|████      | 4/10 [00:09<00:15,  2.61s/it, Episode=3, Accumulated Reward=66, Average Reward=1, Length=66, Steps=195]
+ 50%|█████     | 5/10 [00:10<00:09,  1.94s/it, Episode=4, Accumulated Reward=18, Average Reward=1, Length=18, Steps=213]
+ 70%|███████   | 7/10 [00:14<00:05,  1.88s/it, Episode=6, Accumulated Reward=38, Average Reward=1, Length=38, Steps=292]
+ 80%|████████  | 8/10 [00:16<00:03,  1.92s/it, Episode=7, Accumulated Reward=44, Average Reward=1, Length=44, Steps=336]
+ 80%|████████  | 8/10 [00:16<00:03,  1.92s/it, Episode=7, Accumulated Reward=44, Average Reward=1, Length=44, Steps=336]
+100%|██████████| 10/10 [00:21<00:00,  2.17s/it, Episode=9, Accumulated Reward=12, Average Reward=1, Length=12, Steps=450]
+100%|██████████| 10/10 [00:21<00:00,  2.17s/it, Episode=9, Accumulated Reward=12, Average Reward=1, Length=12, Steps=450]

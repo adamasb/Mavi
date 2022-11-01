@@ -1,0 +1,33 @@
+2022-09-29 18:49:40,632	INFO trainable.py:160 -- Trainable.setup took 13.064 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-29 18:49:40,633	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+training epoch 0 66 68.0 21.606060606060606
+[33m(raylet)[39m [2022-09-29 18:49:49,998 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4605235200; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 1 100 58.0 21.35
+training epoch 2 100 75.0 23.78
+[33m(raylet)[39m [2022-09-29 18:50:00,010 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4604928000; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 3 100 75.0 25.55
+training epoch 4 100 81.0 27.5
+[33m(raylet)[39m [2022-09-29 18:50:10,036 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4604719104; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 5 100 89.0 29.7
+training epoch 6 100 105.0 31.94
+[33m(raylet)[39m [2022-09-29 18:50:20,059 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4604526592; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 7 100 147.0 33.05
+training epoch 8 100 147.0 33.46
+[33m(raylet)[39m [2022-09-29 18:50:30,075 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4603801600; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 9 100 205.0 36.2
+[33m(raylet)[39m [2022-09-29 18:50:40,092 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4603498496; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-29 18:50:50,108 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4603461632; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-29 18:51:00,130 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4603514880; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-29 18:51:10,146 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4603555840; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-29 18:51:20,162 E 96045 96072] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-29_18-49-27_613959_95956 is over 95% full, available space: 4603531264; capacity: 125844406272. Object creation will fail if spilling is required.
+[50.0, 61.0, 40.0, 24.0, 35.0, 42.0, 13.0, 22.0, 20.0, 21.0, 19.0, 23.0, 36.0, 16.0, 36.0, 37.0, 33.0, 19.0, 104.0, 19.0, 89.0, 16.0, 34.0, 21.0, 22.0, 24.0, 105.0, 30.0, 21.0, 32.0, 16.0, 33.0, 14.0, 12.0, 79.0, 21.0, 13.0, 21.0, 76.0, 13.0, 147.0, 13.0, 20.0, 54.0, 37.0, 27.0, 13.0, 34.0, 17.0, 72.0, 53.0, 13.0, 17.0, 23.0, 27.0, 41.0, 45.0, 18.0, 38.0, 42.0, 14.0, 19.0, 14.0, 37.0, 34.0, 63.0, 30.0, 107.0, 16.0, 75.0, 13.0, 27.0, 30.0, 19.0, 20.0, 15.0, 18.0, 18.0, 18.0, 65.0, 20.0, 57.0, 52.0, 32.0, 39.0, 38.0, 20.0, 98.0, 23.0, 205.0, 38.0, 36.0, 26.0, 21.0, 28.0, 18.0, 20.0, 14.0, 19.0, 51.0]
+['self', 'mode']
+  0%|          | 0/10 [00:00<?, ?it/s]
+
+
+
+ 80%|████████  | 8/10 [00:08<00:01,  1.23it/s, Episode=7, Accumulated Reward=23, Average Reward=1, Length=23, Steps=154]
+
+100%|██████████| 10/10 [00:11<00:00,  1.12s/it, Episode=9, Accumulated Reward=34, Average Reward=1, Length=34, Steps=220]
+[None]
+Job done

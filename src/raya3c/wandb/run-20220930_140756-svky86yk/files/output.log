@@ -1,0 +1,312 @@
+
+Backend TkAgg is interactive backend. Turning interactive mode on.
+[33m(raylet)[39m [2022-09-30 14:08:10,327 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4615077888; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:08:20,349 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4615102464; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:08:30,363 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4614987776; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:08:40,380 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4615061504; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:08:50,395 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4615000064; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:09:00,426 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617961472; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:09:10,439 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617961472; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:09:20,454 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617961472; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:09:30,469 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617945088; capacity: 125844406272. Object creation will fail if spilling is required.
+Algorithm.train() result: A3C -> 23 episodes
+training epoch 0 23 85.0 23.91304347826087
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=21076)[39m episode 1400934148 (env-idx=0) ended with length 22 and pole angles 0.08367249369621277
+[36m(RolloutWorker pid=21076)[39m episode 488695349 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=21076)[39m episode 488695349 (env-idx=0) ended with length 12 and pole angles 0.12921778857707977
+[36m(RolloutWorker pid=21076)[39m episode 1926713880 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m episode 1926713880 (env-idx=0) ended with length 17 and pole angles 0.09689947962760925
+[36m(RolloutWorker pid=21076)[39m episode 577907868 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m episode 577907868 (env-idx=0) ended with length 38 and pole angles 0.07369977235794067
+[36m(RolloutWorker pid=21076)[39m episode 1166984907 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=21076)[39m episode 1166984907 (env-idx=0) ended with length 39 and pole angles 0.09283209592103958
+[36m(RolloutWorker pid=21076)[39m episode 1763799124 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m episode 1763799124 (env-idx=0) ended with length 31 and pole angles 0.09510927647352219
+[36m(RolloutWorker pid=21076)[39m episode 1644950047 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m episode 1644950047 (env-idx=0) ended with length 12 and pole angles 0.10992377996444702
+[36m(RolloutWorker pid=21076)[39m episode 1100093230 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m episode 1100093230 (env-idx=0) ended with length 29 and pole angles 0.10288181155920029
+[36m(RolloutWorker pid=21076)[39m episode 1115228116 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=21076)[39m episode 1115228116 (env-idx=0) ended with length 27 and pole angles 0.06080697104334831
+[36m(RolloutWorker pid=21076)[39m episode 1096265322 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=21076)[39m episode 1096265322 (env-idx=0) ended with length 50 and pole angles 0.06267563998699188
+[36m(RolloutWorker pid=21076)[39m episode 718480646 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=21076)[39m episode 718480646 (env-idx=0) ended with length 119 and pole angles 0.06769457459449768
+[36m(RolloutWorker pid=21076)[39m episode 1302089709 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=21076)[39m episode 1302089709 (env-idx=0) ended with length 76 and pole angles 0.037570372223854065
+[36m(RolloutWorker pid=21076)[39m episode 1633015745 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m episode 1633015745 (env-idx=0) ended with length 19 and pole angles 0.1141795888543129
+[36m(RolloutWorker pid=21076)[39m episode 771740216 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=21076)[39m episode 771740216 (env-idx=0) ended with length 15 and pole angles 0.09371723979711533
+[36m(RolloutWorker pid=21076)[39m episode 1182517847 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=21076)[39m episode 1182517847 (env-idx=0) ended with length 31 and pole angles 0.12602457404136658
+[36m(RolloutWorker pid=21076)[39m episode 1781362543 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=21076)[39m episode 1781362543 (env-idx=0) ended with length 41 and pole angles 0.05222737044095993
+[36m(RolloutWorker pid=21076)[39m episode 797171749 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m episode 797171749 (env-idx=0) ended with length 22 and pole angles 0.07402480393648148
+[36m(RolloutWorker pid=21076)[39m episode 904266399 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m episode 904266399 (env-idx=0) ended with length 151 and pole angles 0.06609516590833664
+[36m(RolloutWorker pid=21076)[39m episode 832482641 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=21076)[39m episode 832482641 (env-idx=0) ended with length 26 and pole angles 0.07946204394102097
+[36m(RolloutWorker pid=21076)[39m episode 1077249105 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 7 steps
+[36m(RolloutWorker pid=21076)[39m episode 1077249105 (env-idx=0) ended with length 50 and pole angles 0.09875748306512833
+[36m(RolloutWorker pid=21076)[39m episode 1640243421 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 3 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 2 steps
+[36m(RolloutWorker pid=21076)[39m episode 1640243421 (env-idx=0) ended with length 25 and pole angles 0.06277046352624893
+[36m(RolloutWorker pid=21076)[39m episode 978136779 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 8 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m episode 978136779 (env-idx=0) ended with length 27 and pole angles 0.09500480443239212
+[36m(RolloutWorker pid=21076)[39m episode 1664933087 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 9 steps
+[36m(RolloutWorker pid=21076)[39m episode 1664933087 (env-idx=0) ended with length 30 and pole angles 0.08351372182369232
+[36m(RolloutWorker pid=21076)[39m episode 1012986658 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 1 steps
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+                          postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m episode 140797171 (env-idx=0) ended with length 23 and pole angles 0.08075101673603058
+[36m(RolloutWorker pid=21076)[39m episode 642944599 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m returned sample batch of size 10
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=21076)[39m episode 642944599 (env-idx=0) ended with length 26 and pole angles 0.068743497133255
+[36m(RolloutWorker pid=21076)[39m episode 1332556485 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 4 steps
+[36m(RolloutWorker pid=21076)[39m episode 1332556485 (env-idx=0) ended with length 18 and pole angles 0.0874638631939888
+[36m(RolloutWorker pid=21076)[39m episode 501619612 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)[39m postprocessed 6 steps
+[36m(RolloutWorker pid=21076)[39m postprocessed 10 steps
+[36m(RolloutWorker pid=21076)[39m episode 501619612 (env-idx=0) ended with length 16 and pole angles 0.09714357554912567
+[36m(RolloutWorker pid=21076)[39m episode 1273276809 (env-idx=0) started.
+[36m(RolloutWorker pid=21076)
+[33m(raylet)[39m [2022-09-30 14:09:40,483 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617756672; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:09:50,500 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617740288; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:10:00,515 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617736192; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:10:10,530 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617732096; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:10:20,548 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617728000; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:10:30,563 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617728000; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:10:40,579 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617699328; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:10:50,596 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617670656; capacity: 125844406272. Object creation will fail if spilling is required.
+[36m(RolloutWorker pid=21076)
+[36m(RolloutWorker pid=21076)
+[36m(RolloutWorker pid=21076)
+[33m(raylet)[39m [2022-09-30 14:11:00,614 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617482240; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:11:10,627 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617482240; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 14:11:20,640 E 20894 20912] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_14-07-34_456303_20755 is over 95% full, available space: 4617474048; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 99, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 38, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 397, in train
+    self.log_result(result)
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 220, in log_result
+    return super().log_result(result)
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 1561, in log_result
+    self.callbacks.on_train_result(algorithm=self, result=result, trainer=self)
+  File "/home/tuhe/Documents/mavi/src/raya3c/my_callback.py", line 106, in on_train_result
+    print(

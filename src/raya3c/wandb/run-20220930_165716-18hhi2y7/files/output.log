@@ -1,0 +1,39 @@
+
+Main trainign step 0
+2022-09-30 16:57:17,740	INFO trainable.py:160 -- Trainable.setup took 22.695 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 16:57:17,742	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+[33m(raylet)[39m [2022-09-30 16:57:22,052 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574756864; capacity: 125844406272. Object creation will fail if spilling is required.
+Backend TkAgg is interactive backend. Turning interactive mode on.
+
+[33m(raylet)[39m [2022-09-30 16:57:32,071 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574699520; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:57:42,116 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574679040; capacity: 125844406272. Object creation will fail if spilling is required.
+No gradient information.s
+training epoch 0 54 56.0 23.27777777777778
+Main trainign step 1
+[33m(raylet)[39m [2022-09-30 16:57:52,133 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574568448; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:58:02,163 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574527488; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:58:12,177 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574527488; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:58:22,192 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574519296; capacity: 125844406272. Object creation will fail if spilling is required.
+No gradient information.s
+training epoch 1 100 87.0 24.37
+Main trainign step 2
+[33m(raylet)[39m [2022-09-30 16:58:32,209 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574339072; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:58:42,229 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574322688; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:58:52,242 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574330880; capacity: 125844406272. Object creation will fail if spilling is required.
+No gradient information.s
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.928428649902344, 'policy_loss': 34.72815704345703, 'vf_loss': 151.54197692871094, 'total_loss': 110.42986297607422}
+training epoch 2 100 65.0 22.15
+Main trainign step 3
+[33m(raylet)[39m [2022-09-30 16:59:02,256 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574130176; capacity: 125844406272. Object creation will fail if spilling is required.
+[33m(raylet)[39m [2022-09-30 16:59:12,274 E 41648 41680] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-56-55_114177_41505 is over 95% full, available space: 4574101504; capacity: 125844406272. Object creation will fail if spilling is required.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 101, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 39, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 347, in train
+    result = self.step()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2386, in _run_one_training_iteration
+    return results, train_iter_ctx

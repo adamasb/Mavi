@@ -1,0 +1,85 @@
+2022-09-30 16:04:36,073	INFO trainable.py:160 -- Trainable.setup took 18.169 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 16:04:36,074	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main trainign step 0
+[33m(raylet)[39m [2022-09-30 16:04:41,068 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4586221568; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 0 54 58.0 22.85185185185185
+Main trainign step 1
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.786170482635498, 'policy_loss': 38.84767532348633, 'vf_loss': 168.96453857421875, 'total_loss': 123.26207733154297}
+training epoch 1 96 58.0 23.416666666666668
+Main trainign step 2
+[33m(raylet)[39m [2022-09-30 16:04:51,077 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4585844736; capacity: 125844406272. Object creation will fail if spilling is required.
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.89300012588501, 'policy_loss': 28.44681739807129, 'vf_loss': 104.39140319824219, 'total_loss': 80.5735855102539}
+training epoch 2 100 56.0 22.15
+Main trainign step 3
+training epoch 3 100 56.0 20.92
+Main trainign step 4
+[33m(raylet)[39m [2022-09-30 16:05:01,089 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4586340352; capacity: 125844406272. Object creation will fail if spilling is required.
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.924609661102295, 'policy_loss': -7.061979293823242, 'vf_loss': 139.52297973632812, 'total_loss': 62.63026428222656}
+training epoch 4 100 84.0 23.34
+Main trainign step 5
+training epoch 5 100 84.0 26.06
+Main trainign step 6
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 6.767435550689697, 'policy_loss': 37.59571838378906, 'vf_loss': 240.06451416015625, 'total_loss': 157.560302734375}
+training epoch 6 100 79.0 28.08
+Main trainign step 7
+[33m(raylet)[39m [2022-09-30 16:05:11,099 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4585951232; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 7 100 79.0 27.73
+Main trainign step 8
+[33m(raylet)[39m [2022-09-30 16:05:21,111 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4583833600; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 8 100 92.0 27.84
+Main trainign step 9
+training epoch 9 100 103.0 28.34
+Main trainign step 10
+[33m(raylet)[39m [2022-09-30 16:05:31,124 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4582739968; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 10 100 119.0 29.86
+Main trainign step 11
+training epoch 11 100 122.0 29.06
+Main trainign step 12
+[33m(raylet)[39m [2022-09-30 16:05:41,146 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4582047744; capacity: 125844406272. Object creation will fail if spilling is required.
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 4.39876651763916, 'policy_loss': -5.089012622833252, 'vf_loss': 32.061683654785156, 'total_loss': 10.897842407226562}
+training epoch 12 100 122.0 29.99
+Main trainign step 13
+training epoch 13 100 122.0 28.92
+Main trainign step 14
+[33m(raylet)[39m [2022-09-30 16:05:51,164 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4581646336; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 14 100 115.0 31.14
+Main trainign step 15
+training epoch 15 100 133.0 32.2
+Main trainign step 16
+[33m(raylet)[39m [2022-09-30 16:06:01,179 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4581122048; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 16 100 135.0 35.65
+Main trainign step 17
+training epoch 17 100 135.0 34.43
+Main trainign step 18
+[33m(raylet)[39m [2022-09-30 16:06:11,192 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4580605952; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 18 100 135.0 34.67
+Main trainign step 19
+training epoch 19 100 135.0 36.51
+Main trainign step 20
+[33m(raylet)[39m [2022-09-30 16:06:21,210 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4579663872; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 20 100 125.0 33.06
+Main trainign step 21
+training epoch 21 100 126.0 34.75
+Main trainign step 22
+[33m(raylet)[39m [2022-09-30 16:06:31,220 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4578955264; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 22 100 126.0 36.99
+Main trainign step 23
+> CALLBACK HAD NON-ZERO INFO {'allreduce_latency': 0.0, 'grad_gnorm': 30.0, 'cur_lr': 0.001, 'entropy_coeff': 0.01, 'policy_entropy': 5.124514102935791, 'policy_loss': -150.15518188476562, 'vf_loss': 2800.10888671875, 'total_loss': 1249.8480224609375}
+training epoch 23 100 126.0 36.06
+Main trainign step 24
+[33m(raylet)[39m [2022-09-30 16:06:41,229 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4578430976; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 24 100 126.0 35.66
+Main trainign step 25
+training epoch 25 100 115.0 33.52
+Main trainign step 26
+[33m(raylet)[39m [2022-09-30 16:06:51,245 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4577574912; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 26 100 124.0 33.92
+Main trainign step 27
+training epoch 27 100 127.0 36.12
+Main trainign step 28
+[33m(raylet)[39m [2022-09-30 16:07:01,260 E 35507 35532] (raylet) file_system_monitor.cc:105: /tmp/ray/session_2022-09-30_16-04-18_027007_35420 is over 95% full, available space: 4576583680; capacity: 125844406272. Object creation will fail if spilling is required.
+training epoch 28 100 127.0 35.89
+Main trainign step 29
+training epoch 29 100 127.0 35.78
+[None]
+Job done

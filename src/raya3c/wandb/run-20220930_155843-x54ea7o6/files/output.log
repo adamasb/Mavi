@@ -1,0 +1,41 @@
+
+Main trainign step 0
+2022-09-30 15:58:44,393	INFO trainable.py:160 -- Trainable.setup took 13.568 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-09-30 15:58:44,394	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 101, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 39, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 347, in train
+    result = self.step()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 222, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/execution/parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 98, in wrapper
+    from ray.util.client import ray
+  File "<frozen importlib._bootstrap>", line 1064, in _handle_fromlist
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 101, in <module>
+    res.append(wfun(a))
+  File "/home/tuhe/Documents/mavi/src/raya3c/example.py", line 39, in my_experiment
+    result = trainer.train()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/tune/trainable/trainable.py", line 347, in train
+    result = self.step()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/algorithms/algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "/home/tuhe/Documents/mavi/src/raya3c/a3c.py", line 222, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/rllib/execution/parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "/home/tuhe/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 98, in wrapper
+    from ray.util.client import ray
+  File "<frozen importlib._bootstrap>", line 1064, in _handle_fromlist
