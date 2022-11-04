@@ -41,7 +41,6 @@ def my_experiment(a):
 
 
     
-    #do we keep this in?
     env = gym.make("CartPole-v1")
     #trainer = config.build(env=env)
 

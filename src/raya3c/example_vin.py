@@ -1,5 +1,4 @@
 import sys, os
-from typing_extensions import override
 sys.path.append(os.path.normpath( os.path.dirname(__file__) +"/../" ))
 import gym
 from mazeenv import maze_register
@@ -12,10 +11,15 @@ from ray import tune
 from ray.tune.logger import pretty_print
 from raya3c.my_callback import MyCallbacks
 
+from ray.rllib.models.torch.misc import SlimFC, AppendBiasLayer, normc_initializer
+
+
+
 # The custom model that will be wrapped by an LSTM.
 from ray.rllib.models import ModelCatalog
 from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
 import torch
+from torch import nn
 import matplotlib.pyplot as plt
 
 import wandb
@@ -39,7 +43,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # super().__init__(obs_space, action_space, num_outputs, model_config, name)
         TorchModelV2.__init__(self, obs_space, action_space, num_outputs, model_config, name)
         torch.nn.Module.__init__(self)
-        self.num_outputs = env.action_space.n#int(np.product(self.obs_space.shape)) #now we crash,: 'VideoMonitor' object has no attribute 'shape'
+        self.num_outputs = int(np.product(self.obs_space.shape))
+        #self.num_outputs = 5#env.action_space.n#int(np.product(self.obs_space.shape)) #now we crash,: 'VideoMonitor' object has no attribute 'shape'
         self._last_batch_size = None
         
         #self.Phi = torch.nn.Linear() # dont think we can do this yet
@@ -50,6 +55,123 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
     # Implement your own forward logic, whose output will then be sent
     # through an LSTM.
+
+
+
+        """everything down to comment is stolen from fcnet"""
+        #Stolen right from FCNet
+    
+        hiddens = list(model_config.get("fcnet_hiddens", [])) + list(
+            model_config.get("post_fcnet_hiddens", [])
+        )
+        activation = model_config.get("fcnet_activation")
+        if not model_config.get("fcnet_hiddens", []):
+            activation = model_config.get("post_fcnet_activation")
+        no_final_linear = model_config.get("no_final_linear")
+        self.vf_share_layers = model_config.get("vf_share_layers")
+        self.free_log_std = model_config.get("free_log_std")
+        # Generate free-floating bias variables for the second half of
+        # the outputs.
+        if self.free_log_std:
+            assert num_outputs % 2 == 0, (
+                "num_outputs must be divisible by two",
+                num_outputs,
+            )
+            num_outputs = num_outputs // 2
+
+        layers = []
+        prev_layer_size = int(np.product(obs_space.shape))
+        self._logits = None
+
+        # Create layers 0 to second-last.
+        for size in hiddens[:-1]:
+            layers.append(
+                SlimFC(
+                    in_size=prev_layer_size,
+                    out_size=size,
+                    initializer=normc_initializer(1.0),
+                    activation_fn=activation,
+                )
+            )
+            prev_layer_size = size
+
+        # The last layer is adjusted to be of size num_outputs, but it's a
+        # layer with activation.
+        if no_final_linear and num_outputs:
+            layers.append(
+                SlimFC(
+                    in_size=prev_layer_size,
+                    out_size=num_outputs,
+                    initializer=normc_initializer(1.0),
+                    activation_fn=activation,
+                )
+            )
+            prev_layer_size = num_outputs
+        # Finish the layers with the provided sizes (`hiddens`), plus -
+        # iff num_outputs > 0 - a last linear layer of size num_outputs.
+        else:
+            if len(hiddens) > 0:
+                layers.append(
+                    SlimFC(
+                        in_size=prev_layer_size,
+                        out_size=hiddens[-1],
+                        initializer=normc_initializer(1.0),
+                        activation_fn=activation,
+                    )
+                )
+                prev_layer_size = hiddens[-1]
+            if num_outputs:
+                self._logits = SlimFC(
+                    in_size=prev_layer_size,
+                    out_size=num_outputs,
+                    initializer=normc_initializer(0.01),
+                    activation_fn=None,
+                )
+            else:
+                self.num_outputs = ([int(np.product(obs_space.shape))] + hiddens[-1:])[
+                    -1
+                ]
+        
+        # Layer to add the log std vars to the state-dependent means.
+        if self.free_log_std and self._logits:
+            self._append_free_log_std = AppendBiasLayer(num_outputs)
+
+        self._hidden_layers = torch.nn.Sequential(*layers)
+
+
+        self._value_branch_separate = None
+        if not self.vf_share_layers:
+            # Build a parallel set of hidden layers for the value net.
+            prev_vf_layer_size = int(np.product(obs_space.shape))
+            vf_layers = []
+            for size in hiddens:
+                vf_layers.append(
+                    SlimFC(
+                        in_size=prev_vf_layer_size,
+                        out_size=size,
+                        activation_fn=activation,
+                        initializer=normc_initializer(1.0),
+                    )
+                )
+                prev_vf_layer_size = size
+            self._value_branch_separate = nn.Sequential(*vf_layers)
+
+        self._value_branch = SlimFC(
+            in_size=prev_layer_size,
+            out_size=1,
+            initializer=normc_initializer(0.01),
+            activation_fn=None,
+        )
+        # Holds the current "base" output (before logits layer).
+        self._features = None
+        # Holds the last input, in case value branch is separate.
+        self._last_flat_in = None
+
+
+        """ Everythin above (until comment) is stolen straight from fcnet"""
+
+
+
     def forward(self, input_dict, state, seq_lens): #dont think this is currently being used
         obs = input_dict["obs_flat"]
         # Store last batch size for value_function output.
@@ -66,20 +188,45 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #    V_np = []
         #    assert( (V_np - V_torch.numpy())< 1e-8 )
 
-        return obs * 2.0, []
+
+        #stolen right from FNet
+        obs = input_dict["obs_flat"].float() 
+        self._last_flat_in = obs.reshape(obs.shape[0], -1)
+        self._features = self._hidden_layers(self._last_flat_in)
+        logits = self._logits(self._features) if self._logits else self._features
+        if self.free_log_std:
+            logits = self._append_free_log_std(logits)
+        
+        
+        return logits, state #from fcnet
+        
+        #try to run with the logits, state return statement
+        return obs * 2.0, [] #from documentation example
+
+       
+
     
     
-    @override
     def value_function(self): #dont think this is currently being used
 
         """ Needs to consider VI values"""
-
+        
+        #this is a BS return statement, do something real
+        
+        if self._value_branch_separate:
+            return self._value_branch(
+                self._value_branch_separate(self._last_flat_in)
+            ).squeeze(1)
+        else:
+            return self._value_branch(self._features).squeeze(1)
+        
+        return torch.from_numpy(np.zeros(shape=(self._last_batch_size,)))
+        #this is just zeroes?
         v = VIP(env.reset(),Phi(env.reset()))[:,:,-1] # get last layer of the value prop
 
         return v
         #
-        #return torch.from_numpy(np.zeros(shape=(self._last_batch_size,)))
-        #this is just zeroes?
+
         #return
     
     #i dont know man, needed for train()
@@ -89,7 +236,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
     #pi from agent.py
-    def pi(self, s, k=None):
+    def pi(self, s, k=None): #we never enter this (except with the irlc-visualise stuff i think)
         # return self.env.action_space.sample() #!s
         
         
@@ -130,8 +277,9 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #probably dont need to run this so often, maybe just once?
         #print(self.VIP(s, self.Phi(s)))
 
-        _,_, p = self.Phi(s)
-        plt.imshow(p)
+        #to plot p
+        #_,_, p = self.Phi(s)
+        #plt.imshow(p)
 
         #v = self.VIP(s, self.Phi(s))
 
@@ -199,34 +347,32 @@ def my_experiment(a):
     # see https://docs.ray.io/en/latest/rllib/rllib-training.html
     
     mconf = dict(custom_model=vin_label, use_lstm=False)#, debug_vin=True) 
-    # maybe this is the model_config that i need
     
     
-    #config = A3CConfig().training(lr=0.01/10, grad_clip=30.0, model=mconf).resources(num_gpus=0).rollouts(num_rollout_workers=1)
+    config = A3CConfig().training(lr=0.01/10, grad_clip=30.0, model=mconf).resources(num_gpus=0).rollouts(num_rollout_workers=1)
     #config from example_maze.py
-    config = A3CConfig().training(lr=0.01/10, grad_clip=30.0).resources(num_gpus=0).rollouts(num_rollout_workers=1)
-
-
+    #config = A3CConfig().training(lr=0.01/10, grad_clip=30.0).resources(num_gpus=0).rollouts(num_rollout_workers=1)
     config = config.framework('torch')
 
 
     # config.
-    config = config.callbacks(MyCallbacks)
-    # Set up alternative model (gridworld).
-    # config = config.model(custom_model="my_torch_model", use_lstm=False)
+    config = config.callbacks(MyCallbacks) #not sure i understand callbacks
+    #config = config.model(custom_model="my_torch_model", use_lstm=False)
 
     #print(config.to_dict()) #
     config.model['fcnet_hiddens'] = [24, 24]  #does this refer to fcnet.py? doesnt seem like it
     # lets try to make use of our own custom_net somewhow
     # env = gym.make("MazeDeterministic_empty4-v0")
 
-    trainer = config.build(env="MazeDeterministic_empty4-v0") 
+
+    #something in here needs to be a tensor, but is nonetype
+    trainer = config.build(env="MazeDeterministic_empty4-v0") # juump into a3c setup()
     #trainer = config.build(env="CartPole-v1") 
 
 
-    for t in range(2): #150
+    for t in range(50): #150
         print("Main training step", t)
-        result = trainer.train()
+        result = trainer.train() #calls this line, enters worker.py and crashes. crashes in trainer?
         rewards = result['hist_stats']['episode_reward']
         print("training epoch", t, len(rewards), max(rewards), result['episode_reward_mean'])
     

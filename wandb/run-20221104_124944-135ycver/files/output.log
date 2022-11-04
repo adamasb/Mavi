@@ -1,0 +1,104 @@
+
+Main training step 0
+2022-11-04 12:49:45,010	INFO trainable.py:160 -- Trainable.setup took 28.048 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-04 12:49:45,013	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+training epoch 0 17 0.8 -3.4647058823529346
+Main training step 1
+training epoch 1 94 0.8 -0.41170212765957337
+Main training step 2
+training epoch 2 122 0.8 0.5754098360655738
+Main training step 3
+training epoch 3 136 0.8 0.600735294117647
+Main training step 4
+training epoch 4 155 0.8 0.6483870967741936
+Main training step 5
+training epoch 5 152 0.8 0.6717105263157894
+Main training step 6
+training epoch 6 162 0.8 0.6808641975308641
+Main training step 7
+training epoch 7 157 0.8 0.6738853503184713
+Main training step 8
+training epoch 8 152 0.8 0.6532894736842105
+Main training step 9
+training epoch 9 152 0.8 0.6572368421052631
+Main training step 10
+training epoch 10 162 0.8 0.6833333333333332
+Main training step 11
+training epoch 11 156 0.8 0.6647435897435897
+Main training step 12
+training epoch 12 155 0.8 0.6574193548387097
+Main training step 13
+training epoch 13 164 0.8 0.6749999999999999
+Main training step 14
+training epoch 14 167 0.8 0.6934131736526945
+Main training step 15
+training epoch 15 178 0.8 0.7056179775280899
+Main training step 16
+training epoch 16 192 0.8 0.7354166666666666
+Main training step 17
+training epoch 17 192 0.8 0.7453125000000002
+Main training step 18
+training epoch 18 185 0.8 0.7535135135135136
+Main training step 19
+training epoch 19 192 0.8 0.7567708333333333
+Main training step 20
+training epoch 20 191 0.8 0.7591623036649214
+Main training step 21
+training epoch 21 192 0.8 0.7614583333333332
+Main training step 22
+training epoch 22 202 0.8 0.7732673267326732
+Main training step 23
+training epoch 23 204 0.8 0.7715686274509803
+Main training step 24
+training epoch 24 194 0.8 0.7762886597938145
+Main training step 25
+training epoch 25 199 0.8 0.7829145728643216
+Main training step 26
+training epoch 26 185 0.8 0.7751351351351352
+Main training step 27
+training epoch 27 392 0.8 0.7841836734693879
+Main training step 28
+training epoch 28 441 0.8 0.7829931972789116
+Main training step 29
+training epoch 29 359 0.8 0.7813370473537603
+Main training step 30
+training epoch 30 240 0.8 0.7862500000000001
+Main training step 31
+training epoch 31 192 0.8 0.7848958333333332
+Main training step 32
+training epoch 32 318 0.8 0.791194968553459
+Main training step 33
+training epoch 33 373 0.8 0.789544235924933
+Main training step 34
+training epoch 34 358 0.8 0.7924581005586592
+Main training step 35
+training epoch 35 313 0.8 0.789776357827476
+Main training step 36
+training epoch 36 209 0.8 0.7889952153110048
+Main training step 37
+training epoch 37 215 0.8 0.7972093023255813
+Main training step 38
+training epoch 38 210 0.8 0.7909523809523811
+Main training step 39
+training epoch 39 210 0.8 0.7909523809523811
+Main training step 40
+training epoch 40 216 0.8 0.7972222222222223
+Main training step 41
+training epoch 41 211 0.8 0.7938388625592417
+Main training step 42
+training epoch 42 211 0.8 0.7971563981042653
+Main training step 43
+training epoch 43 215 0.8 0.7967441860465115
+Main training step 44
+training epoch 44 211 0.8 0.7966824644549764
+Main training step 45
+training epoch 45 212 0.8 0.7943396226415094
+Main training step 46
+training epoch 46 211 0.8 0.7966824644549763
+Main training step 47
+training epoch 47 217 0.8 0.795852534562212
+Main training step 48
+training epoch 48 212 0.8 0.7933962264150944
+Main training step 49
+training epoch 49 211 0.8 0.7962085308056872
+Job done

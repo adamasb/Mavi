@@ -160,7 +160,7 @@ class A3C(Algorithm):
     @override(Algorithm)
     def setup(self, config: PartialAlgorithmConfigDict):
         from mazeenv import maze_register
-        super().setup(config) #this is where we crash from example_vin.py
+        super().setup(config) #Enters algorithm.py setup() #valueError: optimizer got an empty parameter list
         self._worker_manager = AsyncRequestsManager(
             self.workers.remote_workers(), max_remote_requests_in_flight_per_worker=1
         )

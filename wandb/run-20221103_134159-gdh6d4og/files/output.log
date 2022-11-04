@@ -1,0 +1,93 @@
+
+Main training step 0
+2022-11-03 13:42:00,338	INFO trainable.py:160 -- Trainable.setup took 10.234 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-03 13:42:00,341	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+2022-11-03 13:42:01,856	WARNING algorithm.py:2179 -- Worker crashed during training or evaluation! To try to continue without failed worker(s), set `ignore_worker_failures=True`. To try to recover the failed worker(s), set `recreate_failed_workers=True`.
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 480, in <module>
+    res.append(wfun(a)) # i think this call the function that crashes
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 364, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2379, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2186, in try_recover_from_step_attempt
+    raise error
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 215, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2275, in get
+    raise value.as_instanceof_cause() #runtime error:
+ray.exceptions.RayTaskError(RayOutOfMemoryError): [36mray::RolloutWorker.apply()[39m (pid=34992, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x0000020C87B391F0>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.07 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+6752	2.95GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --ms-enable-electron-run-as-node c:
+8172	1.05GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --ms-enable-electron-run-as-node c:
+7228	0.5GiB	C:/Users/adams/AppData/Local/Programs/Python/Python39/python.exe c:/Users/adams/OneDrive/Desktop/Mas
+34992	0.47GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+12984	0.39GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+14192	0.35GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+15508	0.34GiB	C:\Users\adams\AppData\Local\Programs\Messenger\Messenger.exe --updated
+8504	0.33GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+10168	0.31GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir=C:\
+22620	0.24GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=gpu-process --user-data-dir=
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 480, in <module>
+    res.append(wfun(a)) # i think this call the function that crashes
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 364, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2379, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2186, in try_recover_from_step_attempt
+    raise error
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 215, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2275, in get
+    raise value.as_instanceof_cause() #runtime error:
+ray.exceptions.RayTaskError(RayOutOfMemoryError): [36mray::RolloutWorker.apply()[39m (pid=34992, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x0000020C87B391F0>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.07 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+6752	2.95GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --ms-enable-electron-run-as-node c:
+8172	1.05GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --ms-enable-electron-run-as-node c:
+7228	0.5GiB	C:/Users/adams/AppData/Local/Programs/Python/Python39/python.exe c:/Users/adams/OneDrive/Desktop/Mas
+34992	0.47GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+12984	0.39GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+14192	0.35GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+15508	0.34GiB	C:\Users\adams\AppData\Local\Programs\Messenger\Messenger.exe --updated
+8504	0.33GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+10168	0.31GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir=C:\
+22620	0.24GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=gpu-process --user-data-dir=
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
