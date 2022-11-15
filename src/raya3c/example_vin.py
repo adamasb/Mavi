@@ -183,16 +183,21 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             for i in range(h):
                 for j in range(w):
                     v[i,j, k+1] = v[i,j,k]
-                    for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
-                        if di + i < 0 or dj + j < 0:
-                            continue
-                        if di + i >= h or dj + j >= w:
-                            continue
-                        ip = i + di
-                        jp = j + dj
-                        nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
-                        v[i,j,k+1] = max( v[i,j,k+1], nv)
+                    continue
+        return
+                    # for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
+                    #     if di + i < 0 or dj + j < 0:
+                    #         continue
+                    #     if di + i >= h or dj + j >= w:
+                    #         continue
+                    #     ip = i + di
+                    #     jp = j + dj
+                    #     nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
+                    #     v[i,j,k+1] = max( v[i,j,k+1], nv)
         s[:,:,0],s[:,:,2] = p,v[:,:,-1]
+        
+        #dim4 = np.expand_dims(v[:,:,-1],axis=2) 
+        #vp = np.concatenate((s,dim4),axis=2)
         vp = s.flatten()
         vp = vp.type(torch.FloatTensor)
         return vp
@@ -208,7 +213,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         vp = torch.tensor(np.zeros((obs.shape)))
         #vp = torch.tensor(np.zeros((4,4,4)))
         # print(state)
-        #for ii in range(obs.shape[0]):
+        for ii in range(obs.shape[0]):
         #     s = obs[i].reshape((4,4,3)) #env - also not sure if this is reshaped correctly
         #     vp[i] = VIP(Phi(s))[:,:,-1] #last layer of th VIP algo
             
@@ -219,6 +224,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
             #vp[ii] = self.VP(copy.deepcopy(obs)[ii].reshape((4,4,3)))
+            #vp[ii] = self.VP(torch.zeros((4,4,3)))
+            vp = self.VP(torch.zeros((4,4,3)))
             #HOW THE FRICK DOES THIS BREAK EVERYTHING!?
         
         
