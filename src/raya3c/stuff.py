@@ -13,8 +13,6 @@ from raya3c.my_callback import MyCallbacks
 
 from ray.rllib.models.torch.misc import SlimFC, AppendBiasLayer, normc_initializer
 
-import copy
-
 
 
 # The custom model that will be wrapped by an LSTM.
@@ -51,14 +49,9 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         
         
         self.nn = SlimFC(3*4*4, self.num_outputs)#input = 3n^2 
-
-        #self.nn = SlimFC(4*4*4, self.num_outputs)# used when we take state @ vp
-        # perhaps change this to 4*4*4 so we can use s @ vp input
-
         #linear(): argument 'input' (position 1) must be Tensor, not NoneType
         
-        #not at all used, yet
-        self.Phi = SlimFC(3, 3) # input 3 output 3
+        #self.Phi = SlimFC(3, 3) # input 3 output 3
 
         #lets try to remove all debug_vin stuff
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
@@ -138,7 +131,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self._hidden_layers = torch.nn.Sequential(*layers)
 
 
-        #self._value_branch_separate = None
+        self._value_branch_separate = None
         # if not self.vf_share_layers:
         #     # Build a parallel set of hidden layers for the value net.
         #     prev_vf_layer_size = int(np.product(obs_space.shape))
@@ -169,12 +162,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         """ Everythin above (until comment) is stolen straight from fcnet"""
 
-    def VP(self,s):
-        rout = s[:, :, 2]
-        rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
-        p = 1 - s[:, :, 0]
-        K=20
-        
+    def VIP(Phi, K=20):#k=20 default, 
+        (rin, rout, p) = Phi
         h, w = p.shape[0], p.shape[1]
         #we get issues with wandb showing the v plot when using tensors instead of np array
         v = torch.from_numpy(np.zeros((h,w, K+1))) #overly simple way to use tensors
@@ -192,75 +181,65 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                         jp = j + dj
                         nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
                         v[i,j,k+1] = max( v[i,j,k+1], nv)
-        s[:,:,0],s[:,:,2] = p,v[:,:,-1]
-        vp = s.flatten()
-        vp = vp.type(torch.FloatTensor)
-        return vp
+        return v
+
+
+    # def Phi(s):
+    #     # THIS SHOULD BE TRAINED IN A NN, for now we just experiment with this though
+    #     """ Is this supposed to be a linear NN or a CNN, paper suggests CNN? """
+
+    #     rout = s[:, :, 2]
+    #     rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
+    #     p = 1 - s[:, :, 0] # what exactly does this represent, currently
+    #     #Phi = (rin,rout,p)
+    #     #print(Phi)
+
+    #     return (rin, rout, p)
 
 
     def forward(self, input_dict, state, seq_lens): #dont think this is currently being used
         obs = input_dict["obs_flat"]
-
-        
+        # if obs.any() != 0:
+        #     print("test")
         # Store last batch size for value_function output.
         self._last_batch_size = obs.shape[0]
-        
-        vp = torch.tensor(np.zeros((obs.shape)))
-        #vp = torch.tensor(np.zeros((4,4,4)))
+        vp = torch.tensor(np.zeros((obs.shape))) # could maybe also just say vp = obs..
         # print(state)
-        #for ii in range(obs.shape[0]):
-        #     s = obs[i].reshape((4,4,3)) #env - also not sure if this is reshaped correctly
-        #     vp[i] = VIP(Phi(s))[:,:,-1] #last layer of th VIP algo
+        for b in range(self._last_batch_size):
             
-            #temp = copy.deepcopy(obs)
-            #s = temp[ii].reshape((4,4,3)) #env - also not sure if this is reshaped correctly
+            temp = obs[b].reshape((4,4,3))
             
-
-
-
-            #vp[ii] = self.VP(copy.deepcopy(obs)[ii].reshape((4,4,3)))
-            #HOW THE FRICK DOES THIS BREAK EVERYTHING!?
-        
-        
-
-            # """
-            # rout = s[:, :, 2]
-            # rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
-            # p = 1 - s[:, :, 0]
-            # K=20
+            s = obs[b].reshape((4,4,3)) #env - also not sure if this is reshaped correctly
             
-            # h, w = p.shape[0], p.shape[1]
-            # #we get issues with wandb showing the v plot when using tensors instead of np array
-            # v = torch.from_numpy(np.zeros((h,w, K+1))) #overly simple way to use tensors
-            # #v = np.zeros((h,w, K+1)) #overly simple way to use tensors 
-            # for k in range(K):
-            #     for i in range(h):
-            #         for j in range(w):
-            #             v[i,j, k+1] = v[i,j,k]
-            #             for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
-            #                 if di + i < 0 or dj + j < 0:
-            #                     continue
-            #                 if di + i >= h or dj + j >= w:
-            #                     continue
-            #                 ip = i + di
-            #                 jp = j + dj
-            #                 nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
-            #                 v[i,j,k+1] = max( v[i,j,k+1], nv)
-            # s[:,:,0],s[:,:,2] = p,v[:,:,-1]
-            # vp[ii] = s.flatten()
-            # vp = vp.type(torch.FloatTensor)
-            # """
+            rout = s[:, :, 2]
+            rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
+            p = 1 - s[:, :, 0]
+            K=20
+            
+            h, w = p.shape[0], p.shape[1]
+            #we get issues with wandb showing the v plot when using tensors instead of np array
+            v = torch.from_numpy(np.zeros((h,w, K+1))) #overly simple way to use tensors
+            #v = np.zeros((h,w, K+1)) #overly simple way to use tensors 
+            for k in range(K):
+                for i in range(h):
+                    for j in range(w):
+                        v[i,j, k+1] = v[i,j,k]
+                        for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
+                            if di + i < 0 or dj + j < 0:
+                                continue
+                            if di + i >= h or dj + j >= w:
+                                continue
+                            ip = i + di
+                            jp = j + dj
+                            nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
+                            v[i,j,k+1] = max( v[i,j,k+1], nv)
+            #vp[i] = v[:,:,-1] #somehow this is an issue
+            #vp[i] = self.VIP(self.Phi(s))[:,:,-1] #last layer of th VIP algo
+            temp[:,:,0],temp[:,:,2] = p,v[:,:,-1]
+            vp[b] = temp.flatten()
+            
         
-
-
-            # why does this look make the whole model so bad, when its not even being used yet
-
         
-
-
-        
-        #self._last_flat_in = vp
-        #expand(torch.DoubleTensor{[4, 4]}, size=[48]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
         
 
         #plt.imshow(vp)
@@ -283,9 +262,15 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #stolen right from FCNet      
         #run crashes if i remove these, even though i override underneath... Has to do with my layers i think
         
+        vp = vp.type(torch.FloatTensor)
+        #self._last_flat_in = vp
+        #expand(torch.DoubleTensor{[4, 4]}, size=[48]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
         
-        
+
+
+        #do this line earlier instead
         self._last_flat_in = obs.reshape(obs.shape[0], -1)
+ #      assert(self._last_flat_in.shape == vp.shape)
         self._features = self._hidden_layers(self._last_flat_in)
         logits = self._logits(self._features) if self._logits else self._features
         
@@ -301,15 +286,15 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     
     def value_function(self): #dont think this is currently being used
 
+        """ Needs to consider VI values"""
+        
         #return torch.tensor([0]*32) # a little test, causes weird error
-        # if self._value_branch_separate:
-        #     return self._value_branch(
-        #         self._value_branch_separate(self._last_flat_in)
-        #     ).squeeze(1)
-        # else:
-
-        #if i can get current location, then i can use vp module here
-        return self._value_branch(self._features).squeeze(1) #
+        if self._value_branch_separate:
+            return self._value_branch(
+                self._value_branch_separate(self._last_flat_in)
+            ).squeeze(1)
+        else:
+            return self._value_branch(self._features).squeeze(1) #
         
         #return torch.from_numpy(np.zeros(shape=(self._last_batch_size,)))
         #this is just zeroes?
@@ -334,7 +319,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
 
-"""
+
 def VIP(Phi, K=20):#k=20 default, 
     (rin, rout, p) = Phi
     h, w = p.shape[0], p.shape[1]
@@ -355,10 +340,6 @@ def VIP(Phi, K=20):#k=20 default,
                     nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
                     v[i,j,k+1] = max( v[i,j,k+1], nv)
     return v
-    """
-
-
-
 
 
 def Phi(s):
@@ -433,7 +414,7 @@ def my_experiment(a):
     # Set up alternative model (gridworld).
     # config = config.model(custom_model="my_torch_model", use_lstm=False)
     print(config.to_dict())
-    config.model['fcnet_hiddens'] = [24, 24] #why 24, just arbitrary?
+    config.model['fcnet_hiddens'] = [24, 24]
     # config.model['debug_vin'] = True
     # config.model['saf'] = True
     # config.model['asdfasdf'] = 234
@@ -485,15 +466,10 @@ def my_experiment(a):
     else:
 
         trainer = config.build(env="MazeDeterministic_empty4-v0")
-        for t in range(20): #150
+        for t in range(50): #150
             print("Main training step", t)
             result = trainer.train()
             rewards = result['hist_stats']['episode_reward']
-            try:
-                int(result['episode_reward_mean'])
-            except:
-                print("whoops")#just want to catch when the result is nan
-                
             print("training epoch", t, len(rewards), max(rewards) if len(rewards) > 0 else -1, result['episode_reward_mean'])
 
     # config.save
@@ -503,9 +479,9 @@ def my_experiment(a):
 
 
     #only needed for printing the wandb image of V
-    #env = gym.make("MazeDeterministic_empty4-v0")
-
-    #s = env.reset() # 
+    env = gym.make("MazeDeterministic_empty4-v0")
+    #env = gym.make("CartPole-v1")
+    s = env.reset() # 
     """ s looks like: 
 array([[1., 0., 0., 1.],
        [0., 0., 0., 0.],
@@ -529,19 +505,19 @@ array([[0., 0., 0., 0.],
 
 
     #create an image in wandb (of last layer of V)
-    #v = VIP(Phi(s))
-    #v = v[:,:,-1]
+    v = VIP(Phi(s))
+    v = v[:,:,-1]
 
-    #print(s[:,:,0])
-    #print(s[:,:,1])
-    #print(s[:,:,2])
+    print(s[:,:,0])
+    print(s[:,:,1])
+    print(s[:,:,2])
 
     #p = 1 - s[:, :, 0] 
     #images = wandb.Image(p, caption="Top: Output, Bottom: Input")
     #wandb.log({"image of p": images})
 
-    #plt.imshow(v)
-    #plt.show()
+    plt.imshow(v)
+    plt.show()
 
     #images = wandb.Image(v, caption="Top: Output, Bottom: Input")
     #wandb.log({"image of v": images})

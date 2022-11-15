@@ -8,10 +8,6 @@ custom metric.
 from typing import Dict, Tuple
 import argparse
 import numpy as np
-import os
-
-import ray
-from ray import air, tune
 from ray.rllib.algorithms.callbacks import DefaultCallbacks
 from ray.rllib.env import BaseEnv
 from ray.rllib.evaluation import Episode, RolloutWorker
@@ -30,8 +26,14 @@ parser.add_argument("--stop-iters", type=int, default=2000)
 
 class MyCallbacks(DefaultCallbacks):
     wandb = None
-    def on_algorithm_init(self, *args, **kwargs):
+    def on_algorithm_init(self, *args, algorithm=None):
         print("Initializing the callback logger..")
+        # algorithm.config
+        # This gets us a base environment of sorts.
+        MyCallbacks.env = algorithm.env_creator(algorithm.config['env_config'])
+
+
+
         if self.wandb is None:
             import wandb
             wandb.init(project="my-test-project")
@@ -69,6 +71,17 @@ class MyCallbacks(DefaultCallbacks):
         episode.user_data["pole_angles"] = []
         episode.hist_data["pole_angles"] = []
 
+    def on_evaluate_start(self, *args, **kwargs):
+        print("on eval start")
+        pass
+
+
+    def on_evaluate_end(self, *args, **kwargs):
+        print("on eval end")
+        pass
+
+
+
     def on_episode_step(
         self,
         *,
@@ -84,9 +97,10 @@ class MyCallbacks(DefaultCallbacks):
             "ERROR: `on_episode_step()` callback should not be called right "
             "after env reset!"
         )
-        pole_angle = abs(episode.last_observation_for()[2])
-        raw_angle = abs(episode.last_raw_obs_for()[2])
-        assert pole_angle == raw_angle
+        # pole_angle = abs(episode.last_observation_for()[2])
+        # raw_angle = abs(episode.last_raw_obs_for()[2])
+        # assert pole_angle == raw_angle
+        pole_angle = 0
         episode.user_data["pole_angles"].append(pole_angle)
 
     def on_episode_end(
@@ -123,6 +137,39 @@ class MyCallbacks(DefaultCallbacks):
         pass
         # print("on_sample_end, returned sample batch of size {}".format(samples.count))
 
+    def evaluation_call(self, a3policy):
+        # evaluation callback using hacks, etc.
+        # a3policy.model
+        state = MyCallbacks.env.reset()
+        model = a3policy.model
+        stats = model.value_function_for_env_state(state)
+        vv = stats['v']
+        vv_norm = (vv-vv.min()) / (0.0001 + vv.max() - vv.min())
+        p = stats['p']
+        rin = stats['rin']
+        rout = stats['rout']
+
+        image_array = [state, vv, vv_norm, p, rin, rout]
+        image_array = [i*255 for i in image_array]
+        import PIL
+        images = [PIL.Image.fromarray(image.astype(np.uint8)) for image in image_array]
+        # images = self.wandb.Image(image_array, caption="Top: Output, Bottom: Input")
+        self.wandb.log({"Layout (Green=agent) | V | V_norm | p | rin | rout ":  [self.wandb.Image(image) for image in images]})
+        # import torchvision
+        pass
+
+    def on_learn_on_batch(
+        self, *, policy: Policy, train_batch: SampleBatch, result: dict, **kwargs
+    ) -> None:
+        print("Learned..")
+        result["sum_actions_in_train_batch"] = np.sum(train_batch["actions"])
+        assert False
+        print(
+            "policy.learn_on_batch() result: {} -> sum actions: {}".format(
+                policy, result["sum_actions_in_train_batch"]
+            )
+        )
+
     def on_train_result(self, *, algorithm, result: dict, **kwargs):
         # print("Algorithm.train() result: {} -> {} episodes".format(algorithm, result["episodes_this_iter"]))
         # you can mutate the result dict to add new fields to return
@@ -141,46 +188,11 @@ class MyCallbacks(DefaultCallbacks):
         stats = lstats | hstats |  result['timers'] | result['counters']
         # print(stats)
         # print(hstats)
-        
-
-
-        #try to log p as an image
-        #image_array = np.array([1,2,3,4])
-        #images = self.wandb.Image(image_array, caption="Top: Output, Bottom: Input")
-        #self.wandb.log({"examples": images})
-
-
-
         self.wandb.log( stats)
-
 
         # print("ON TRAIN", result['info'])
 
 
-    def on_learn_on_batch(
-        self, *, policy: Policy, train_batch: SampleBatch, result: dict, **kwargs
-    ) -> None:
-        result["sum_actions_in_train_batch"] = np.sum(train_batch["actions"])
-        print(
-            "policy.learn_on_batch() result: {} -> sum actions: {}".format(
-                policy, result["sum_actions_in_train_batch"]
-            )
-        )
-        print("learn on batch", result['info'] )
-
-
-        lstats = result['info']['learner']
-        if 'default_policy' in lstats:
-            lstats = lstats['default_policy']['learner_stats']
-        else:
-            # print("no l stats")
-            lstats = {}
-
-
-
-
-
-        # print("INFO IS", result['info'])
 
     def on_postprocess_trajectory(
         self,

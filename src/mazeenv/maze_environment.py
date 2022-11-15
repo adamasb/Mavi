@@ -135,7 +135,7 @@ class MazeEnvironment(Env):
                         x[j,i,2] = 1
                         x[j,i,0] = 0
                     else:
-                        x[j,i,0] = 1
+                        x[j,i,0] = 1 #1 originally, what happens now: No major change, i think. (no corner walls tho)
         return x
 
     def step(self, action):

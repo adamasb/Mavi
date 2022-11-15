@@ -79,8 +79,9 @@ class A3CTorchPolicy(ValueNetworkMixin, LearningRateSchedule, EntropyCoeffSchedu
         Returns:
             The A3C loss tensor given the input batch.
         """
-        logits, _ = model(train_batch)
-        values = model.value_function()
+        logits, _, = model(train_batch) #logits are gotten from our forward function
+        values = model.value_function()#here we go into our value function
+
 
         if self.is_recurrent():
             B = len(train_batch[SampleBatch.SEQ_LENS])
