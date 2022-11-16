@@ -200,6 +200,10 @@ class A3C(Algorithm):
             grads, infos = worker.compute_gradients(samples)
             # print(infos.keys())
 
+            # print("computing a gradient") #added 
+
+            #check if the gradients is actually being calculated?? is the variable empty
+
             return {
                 "grads": grads,
                 "infos": infos,

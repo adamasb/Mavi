@@ -1,0 +1,416 @@
+2022-11-16 12:36:10,115	INFO trainable.py:160 -- Trainable.setup took 17.064 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-16 12:36:10,117	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+test2[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+torch.Size([1, 48]) 2[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+torch.Size([1, 48])[36m(RolloutWorker pid=18048)[39m test1
+3
+[36m(RolloutWorker pid=18048)[39m test2
+torch.Size([1, 48])[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2 1
+test1
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2torch.Size([1, 48])
+ 1[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+test1
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([10, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+test2
+torch.Size([1, 48]) 2
+torch.Size([1, 48]) 3
+torch.Size([1, 48]) 1
+test1
+[36m(RolloutWorker pid=18048)[39m test2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 2
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 3
+[36m(RolloutWorker pid=18048)[39m torch.Size([1, 48]) 1
+[36m(RolloutWorker pid=18048)[39m test1
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 498, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 404, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2269, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 669, in get_objects
+    data_metadata_pairs = self.core_worker.get_objects(
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 498, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 404, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2269, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 669, in get_objects
+    data_metadata_pairs = self.core_worker.get_objects(

@@ -50,13 +50,10 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self._last_batch_size = None
         
         
-        self.nn = SlimFC(3*4*4, self.num_outputs)#input = 3n^2 
+        #self.nn = SlimFC(3*4*4, self.num_outputs)#input = 3n^2 
 
-        #self.nn = SlimFC(4*4*4, self.num_outputs)# used when we take state @ vp
-        # perhaps change this to 4*4*4 so we can use s @ vp input
-
-        #linear(): argument 'input' (position 1) must be Tensor, not NoneType
-        
+        self.nn = SlimFC(4*4*4, self.num_outputs)# used when we take state @ vp
+        # perhaps change this to 4*4*4 so we can use s @ vp input        
         #not at all used, yet
         self.Phi = SlimFC(3, 3) # input 3 output 3
 
@@ -75,12 +72,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         hiddens = list(model_config.get("fcnet_hiddens", [])) + list(
             model_config.get("post_fcnet_hiddens", [])
         )
-        #activation = model_config.get("fcnet_activation")
-        #if not model_config.get("fcnet_hiddens", []):
-        #    activation = model_config.get("post_fcnet_activation")
-        #no_final_linear = model_config.get("no_final_linear")
-        #self.vf_share_layers = model_config.get("vf_share_layers")
-        
+
 
         layers = []
         prev_layer_size = int(np.product(obs_space.shape))
@@ -98,21 +90,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             )
             prev_layer_size = size
 
-        # The last layer is adjusted to be of size num_outputs, but it's a
-        # layer with activation.
-        # if no_final_linear and num_outputs:
-        #     layers.append(
-        #         SlimFC(
-        #             in_size=prev_layer_size,
-        #             out_size=num_outputs,
-        #             initializer=normc_initializer(1.0),
-        #             #activation_fn=activation,
-        #         )
-        #     )
-        #     prev_layer_size = num_outputs
-        # Finish the layers with the provided sizes (`hiddens`), plus -
-        # iff num_outputs > 0 - a last linear layer of size num_outputs.
-        #else:
         if len(hiddens) > 0:
             layers.append(
                 SlimFC(
@@ -137,24 +114,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         self._hidden_layers = torch.nn.Sequential(*layers)
 
-
-        #self._value_branch_separate = None
-        # if not self.vf_share_layers:
-        #     # Build a parallel set of hidden layers for the value net.
-        #     prev_vf_layer_size = int(np.product(obs_space.shape))
-        #     vf_layers = []
-        #     for size in hiddens:
-        #         vf_layers.append(
-        #             SlimFC(
-        #                 in_size=prev_vf_layer_size,
-        #                 out_size=size,
-        #                 #activation_fn=activation,
-        #                 initializer=normc_initializer(1.0),
-        #             )
-        #         )
-        #         prev_vf_layer_size = size
-        #     self._value_branch_separate = nn.Sequential(*vf_layers)
-
         self._value_branch = SlimFC(
             in_size=prev_layer_size,
             out_size=1,
@@ -174,132 +133,76 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
         p = 1 - s[:, :, 0]
         K=20
-        
         h, w = p.shape[0], p.shape[1]
         #we get issues with wandb showing the v plot when using tensors instead of np array
-        v = torch.from_numpy(np.zeros((h,w, K+1))) #overly simple way to use tensors
-        #v = np.zeros((h,w, K+1)) #overly simple way to use tensors 
+        v = torch.zeros((h,w, K+1)) 
         for k in range(K):
             for i in range(h):
                 for j in range(w):
                     v[i,j, k+1] = v[i,j,k]
-                    continue
-        return
-                    # for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
-                    #     if di + i < 0 or dj + j < 0:
-                    #         continue
-                    #     if di + i >= h or dj + j >= w:
-                    #         continue
-                    #     ip = i + di
-                    #     jp = j + dj
-                    #     nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
-                    #     v[i,j,k+1] = max( v[i,j,k+1], nv)
+                    for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
+                        if di + i < 0 or dj + j < 0:
+                            continue
+                        if di + i >= h or dj + j >= w:
+                            continue
+                        ip = i + di
+                        jp = j + dj
+                        nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
+                        v[i,j,k+1] = max( v[i,j,k+1], nv)
+                        
         s[:,:,0],s[:,:,2] = p,v[:,:,-1]
-        
-        #dim4 = np.expand_dims(v[:,:,-1],axis=2) 
-        #vp = np.concatenate((s,dim4),axis=2)
-        vp = s.flatten()
+        # print("s",s.shape)
+        dim4 = v[:,:,-1]
+        #print(dim4.shape)
+        dim4 = np.expand_dims(dim4,axis=2) 
+        vp = np.concatenate((s,dim4),axis=2)
+        # print("vp",vp.shape)
+        vp = torch.from_numpy(vp.flatten())
+        # print("vp",vp.shape)
         vp = vp.type(torch.FloatTensor)
+        #vp =1
+
         return vp
 
 
     def forward(self, input_dict, state, seq_lens): #dont think this is currently being used
         obs = input_dict["obs_flat"]
 
-        
         # Store last batch size for value_function output.
         self._last_batch_size = obs.shape[0]
         
-        vp = torch.tensor(np.zeros((obs.shape)))
-        #vp = torch.tensor(np.zeros((4,4,4)))
-        # print(state)
+        #vp = torch.tensor(np.zeros((obs.shape)))
+        vp = torch.zeros((obs.shape[0],int(obs.shape[1]/3*4)))
         for ii in range(obs.shape[0]):
-        #     s = obs[i].reshape((4,4,3)) #env - also not sure if this is reshaped correctly
-        #     vp[i] = VIP(Phi(s))[:,:,-1] #last layer of th VIP algo
-            
-            #temp = copy.deepcopy(obs)
-            #s = temp[ii].reshape((4,4,3)) #env - also not sure if this is reshaped correctly
-            
 
-
-
-            #vp[ii] = self.VP(copy.deepcopy(obs)[ii].reshape((4,4,3)))
-            #vp[ii] = self.VP(torch.zeros((4,4,3)))
-            vp = self.VP(torch.zeros((4,4,3)))
+            vp[ii] = self.VP(copy.deepcopy(obs)[ii].reshape((4,4,3)))
+        #self.VP(torch.zeros((4,4,3)))
+        #mat1 and mat2 shapes cannot be multiplied (32x48 and 64x5)
+        
+            #vp = self.VP(torch.zeros((4,4,3)))
             #HOW THE FRICK DOES THIS BREAK EVERYTHING!?
         
-        
-
-            # """
-            # rout = s[:, :, 2]
-            # rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
-            # p = 1 - s[:, :, 0]
-            # K=20
-            
-            # h, w = p.shape[0], p.shape[1]
-            # #we get issues with wandb showing the v plot when using tensors instead of np array
-            # v = torch.from_numpy(np.zeros((h,w, K+1))) #overly simple way to use tensors
-            # #v = np.zeros((h,w, K+1)) #overly simple way to use tensors 
-            # for k in range(K):
-            #     for i in range(h):
-            #         for j in range(w):
-            #             v[i,j, k+1] = v[i,j,k]
-            #             for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
-            #                 if di + i < 0 or dj + j < 0:
-            #                     continue
-            #                 if di + i >= h or dj + j >= w:
-            #                     continue
-            #                 ip = i + di
-            #                 jp = j + dj
-            #                 nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
-            #                 v[i,j,k+1] = max( v[i,j,k+1], nv)
-            # s[:,:,0],s[:,:,2] = p,v[:,:,-1]
-            # vp[ii] = s.flatten()
-            # vp = vp.type(torch.FloatTensor)
-            # """
-        
-
-
-            # why does this look make the whole model so bad, when its not even being used yet
-
-        
-
-
-        
-        #self._last_flat_in = vp
-        #expand(torch.DoubleTensor{[4, 4]}, size=[48]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
-        
+              
+        #self._last_flat_in = vp     
 
         #plt.imshow(vp)
         #plt.show()
-        
-        
-        # Return 2x the obs (and empty states).
-        # This will further be sent through an automatically provided
-        # LSTM head (b/c we are setting use_lstm=True below).
-        #if self.debug_vin:
-            # Brug VIN-koden fra VI-agent til at udregne value-funktionen for dette Phi.
-
-            # udregn V(s) vha. numpy-VI-AGENT
-
-            
+                    
         #    V_np = []
         #    assert( (V_np - V_torch.numpy())< 1e-8 )
 
 
-        #stolen right from FCNet      
-        #run crashes if i remove these, even though i override underneath... Has to do with my layers i think
+        #stolen right from FCNet        
         
-        
-        
+
         self._last_flat_in = obs.reshape(obs.shape[0], -1)
         self._features = self._hidden_layers(self._last_flat_in)
-        logits = self._logits(self._features) if self._logits else self._features
+        #logits = self._logits(self._features) if self._logits else self._features
         
-        #logits = self.nn(vp)
-        logits = self.nn(obs) #this seems to be just a much simpler version of the above (single layer)
+        logits = self.nn(vp)
+        #logits = self.nn(obs) #this seems to be just a much simpler version of the above (single layer)
         # self._logits = logits
-        #logits.shape = ([32,5]), state = []        
+        #logits.shape = ([32,5]), state = [] 
         return logits, state #from fcnet
         
         #try to run with the logits, state return statement
@@ -431,7 +334,13 @@ def my_experiment(a):
     mconf = dict(custom_model=vin_label, use_lstm=False)
     # mconf = {}
     config = A3CConfig().training(lr=0.01/10, grad_clip=30.0, model=mconf).resources(num_gpus=0).rollouts(num_rollout_workers=1)
+
     config = config.framework('torch')
+
+    #figure out where these should be defined
+    config.min_train_timesteps_per_iteration = 200
+    config.min_sample_timesteps_per_iteration = 200
+
 
     env_name = "MazeDeterministic_empty4-v0"
     #env_name = 'Maze_empty4-v0' # i dont have this one
@@ -439,7 +348,7 @@ def my_experiment(a):
 
     # Set up alternative model (gridworld).
     # config = config.model(custom_model="my_torch_model", use_lstm=False)
-    print(config.to_dict())
+    #print(config.to_dict())
     config.model['fcnet_hiddens'] = [24, 24] #why 24, just arbitrary?
     # config.model['debug_vin'] = True
     # config.model['saf'] = True

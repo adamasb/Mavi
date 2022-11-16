@@ -26,6 +26,7 @@ parser.add_argument("--stop-iters", type=int, default=2000)
 
 class MyCallbacks(DefaultCallbacks):
     wandb = None
+    gradients = 0 
     def on_algorithm_init(self, *args, algorithm=None):
         print("Initializing the callback logger..")
         # algorithm.config
@@ -178,7 +179,11 @@ class MyCallbacks(DefaultCallbacks):
         if 'default_policy' in lstats:
             lstats = lstats['default_policy']['learner_stats']
             # print("> CALLBACK HAD NON-ZERO INFO", lstats)
-
+            self.gradients = self.gradients + 1
+            print(" logging gradients")
+            self.wandb.log("Training results with learner info", self.gradients)
+            assert False
+            
         else:
             # print("no l stats")
             lstats = {}

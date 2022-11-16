@@ -1,0 +1,146 @@
+
+Main training step 0
+2022-11-15 15:52:42,143	INFO trainable.py:160 -- Trainable.setup took 24.781 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-15 15:52:42,147	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Running custom evaluation function...
+whoops
+training epoch 0 0 -1 nan
+Main training step 1
+C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\numpy\core\fromnumeric.py:3432: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\numpy\core\_methods.py:190: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+Running custom evaluation function...
+whoops
+training epoch 1 0 -1 nan
+Main training step 2
+Running custom evaluation function...
+training epoch 2 1 -12.999999999999966 -12.999999999999966
+Main training step 3
+Running custom evaluation function...
+training epoch 3 2 -0.7000000000000004 -6.849999999999984
+Main training step 4
+Running custom evaluation function...
+training epoch 4 3 -0.7000000000000004 -4.999999999999989
+Main training step 5
+Running custom evaluation function...
+training epoch 5 3 -0.7000000000000004 -4.999999999999989
+Main training step 6
+Running custom evaluation function...
+training epoch 6 3 -0.7000000000000004 -4.999999999999989
+Main training step 7
+Running custom evaluation function...
+training epoch 7 4 -0.7000000000000004 -6.749999999999984
+Main training step 8
+Running custom evaluation function...
+training epoch 8 5 -0.7000000000000004 -6.179999999999987
+Main training step 9
+Running custom evaluation function...
+training epoch 9 5 -0.7000000000000004 -6.179999999999987
+Main training step 10
+Running custom evaluation function...
+training epoch 10 5 -0.7000000000000004 -6.179999999999987
+Main training step 11
+Running custom evaluation function...
+training epoch 11 7 1.1102230246251565e-16 -5.585714285714274
+Main training step 12
+Running custom evaluation function...
+training epoch 12 8 1.1102230246251565e-16 -5.08749999999999
+Main training step 13
+Running custom evaluation function...
+training epoch 13 9 1.1102230246251565e-16 -5.099999999999991
+Main training step 14
+Running custom evaluation function...
+training epoch 14 10 1.1102230246251565e-16 -4.659999999999991
+Main training step 15
+Running custom evaluation function...
+training epoch 15 11 1.1102230246251565e-16 -4.636363636363629
+Main training step 16
+Running custom evaluation function...
+training epoch 16 15 0.8 -3.4399999999999946
+Main training step 17
+Running custom evaluation function...
+training epoch 17 16 0.8 -3.2187499999999947
+Main training step 18
+Running custom evaluation function...
+training epoch 18 18 0.8 -3.1222222222222173
+Main training step 19
+Running custom evaluation function...
+training epoch 19 22 0.8 -2.536363636363632
+Main training step 20
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\trystuff.py", line 519, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\trystuff.py", line 425, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 167, in get_ready
+    ready_requests, self._pending_remotes = ray.wait(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2461, in wait
+    ready_ids, remaining_ids = worker.core_worker.wait(
+  File "python\ray\_raylet.pyx", line 1414, in ray._raylet.CoreWorker.wait
+  File "python\ray\_raylet.pyx", line 173, in ray._raylet.check_status
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\trystuff.py", line 519, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\trystuff.py", line 425, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 167, in get_ready
+    ready_requests, self._pending_remotes = ray.wait(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2461, in wait
+    ready_ids, remaining_ids = worker.core_worker.wait(
+  File "python\ray\_raylet.pyx", line 1414, in ray._raylet.CoreWorker.wait
+  File "python\ray\_raylet.pyx", line 173, in ray._raylet.check_status
+KeyboardInterrupt

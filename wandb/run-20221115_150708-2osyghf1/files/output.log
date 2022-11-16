@@ -1,0 +1,73 @@
+
+Main training step 0
+2022-11-15 15:07:10,314	INFO trainable.py:160 -- Trainable.setup took 42.812 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-15 15:07:10,325	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\numpy\core\fromnumeric.py:3432: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\numpy\core\_methods.py:190: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+Running custom evaluation function...
+whoops
+training epoch 0 0 -1 nan
+Main training step 1
+Running custom evaluation function...
+whoops
+training epoch 1 0 -1 nan
+Main training step 2
+Running custom evaluation function...
+whoops
+training epoch 2 0 -1 nan
+Main training step 3
+Running custom evaluation function...
+whoops
+training epoch 3 0 -1 nan
+Main training step 4
+Running custom evaluation function...
+whoops
+training epoch 4 0 -1 nan
+Main training step 5
+Running custom evaluation function...
+training epoch 5 1 -20.000000000000014 -20.000000000000014
+Main training step 6
+Running custom evaluation function...
+training epoch 6 1 -20.000000000000014 -20.000000000000014
+Main training step 7
+Running custom evaluation function...
+training epoch 7 1 -20.000000000000014 -20.000000000000014
+Main training step 8
+Running custom evaluation function...
+training epoch 8 1 -20.000000000000014 -20.000000000000014
+Main training step 9
+Running custom evaluation function...
+training epoch 9 1 -20.000000000000014 -20.000000000000014
+Main training step 10
+Running custom evaluation function...
+training epoch 10 1 -20.000000000000014 -20.000000000000014
+Main training step 11
+Running custom evaluation function...
+training epoch 11 2 -20.000000000000014 -20.000000000000014
+Main training step 12
+Running custom evaluation function...
+training epoch 12 2 -20.000000000000014 -20.000000000000014
+Main training step 13
+Running custom evaluation function...
+training epoch 13 3 -2.5000000000000018 -14.166666666666677
+Main training step 14
+Running custom evaluation function...
+training epoch 14 3 -2.5000000000000018 -14.166666666666677
+Main training step 15
+Running custom evaluation function...
+training epoch 15 3 -2.5000000000000018 -14.166666666666677
+Main training step 16
+Running custom evaluation function...
+training epoch 16 3 -2.5000000000000018 -14.166666666666677
+Main training step 17
+Running custom evaluation function...
+training epoch 17 3 -2.5000000000000018 -14.166666666666677
+Main training step 18
+Running custom evaluation function...
+training epoch 18 3 -2.5000000000000018 -14.166666666666677
+Main training step 19
+Running custom evaluation function...
+training epoch 19 4 -2.5000000000000018 -15.62500000000001
+Job done
