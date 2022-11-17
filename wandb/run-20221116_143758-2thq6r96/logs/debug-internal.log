@@ -1,0 +1,108 @@
+2022-11-16 14:37:59,091 INFO    StreamThr :7024 [internal.py:wandb_internal():88] W&B internal server running at pid: 7024, started at: 2022-11-16 14:37:59.089540
+2022-11-16 14:37:59,102 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: status
+2022-11-16 14:37:59,121 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: status
+2022-11-16 14:37:59,130 DEBUG   SenderThread:7024 [sender.py:send():303] send: header
+2022-11-16 14:37:59,131 INFO    WriterThread:7024 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\run-2thq6r96.wandb
+2022-11-16 14:37:59,245 DEBUG   SenderThread:7024 [sender.py:send():303] send: run
+2022-11-16 14:37:59,816 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: check_version
+2022-11-16 14:37:59,855 INFO    SenderThread:7024 [dir_watcher.py:__init__():216] watching files in: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files
+2022-11-16 14:37:59,855 INFO    SenderThread:7024 [sender.py:_start_run_threads():928] run started: 2thq6r96 with start time 1668605879.091911
+2022-11-16 14:37:59,855 DEBUG   SenderThread:7024 [sender.py:send():303] send: summary
+2022-11-16 14:37:59,855 INFO    SenderThread:7024 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 14:37:59,861 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: check_version
+2022-11-16 14:38:00,042 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: run_start
+2022-11-16 14:38:00,068 DEBUG   HandlerThread:7024 [meta.py:__init__():34] meta init
+2022-11-16 14:38:00,069 DEBUG   HandlerThread:7024 [meta.py:__init__():49] meta init done
+2022-11-16 14:38:00,069 DEBUG   HandlerThread:7024 [meta.py:probe():215] probe
+2022-11-16 14:38:00,107 DEBUG   HandlerThread:7024 [meta.py:_setup_git():205] setup git
+2022-11-16 14:38:00,271 DEBUG   HandlerThread:7024 [meta.py:_setup_git():212] setup git done
+2022-11-16 14:38:00,271 DEBUG   HandlerThread:7024 [meta.py:_save_pip():53] save pip
+2022-11-16 14:38:00,273 DEBUG   HandlerThread:7024 [meta.py:_save_pip():67] save pip done
+2022-11-16 14:38:00,273 DEBUG   HandlerThread:7024 [meta.py:probe():253] probe done
+2022-11-16 14:38:00,572 DEBUG   SenderThread:7024 [sender.py:send():303] send: files
+2022-11-16 14:38:00,574 INFO    SenderThread:7024 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-16 14:38:00,575 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:38:00,578 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:38:00,808 DEBUG   SenderThread:7024 [sender.py:send():303] send: telemetry
+2022-11-16 14:38:00,865 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\wandb-metadata.json
+2022-11-16 14:38:00,869 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\requirements.txt
+2022-11-16 14:38:00,871 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:38:00,871 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\wandb-summary.json
+2022-11-16 14:38:01,363 INFO    Thread-29 :7024 [upload_job.py:push():143] Uploaded file C:\Users\adams\AppData\Local\Temp\tmpfs34gx60wandb\10o1joyb-wandb-metadata.json
+2022-11-16 14:38:02,889 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:38:15,830 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:38:15,830 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:38:30,220 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\config.yaml
+2022-11-16 14:38:31,137 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:38:31,137 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:38:31,653 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:38:32,439 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-16 14:38:32,456 DEBUG   SenderThread:7024 [sender.py:send():303] send: history
+2022-11-16 14:38:32,456 DEBUG   SenderThread:7024 [sender.py:send():303] send: summary
+2022-11-16 14:38:32,456 INFO    SenderThread:7024 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 14:38:33,253 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:38:33,253 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\wandb-summary.json
+2022-11-16 14:38:46,381 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:38:46,382 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:39:01,631 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:39:01,631 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:39:05,342 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:39:16,906 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:39:16,907 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:39:32,171 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:39:32,173 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:39:38,779 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:39:47,533 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:39:47,533 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:39:57,991 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-16 14:39:57,995 DEBUG   SenderThread:7024 [sender.py:send():303] send: history
+2022-11-16 14:39:57,995 DEBUG   SenderThread:7024 [sender.py:send():303] send: summary
+2022-11-16 14:39:58,010 INFO    SenderThread:7024 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 14:39:58,271 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\wandb-summary.json
+2022-11-16 14:40:00,302 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:40:02,804 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:40:02,805 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:40:12,424 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:40:18,149 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:40:18,149 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:40:33,521 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:40:33,523 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:40:45,405 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:40:48,767 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:40:48,767 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:41:04,057 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:41:04,057 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:41:09,406 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-16 14:41:09,415 DEBUG   SenderThread:7024 [sender.py:send():303] send: history
+2022-11-16 14:41:09,416 DEBUG   SenderThread:7024 [sender.py:send():303] send: summary
+2022-11-16 14:41:09,422 INFO    SenderThread:7024 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 14:41:10,037 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:41:10,038 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\wandb-summary.json
+2022-11-16 14:41:12,056 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:41:18,478 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:41:19,379 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:41:19,379 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:41:34,643 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:41:34,643 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:41:46,660 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-16 14:41:46,660 DEBUG   SenderThread:7024 [sender.py:send():303] send: history
+2022-11-16 14:41:46,660 DEBUG   SenderThread:7024 [sender.py:send():303] send: summary
+2022-11-16 14:41:46,672 INFO    SenderThread:7024 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 14:41:47,411 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\wandb-summary.json
+2022-11-16 14:41:48,417 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:41:49,898 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:41:49,898 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:41:51,760 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:42:05,106 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:42:05,107 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:42:20,343 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:42:20,343 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status
+2022-11-16 14:42:23,688 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-16 14:42:23,688 DEBUG   SenderThread:7024 [sender.py:send():303] send: history
+2022-11-16 14:42:23,697 DEBUG   SenderThread:7024 [sender.py:send():303] send: summary
+2022-11-16 14:42:23,705 INFO    SenderThread:7024 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-16 14:42:23,791 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\wandb-summary.json
+2022-11-16 14:42:24,800 INFO    Thread-23 :7024 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221116_143758-2thq6r96\files\output.log
+2022-11-16 14:42:25,071 DEBUG   SenderThread:7024 [sender.py:send():303] send: stats
+2022-11-16 14:42:35,560 DEBUG   HandlerThread:7024 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-16 14:42:35,560 DEBUG   SenderThread:7024 [sender.py:send_request():317] send_request: stop_status

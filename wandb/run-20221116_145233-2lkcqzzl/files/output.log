@@ -1,0 +1,2428 @@
+2022-11-16 14:52:35,519	INFO trainable.py:160 -- Trainable.setup took 69.002 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-16 14:52:35,526	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+Running custom evaluation function...
+training epoch 0[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.], 1
+ -20.000000000000014[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+-20.000000000000014
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],Main training step
+ 1
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+Running custom evaluation function...
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+training epoch 1 2 -20.000000000000014 -20.000000000000014
+Main training step 2
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [1., 0., 0., 0.]])
+tensor([[0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [0., 0., 0., 0.],
+        [1., 0., 0., 0.]])
+[36m(RolloutWorker pid=8984)[39m tensor([[0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],
+[36m(RolloutWorker pid=8984)[39m         [0., 0., 0., 0.],

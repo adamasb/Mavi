@@ -179,10 +179,11 @@ class MyCallbacks(DefaultCallbacks):
         if 'default_policy' in lstats:
             lstats = lstats['default_policy']['learner_stats']
             # print("> CALLBACK HAD NON-ZERO INFO", lstats)
-            self.gradients = self.gradients + 1
-            print(" logging gradients")
-            self.wandb.log("Training results with learner info", self.gradients)
-            assert False
+            # self.gradients = self.gradients + 1
+            # print(" logging gradients") 
+            # print(type(self.gradients)) # this is of course not a dictionary, which is giving errors
+            #self.wandb.log("Training results with learner info", self.gradients)
+            #assert False
             
         else:
             # print("no l stats")

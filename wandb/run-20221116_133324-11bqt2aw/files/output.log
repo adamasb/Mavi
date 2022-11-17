@@ -1,0 +1,105 @@
+2022-11-16 13:33:25,176	INFO trainable.py:160 -- Trainable.setup took 22.856 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-16 13:33:25,178	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+Running custom evaluation function...
+training epoch 0 7 0.8 -1.6428571428571423
+Main training step 1
+Running custom evaluation function...
+training epoch 1 25 0.8 -0.4519999999999998
+Main training step 2
+Running custom evaluation function...
+training epoch 2 48 0.8 -0.14374999999999993
+Main training step 3
+Running custom evaluation function...
+training epoch 3 83 0.8 0.13614457831325305
+Main training step 4
+Running custom evaluation function...
+training epoch 4 100 0.8 0.4679999999999999
+Main training step 5
+Running custom evaluation function...
+training epoch 5 100 0.8 0.5619999999999999
+Main training step 6
+Running custom evaluation function...
+training epoch 6 100 0.8 0.621
+Main training step 7
+Running custom evaluation function...
+training epoch 7 100 0.8 0.6509999999999999
+Main training step 8
+Running custom evaluation function...
+training epoch 8 100 0.8 0.6509999999999998
+Main training step 9
+Running custom evaluation function...
+training epoch 9 100 0.8 0.6659999999999999
+Main training step 10
+Running custom evaluation function...
+training epoch 10 100 0.8 0.681
+Main training step 11
+Running custom evaluation function...
+training epoch 11 100 0.8 0.6639999999999999
+Main training step 12
+Running custom evaluation function...
+training epoch 12 100 0.8 0.6619999999999999
+Main training step 13
+Running custom evaluation function...
+training epoch 13 100 0.8 0.675
+Main training step 14
+Running custom evaluation function...
+training epoch 14 100 0.8 0.6759999999999999
+Main training step 15
+Backend QtAgg is interactive backend. Turning interactive mode on.
+<module 'numpy.random' from 'C:\\Users\\adams\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\__init__.py'>
+<built-in method rand of numpy.random.mtrand.RandomState object at 0x00000236E5262440>
+[0.65106504]
+[0.82417778]
+[0.93041049]
+[0.58328914]
+[0.53760278]
+[0.98770431]
+[0.40669113]
+[0.1935292  0.48819165 0.28989022 0.89093936 0.82580532 0.25178126
+ 0.09347448 0.42172857 0.06681327 0.30602787]
+[0.63159492]
+[4.5422735]
+[3.43810373]
+[90.2872838]
+[33.30547307]
+[87.30704322]
+[86.81827693]
+[50.74375486]
+[2.4099081]
+[47.56320263]
+[29.22296985]
+[17.12464294]
+[674.14038115]
+[569.96313025]
+[121.91755236]
+[264.51552604]
+[90.90541784]
+[406.25221079]
+Running custom evaluation function...
+training epoch 15 100 0.8 0.6949999999999998
+Main training step 16
+Running custom evaluation function...
+training epoch 16 100 0.8 0.705
+Main training step 17
+Running custom evaluation function...
+training epoch 17 100 0.8 0.7219999999999999
+Main training step 18
+Running custom evaluation function...
+training epoch 18 100 0.8 0.6839999999999999
+Main training step 19
+Running custom evaluation function...
+training epoch 19 100 0.8 0.672
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 1.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 1. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+Job done

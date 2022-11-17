@@ -1,0 +1,49 @@
+2022-11-16 16:10:06,234	INFO trainable.py:160 -- Trainable.setup took 21.450 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-16 16:10:06,237	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 510, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 416, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 397, in train
+    self.log_result(result)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 188, in log_result
+    return super().log_result(result)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 1562, in log_result
+    self.callbacks.on_train_result(algorithm=self, result=result, trainer=self)
+  File "C:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\my_callback.py", line 184, in on_train_result
+    self.wandb.log("Training results with learner info", self.gradients)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 292, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 255, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1609, in log
+    self._log(data=data, step=step, commit=commit)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1386, in _log
+    raise ValueError("wandb.log must be passed a dictionary")
+ValueError: wandb.log must be passed a dictionary
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 510, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 416, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 397, in train
+    self.log_result(result)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 188, in log_result
+    return super().log_result(result)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 1562, in log_result
+    self.callbacks.on_train_result(algorithm=self, result=result, trainer=self)
+  File "C:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\my_callback.py", line 184, in on_train_result
+    self.wandb.log("Training results with learner info", self.gradients)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 292, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 255, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1609, in log
+    self._log(data=data, step=step, commit=commit)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1386, in _log
+    raise ValueError("wandb.log must be passed a dictionary")
+ValueError: wandb.log must be passed a dictionary
+Running custom evaluation function...
+ logging gradients

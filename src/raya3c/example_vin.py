@@ -29,14 +29,6 @@ import wandb
 
 
 
-#can be used to create a custom policy or custom trainer
-"""CustomPolicy = A3CTorchPolicy.with_updates(
-    name="MyCustomA3CTorchPolicy",
-    loss_fn=some_custom_loss_fn)
-
-CustomTrainer = A3C.with_updates(
-    default_policy=CustomPolicy)"""
-
 
 vin_label = "vin_network_model"
 # Kig paa: FullyConnectedNetwork som er den Model-klassen bruger per default.
@@ -49,11 +41,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self.num_outputs = 5 #int(np.product(self.obs_space.shape))
         self._last_batch_size = None
         
-        
-        #self.nn = SlimFC(3*4*4, self.num_outputs)#input = 3n^2 
-
         self.nn = SlimFC(4*4*4, self.num_outputs)# used when we take state @ vp
-        # perhaps change this to 4*4*4 so we can use s @ vp input        
         #not at all used, yet
         self.Phi = SlimFC(3, 3) # input 3 output 3
 
@@ -61,14 +49,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
         #    self.debug_vin = model_config['debug_vin']
 
-    # Implement your own forward logic, whose output will then be sent
-    # through an LSTM.
-
-
-
-        """everything down to comment is stolen from fcnet.py"""
-        #Stolen right from FCNet
-    
         hiddens = list(model_config.get("fcnet_hiddens", [])) + list(
             model_config.get("post_fcnet_hiddens", [])
         )
@@ -168,6 +148,16 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     def forward(self, input_dict, state, seq_lens): #dont think this is currently being used
         obs = input_dict["obs_flat"]
 
+        # if obs.any() != 0:
+        #     #print(obs[0].reshape((4,4,3))[:,:,-1])
+        #     if (obs[0] != torch.tensor([[1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.]])).all() == torch.tensor(False):
+        #         if (obs[0] != torch.tensor([1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.])).all() == torch.tensor(False):
+        #             if (obs[0] != torch.tensor([[1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.]])).all():
+        #                 if (obs[0] != torch.tensor([1., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 1., 0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0.])).all():
+        #                     #print(obs[0].reshape((4,4,3))[:,:,-1])
+        #                     print("they dont match")
+
+
         # Store last batch size for value_function output.
         self._last_batch_size = obs.shape[0]
         
@@ -200,131 +190,23 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #logits = self._logits(self._features) if self._logits else self._features
         
         logits = self.nn(vp)
-        #logits = self.nn(obs) #this seems to be just a much simpler version of the above (single layer)
-        # self._logits = logits
-        #logits.shape = ([32,5]), state = [] 
+   
         return logits, state #from fcnet
         
-        #try to run with the logits, state return statement
-        #return obs * 2.0, [] #from documentation example
-
     
     def value_function(self): #dont think this is currently being used
+        #pass value function through a neural network
+        
 
-        #return torch.tensor([0]*32) # a little test, causes weird error
-        # if self._value_branch_separate:
-        #     return self._value_branch(
-        #         self._value_branch_separate(self._last_flat_in)
-        #     ).squeeze(1)
-        # else:
-
-        #if i can get current location, then i can use vp module here
         return self._value_branch(self._features).squeeze(1) #
         
-        #return torch.from_numpy(np.zeros(shape=(self._last_batch_size,)))
-        #this is just zeroes?
-        
-        #v = VIP(env.reset(),Phi(env.reset()))[:,:,-1] # get last layer of the value prop
-
-        #return v
-    
-
 
     #pi from agent.py
     def pi(self, s, k=None): #we never enter this (except with the irlc-visualise stuff i think)
         # return self.env.action_space.sample() #!s
 
-        #hacky way of getting location of agent
-        s = env.reset() #dont use env.reset when changing to "real environment"
-        a_map = s[:,:,1]
-        a_loc = np.where(a_map==1)
-        a_loc = (a_loc[0][0],a_loc[1][0])
-
         return self.obs_space.action_space.sample()
 
-
-
-"""
-def VIP(Phi, K=20):#k=20 default, 
-    (rin, rout, p) = Phi
-    h, w = p.shape[0], p.shape[1]
-    #we get issues with wandb showing the v plot when using tensors instead of np array
-    v = torch.from_numpy(np.zeros((h,w, K+1))) #overly simple way to use tensors
-    #v = np.zeros((h,w, K+1)) #overly simple way to use tensors 
-    for k in range(K):
-        for i in range(h):
-            for j in range(w):
-                v[i,j, k+1] = v[i,j,k]
-                for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
-                    if di + i < 0 or dj + j < 0:
-                        continue
-                    if di + i >= h or dj + j >= w:
-                        continue
-                    ip = i + di
-                    jp = j + dj
-                    nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
-                    v[i,j,k+1] = max( v[i,j,k+1], nv)
-    return v
-    """
-
-
-
-
-
-def Phi(s):
-    # THIS SHOULD BE TRAINED IN A NN, for now we just experiment with this though
-    """ Is this supposed to be a linear NN or a CNN, paper suggests CNN? """
-
-    rout = s[:, :, 2]
-    rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
-    p = 1 - s[:, :, 0] # what exactly does this represent, currently
-    #Phi = (rin,rout,p)
-    #print(Phi)
-
-    return (rin, rout, p)
-    
-""" #"my own" experiment, maybe outdated by tues version (below)
-ModelCatalog.register_custom_model(vin_label, VINNetwork)
-def my_experiment(a):
-    print("Hello world")
-    # see https://docs.ray.io/en/latest/rllib/rllib-training.html
-    
-    mconf = dict(custom_model=vin_label, use_lstm=False)#, debug_vin=True) 
-    
-    
-    config = A3CConfig().training(lr=0.01/10, grad_clip=30.0, model=mconf).resources(num_gpus=0).rollouts(num_rollout_workers=1)
-    #config from example_maze.py
-    #config = A3CConfig().training(lr=0.01/10, grad_clip=30.0).resources(num_gpus=0).rollouts(num_rollout_workers=1)
-    config = config.framework('torch')
-
-
-    # config.
-    config = config.callbacks(MyCallbacks) #not sure i understand callbacks
-    #config = config.model(custom_model="my_torch_model", use_lstm=False)
-
-    #print(config.to_dict()) #
-    config.model['fcnet_hiddens'] = [24, 24]  
-    # lets try to make use of our own custom_net somewhow
-    # env = gym.make("MazeDeterministic_empty4-v0")
-
-
-    #something in here needs to be a tensor, but is nonetype
-    trainer = config.build(env="MazeDeterministic_empty4-v0") # juump into a3c setup()
-    #trainer = config.build(env="CartPole-v1") 
-
-
-    for t in range(10): #150
-        print("Main training step", t)
-        result = trainer.train() #calls this line, enters worker.py and crashes. crashes in trainer?
-        rewards = result['hist_stats']['episode_reward']
-        print("training epoch", t, len(rewards), max(rewards), result['episode_reward_mean'])
-    
-
-
-
-    #config.save 
-    # #crash "A3CConfig has no attribute 'save'"
-"""
 
 #Tue's "Scrap file" code:
 ModelCatalog.register_custom_model(vin_label, VINNetwork)
@@ -338,9 +220,14 @@ def my_experiment(a):
     config = config.framework('torch')
 
     #figure out where these should be defined
+
+
+    #might be here where we break the wandb??
+
+    #THIS IS WHERE MY ISSUE IS!!
     config.min_train_timesteps_per_iteration = 200
     config.min_sample_timesteps_per_iteration = 200
-
+   
 
     env_name = "MazeDeterministic_empty4-v0"
     #env_name = 'Maze_empty4-v0' # i dont have this one
@@ -401,7 +288,7 @@ def my_experiment(a):
     else:
 
         trainer = config.build(env="MazeDeterministic_empty4-v0")
-        for t in range(20): #150
+        for t in range(50): #150
             print("Main training step", t)
             result = trainer.train()
             rewards = result['hist_stats']['episode_reward']
@@ -414,48 +301,6 @@ def my_experiment(a):
 
     # config.save
 
-
-
-
-
-    #only needed for printing the wandb image of V
-    #env = gym.make("MazeDeterministic_empty4-v0")
-
-    #s = env.reset() # 
-    """ s looks like: 
-array([[1., 0., 0., 1.],
-       [0., 0., 0., 0.],
-       [0., 0., 0., 0.],
-       [1., 0., 0., 1.]])
-
-array([[0., 0., 0., 0.],
-       [0., 0., 0., 0.],
-       [0., 0., 1., 0.],
-       [0., 0., 0., 0.]])
-
-array([[0., 0., 0., 0.],
-       [0., 0., 0., 0.],
-       [0., 0., 0., 0.],
-       [1., 0., 0., 0.]])
-       """
-    #env = VideoMonitor(env)
-    
-    #this is only needed if i wanna visualize the trainer
-    #train(env, VINNetwork(env, trainer,num_outputs=env.action_space.n, model_config=dict(custom_model=vin_label, use_lstm=False), name='hardcoded'), num_episodes=10) #train() is a function in agent.py that crashes
-
-
-    #create an image in wandb (of last layer of V)
-    #v = VIP(Phi(s))
-    #v = v[:,:,-1]
-
-    #print(s[:,:,0])
-    #print(s[:,:,1])
-    #print(s[:,:,2])
-
-    #p = 1 - s[:, :, 0] 
-    #images = wandb.Image(p, caption="Top: Output, Bottom: Input")
-    #wandb.log({"image of p": images})
-
     #plt.imshow(v)
     #plt.show()
 
@@ -464,49 +309,13 @@ array([[0., 0., 0., 0.],
 
 
 
-
 if __name__ == "__main__":
-    #
-    # import pickle
-    #
-    # with open('mydb', 'wb') as f:
-    #     pickle.dump({'x': 344}, f)
-    #
-    # with open('mydb', 'rb') as f:
-    #     s = pickle.load(f)
-    #     # pickle.dump({'x': 344}, f)
-    #
-    # sys.exit()
+   
     res = []
     DISABLE = True
-    # key = "04ff52c3923a648c9c263246bf44cb955a8bf56d"
-
-    # Optional
-    # wandb.watch(model)
-
-    # sys.exit()
-    # my_experiment(34)
-    # sys.exit()
     
-    
-    # with DTUCluster(job_group="myfarm/job0", nuke_group_folder=True, rq=False, disable=False, dir_map=['../../../mavi'],
-    #                 nuke_all_remote_folders=True) as cc:
-    #     # my_experiment(2)
-    #     wfun = cc.wrap(my_experiment) if not DISABLE else my_experiment
-    #     for a in [1]:
-    #         res.append(wfun(a))
-    # print(res)
-
     my_experiment(1)
-    # wfun = my_experiment
-    # for a in [1]:
-    #     res.append(wfun(a))
-    #     a = 123
-    
-
-    # res = cc.wrap(myfun)(args1, args2)
-    # val2 = myexperiment(1,2)
-    # wait_to_finish()
+   
     print("Job done")
     sys.exit()
 
