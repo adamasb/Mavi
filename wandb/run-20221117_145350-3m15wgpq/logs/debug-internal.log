@@ -1,0 +1,291 @@
+2022-11-17 14:53:50,919 INFO    StreamThr :10340 [internal.py:wandb_internal():88] W&B internal server running at pid: 10340, started at: 2022-11-17 14:53:50.918504
+2022-11-17 14:53:50,921 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: status
+2022-11-17 14:53:50,924 DEBUG   SenderThread:10340 [sender.py:send_request():317] send_request: status
+2022-11-17 14:53:50,925 DEBUG   SenderThread:10340 [sender.py:send():303] send: header
+2022-11-17 14:53:50,926 INFO    WriterThread:10340 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221117_145350-3m15wgpq\run-3m15wgpq.wandb
+2022-11-17 14:53:50,969 DEBUG   SenderThread:10340 [sender.py:send():303] send: run
+2022-11-17 14:53:56,014 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:01,058 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:06,087 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:11,142 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:11,237 ERROR   SenderThread:10340 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001E1CCF68D30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E1CCF68D30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\lib\retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\internal\internal_api.py", line 213, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\transport\requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E1CCF68D30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-11-17 14:54:16,179 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:21,236 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:26,276 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:31,312 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:36,340 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:41,380 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:46,428 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:54:52,530 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: poll_exit
+2022-11-17 14:54:57,558 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:02,573 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:07,618 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:12,633 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:17,667 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:22,694 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:27,723 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:32,751 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:37,765 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:42,793 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:47,827 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:52,851 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:55:57,864 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:02,872 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:07,887 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:12,900 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:17,927 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:22,943 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:27,956 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:32,971 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:37,993 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:43,036 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:48,077 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:53,125 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:56:58,156 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:03,184 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:08,196 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:13,207 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:18,220 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:23,236 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:28,251 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:33,269 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:38,296 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:43,339 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:48,400 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:53,424 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:57:58,430 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:03,444 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:08,457 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:13,484 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:18,496 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:23,524 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:28,553 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:33,565 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:38,576 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:43,602 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:48,634 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:53,658 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:58:58,687 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:03,710 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:08,723 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:13,737 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:18,764 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:23,776 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:28,818 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:33,831 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:38,843 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:43,871 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:48,886 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:53,905 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 14:59:58,933 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:03,961 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:08,997 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:14,033 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:19,046 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:24,056 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:29,064 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:34,098 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:39,111 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:44,154 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:49,185 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:54,207 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:00:59,218 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:04,261 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:09,290 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:14,302 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:19,359 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:24,385 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:29,415 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:34,421 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:39,472 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:44,516 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:49,553 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:54,612 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:01:59,650 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:04,702 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:09,733 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:14,745 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:19,779 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:24,809 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:29,820 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:34,858 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:39,904 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:44,924 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:49,941 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:54,975 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:02:59,986 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:05,031 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:10,065 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:15,076 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:20,097 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:25,147 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:30,159 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:35,172 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:40,201 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:45,214 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:50,240 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:03:55,254 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:00,311 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:05,340 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:10,355 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:15,382 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:20,410 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:25,454 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:30,483 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:35,510 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:40,537 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:45,565 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:50,606 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:04:55,624 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:00,652 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:05,680 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:10,707 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:15,719 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:20,742 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:25,771 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:30,786 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:35,799 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:40,815 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:45,842 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:50,867 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:05:55,897 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:00,908 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:05,935 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:10,950 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:15,978 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:20,990 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:26,034 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:31,062 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:36,091 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:41,104 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:46,150 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:51,187 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:06:56,204 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:01,216 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:06,229 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:11,240 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:16,269 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:21,313 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:26,356 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:31,383 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:36,411 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:41,454 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:46,465 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:51,494 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:07:56,519 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:01,527 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:06,541 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:11,553 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:16,583 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:21,602 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:26,615 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:31,643 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:36,656 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:41,684 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:46,727 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:51,752 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:08:56,768 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:01,794 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:06,807 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:11,818 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:16,847 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:21,874 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:26,902 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:31,918 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:36,961 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:41,973 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:47,001 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:52,024 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:09:57,041 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:10:02,053 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:10:07,068 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:10:12,099 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:10:17,126 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:04,014 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:09,047 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:14,088 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:19,112 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:24,125 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:29,137 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:34,150 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:39,164 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:44,191 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:49,205 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:54,233 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:13:59,245 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:04,267 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:09,284 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:14,314 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:19,322 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:24,334 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:29,347 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:34,390 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:39,433 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:44,481 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:49,510 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:54,545 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:14:59,595 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:15:04,647 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:15:09,696 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:15:14,717 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:15:19,750 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive
+2022-11-17 15:15:24,781 DEBUG   HandlerThread:10340 [handler.py:handle_request():138] handle_request: keepalive

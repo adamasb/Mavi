@@ -1,0 +1,9 @@
+
+
+voltash
+
+source virt1/bin/activate
+
+
+#maybe:
+module load cuda

@@ -196,7 +196,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     
     def value_function(self): #dont think this is currently being used
         #pass value function through a neural network
-        
 
         return self._value_branch(self._features).squeeze(1) #
         
@@ -288,7 +287,7 @@ def my_experiment(a):
     else:
 
         trainer = config.build(env="MazeDeterministic_empty4-v0")
-        for t in range(50): #150
+        for t in range(400): #200 is not enough for good performance
             print("Main training step", t)
             result = trainer.train()
             rewards = result['hist_stats']['episode_reward']

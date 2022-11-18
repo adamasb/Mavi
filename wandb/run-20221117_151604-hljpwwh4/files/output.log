@@ -1,0 +1,81 @@
+
+Main training step 0
+2022-11-17 15:16:06,135	INFO trainable.py:160 -- Trainable.setup took 27.760 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-17 15:16:06,135	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Running custom evaluation function...
+training epoch 0 9 0.8 -1.0999999999999988
+Main training step 1
+Running custom evaluation function...
+training epoch 1 27 0.8 -0.38518518518518485
+Main training step 2
+Running custom evaluation function...
+training epoch 2 57 0.8 0.05438596491228089
+Main training step 3
+Running custom evaluation function...
+training epoch 3 94 0.8 0.2585106382978724
+Main training step 4
+Running custom evaluation function...
+training epoch 4 100 0.8 0.5109999999999999
+Main training step 5
+Running custom evaluation function...
+training epoch 5 100 0.8 0.525
+Main training step 6
+Running custom evaluation function...
+training epoch 6 100 0.8 0.59
+Main training step 7
+Running custom evaluation function...
+training epoch 7 100 0.8 0.6499999999999999
+Main training step 8
+Running custom evaluation function...
+training epoch 8 100 0.8 0.6629999999999999
+Main training step 9
+Running custom evaluation function...
+training epoch 9 100 0.8 0.6679999999999999
+Main training step 10
+Running custom evaluation function...
+training epoch 10 100 0.8 0.6689999999999998
+Main training step 11
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 316, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 292, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2269, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 669, in get_objects
+    data_metadata_pairs = self.core_worker.get_objects(
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 316, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 292, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2269, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 669, in get_objects
+    data_metadata_pairs = self.core_worker.get_objects(
+KeyboardInterrupt
