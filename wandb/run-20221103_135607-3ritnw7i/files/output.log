@@ -1,0 +1,124 @@
+2022-11-03 13:56:29,926	INFO trainable.py:160 -- Trainable.setup took 296.413 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-03 13:56:29,936	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+2022-11-03 13:57:09,609	WARNING algorithm.py:2179 -- Worker crashed during training or evaluation! To try to continue without failed worker(s), set `ignore_worker_failures=True`. To try to recover the failed worker(s), set `recreate_failed_workers=True`.
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 480, in <module>
+    res.append(wfun(a)) # i think this call the function that crashes
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 364, in my_experiment
+    result = trainer.train() #calls this line, enters worker.py and crashes. crashes in trainer?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2379, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2186, in try_recover_from_step_attempt
+    raise error
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 215, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2275, in get
+    raise value.as_instanceof_cause() #runtime error:
+ray.exceptions.RayTaskError(RuntimeError): [36mray::RolloutWorker.apply()[39m (pid=7752, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x000001D36E6F81F0>)
+  File "python\ray\_raylet.pyx", line 662, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 666, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 613, in ray._raylet.execute_task.function_executor
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\function_manager.py", line 674, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\util\tracing\tracing_helper.py", line 466, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\rollout_worker.py", line 1664, in apply
+    return func(self, *args, **kwargs)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 199, in sample_and_compute_grads
+    samples = worker.sample()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\util\tracing\tracing_helper.py", line 466, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\rollout_worker.py", line 806, in sample
+    batches = [self.input_reader.next()]
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\sampler.py", line 92, in next
+    batches = [self.get_data()]
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\sampler.py", line 509, in get_data
+    raise RuntimeError("Sampling thread has died")
+RuntimeError: Sampling thread has died
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.1\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 480, in <module>
+    res.append(wfun(a)) # i think this call the function that crashes
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 364, in my_experiment
+    result = trainer.train() #calls this line, enters worker.py and crashes. crashes in trainer?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 662, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2379, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2186, in try_recover_from_step_attempt
+    raise error
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2374, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 215, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2275, in get
+    raise value.as_instanceof_cause() #runtime error:
+ray.exceptions.RayTaskError(RuntimeError): [36mray::RolloutWorker.apply()[39m (pid=7752, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x000001D36E6F81F0>)
+  File "python\ray\_raylet.pyx", line 662, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 666, in ray._raylet.execute_task
+  File "python\ray\_raylet.pyx", line 613, in ray._raylet.execute_task.function_executor
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\function_manager.py", line 674, in actor_method_executor
+    return method(__ray_actor, *args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\util\tracing\tracing_helper.py", line 466, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\rollout_worker.py", line 1664, in apply
+    return func(self, *args, **kwargs)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 199, in sample_and_compute_grads
+    samples = worker.sample()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\util\tracing\tracing_helper.py", line 466, in _resume_span
+    return method(self, *_args, **_kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\rollout_worker.py", line 806, in sample
+    batches = [self.input_reader.next()]
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\sampler.py", line 92, in next
+    batches = [self.get_data()]
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\evaluation\sampler.py", line 509, in get_data
+    raise RuntimeError("Sampling thread has died")
+RuntimeError: Sampling thread has died

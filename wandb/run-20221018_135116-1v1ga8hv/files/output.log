@@ -1,0 +1,63 @@
+
+Main training step 0
+2022-10-18 13:51:17,800	INFO trainable.py:160 -- Trainable.setup took 24.057 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-10-18 13:51:17,800	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+training epoch 0 134 0.8 -0.0671641791044775
+Main training step 1
+training epoch 1 286 0.8 0.5965034965034964
+Main training step 2
+training epoch 2 305 0.8 0.6380327868852459
+Main training step 3
+training epoch 3 294 0.8 0.6517006802721088
+Main training step 4
+training epoch 4 302 0.8 0.6668874172185429
+Backend QtAgg is interactive backend. Turning interactive mode on.
+['self', 'mode', 'state', 'agent', 'v', 'Q', 'pi', 'policy', 'v2Q', 'gamma', 'method_label', 'label']
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 183, in <module>
+    res.append(wfun(a)) # i think this call the function that crashes
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 124, in my_experiment
+    train(env, VINNetwork(env, trainer,num_outputs=5, model_config=dict(custom_model=vin_label, use_lstm=False), name='test'), num_episodes=10)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 29, in __init__
+    self.num_outputs = int(np.product(self.obs_space.shape)) #now we crash,: 'VideoMonitor' object has no attribute 'shape'
+AttributeError: 'VideoMonitor' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 183, in <module>
+    res.append(wfun(a)) # i think this call the function that crashes
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 124, in my_experiment
+    train(env, VINNetwork(env, trainer,num_outputs=5, model_config=dict(custom_model=vin_label, use_lstm=False), name='test'), num_episodes=10)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 29, in __init__
+    self.num_outputs = int(np.product(self.obs_space.shape)) #now we crash,: 'VideoMonitor' object has no attribute 'shape'
+AttributeError: 'VideoMonitor' object has no attribute 'shape'

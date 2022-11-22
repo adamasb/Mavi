@@ -5,7 +5,7 @@ gym.envs.register(
      id="MazeDeterministic_empty4-v0",
      entry_point='mazeenv.maze_environment:MazeEnvironment',
      max_episode_steps=200,
-     kwargs=dict(size=4, blockpct=0),  #size=4 is default, change this to change size of map# removed seed = 0
+     kwargs=dict(size=4, blockpct=0,seed = 0),  #size=4 is default, change this to change size of map# removed seed = 0
 )
 
 from ray.tune.registry import register_env

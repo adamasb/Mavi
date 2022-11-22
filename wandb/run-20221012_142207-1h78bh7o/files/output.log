@@ -1,0 +1,128 @@
+2022-10-12 14:22:08,036	INFO trainable.py:160 -- Trainable.setup took 19.651 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-10-12 14:22:08,036	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+training epoch 0 118 0.8 -0.32288135593220324
+training epoch 1 320 0.8 0.5934375
+training epoch 2 350 0.8 0.6537142857142857
+training epoch 3 343 0.8 0.6565597667638484
+training epoch 4 357 0.8 0.6750700280112044
+training epoch 5 398 0.8 0.700251256281407
+training epoch 6 401 0.8 0.7206982543640897
+training epoch 7 424 0.8 0.7391509433962264
+training epoch 8 436 0.8 0.7561926605504586
+training epoch 9 442 0.8 0.76289592760181
+training epoch 10 441 0.8 0.7755102040816326
+training epoch 11 461 0.8 0.7746203904555315
+training epoch 12 469 0.8 0.7844349680170576
+training epoch 13 474 0.8 0.7881856540084389
+training epoch 14 485 0.8 0.78659793814433
+training epoch 15 469 0.8 0.7908315565031983
+2022-10-12 14:23:31,551	ERROR worker.py:399 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RolloutWorker.set_weights()[39m (pid=19604, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x000002606EF681C0>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.07 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+19956	2.08GiB	C:\Program Files\JetBrains\PyCharm 2022.2.2\bin\pycharm64.exe
+18932	0.64GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+18720	0.53GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+27340	0.51GiB	C:/Users/adams/AppData/Local/Programs/Python/Python39/python.exe c:/Users/adams/OneDrive/Desktop/Mas
+19604	0.48GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+7048	0.46GiB	C:\WINDOWS\Explorer.EXE
+12976	0.43GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --flag-switches-begin --flag-switches-end
+7720	0.32GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+6756	0.3GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+24504	0.28GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+2022-10-12 14:23:33,329	WARNING algorithm.py:2178 -- Worker crashed during training or evaluation! To try to continue without failed worker(s), set `ignore_worker_failures=True`. To try to recover the failed worker(s), set `recreate_failed_workers=True`.
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_maze.py", line 120, in <module>
+    res.append(wfun(a))
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_maze.py", line 45, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2378, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2185, in try_recover_from_step_attempt
+    raise error
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 215, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2275, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(RayOutOfMemoryError): [36mray::RolloutWorker.apply()[39m (pid=19604, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x000002606EF681C0>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.07 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+19956	2.08GiB	C:\Program Files\JetBrains\PyCharm 2022.2.2\bin\pycharm64.exe
+18932	0.64GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+18720	0.53GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+27340	0.51GiB	C:/Users/adams/AppData/Local/Programs/Python/Python39/python.exe c:/Users/adams/OneDrive/Desktop/Mas
+19604	0.48GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+7048	0.46GiB	C:\WINDOWS\Explorer.EXE
+12976	0.43GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --flag-switches-begin --flag-switches-end
+7720	0.32GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+6756	0.3GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+24504	0.27GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+Traceback (most recent call last):
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_maze.py", line 120, in <module>
+    res.append(wfun(a))
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_maze.py", line 45, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2378, in _run_one_training_iteration
+    num_recreated += self.try_recover_from_step_attempt(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2185, in try_recover_from_step_attempt
+    raise error
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\a3c.py", line 215, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 173, in get_ready
+    objs = ray.get(ready_requests)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2275, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(RayOutOfMemoryError): [36mray::RolloutWorker.apply()[39m (pid=19604, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x000002606EF681C0>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.07 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+19956	2.08GiB	C:\Program Files\JetBrains\PyCharm 2022.2.2\bin\pycharm64.exe
+18932	0.64GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+18720	0.53GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+27340	0.51GiB	C:/Users/adams/AppData/Local/Programs/Python/Python39/python.exe c:/Users/adams/OneDrive/Desktop/Mas
+19604	0.48GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+7048	0.46GiB	C:\WINDOWS\Explorer.EXE
+12976	0.43GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --flag-switches-begin --flag-switches-end
+7720	0.32GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+6756	0.3GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+24504	0.27GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---

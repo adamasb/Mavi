@@ -1,0 +1,7 @@
+2022-11-04 12:34:09,920	INFO trainable.py:160 -- Trainable.setup took 79.273 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-04 12:34:09,940	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+training epoch 0 87 0.8 -0.34367816091953934
+Main training step 1
+training epoch 1 305 0.8 0.6186885245901639
+Job done

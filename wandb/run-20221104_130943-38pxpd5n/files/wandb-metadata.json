@@ -1,0 +1,16 @@
+{
+    "os": "Windows-10-10.0.22000-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2022-11-04T12:09:43.915470",
+    "startedAt": "2022-11-04T12:09:43.231582",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\adams\\OneDrive\\Desktop\\Masters\\MasterThesis\\mavi-main\\src\\raya3c\\example_vin.py",
+    "codePath": "src\\raya3c\\example_vin.py",
+    "host": "Surface4Beilin",
+    "username": "adams",
+    "executable": "C:\\Users\\adams\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+}

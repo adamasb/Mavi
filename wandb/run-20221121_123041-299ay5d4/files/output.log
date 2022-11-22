@@ -1,0 +1,26 @@
+2022-11-21 12:30:43,264	INFO trainable.py:160 -- Trainable.setup took 107.932 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-21 12:30:43,275	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+vp is not 0
+dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero
+2022-11-21 12:30:47,509	WARNING algorithm.py:2178 -- Worker crashed during training or evaluation! To try to continue without failed worker(s), set `ignore_worker_failures=True`. To try to recover the failed worker(s), set `recreate_failed_workers=True`.
+[36m(RolloutWorker pid=4052)[39m vp is not 0
+[36m(RolloutWorker pid=4052)[39m dim4 is not zero

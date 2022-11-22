@@ -1,0 +1,85 @@
+2022-10-24 10:52:16,040 INFO    StreamThr :14256 [internal.py:wandb_internal():88] W&B internal server running at pid: 14256, started at: 2022-10-24 10:52:16.038999
+2022-10-24 10:52:16,050 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: status
+2022-10-24 10:52:16,058 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: status
+2022-10-24 10:52:16,067 INFO    WriterThread:14256 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\run-2n9uqjjf.wandb
+2022-10-24 10:52:16,067 DEBUG   SenderThread:14256 [sender.py:send():303] send: header
+2022-10-24 10:52:16,109 DEBUG   SenderThread:14256 [sender.py:send():303] send: run
+2022-10-24 10:52:16,633 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: check_version
+2022-10-24 10:52:16,657 INFO    SenderThread:14256 [dir_watcher.py:__init__():216] watching files in: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files
+2022-10-24 10:52:16,658 INFO    SenderThread:14256 [sender.py:_start_run_threads():928] run started: 2n9uqjjf with start time 1666601536.021576
+2022-10-24 10:52:16,659 DEBUG   SenderThread:14256 [sender.py:send():303] send: summary
+2022-10-24 10:52:16,661 INFO    SenderThread:14256 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-24 10:52:16,661 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: check_version
+2022-10-24 10:52:16,840 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: run_start
+2022-10-24 10:52:16,860 DEBUG   HandlerThread:14256 [meta.py:__init__():34] meta init
+2022-10-24 10:52:16,860 DEBUG   HandlerThread:14256 [meta.py:__init__():49] meta init done
+2022-10-24 10:52:16,860 DEBUG   HandlerThread:14256 [meta.py:probe():215] probe
+2022-10-24 10:52:16,905 DEBUG   HandlerThread:14256 [git.py:repo():40] git repository is invalid
+2022-10-24 10:52:16,908 DEBUG   HandlerThread:14256 [meta.py:_save_pip():53] save pip
+2022-10-24 10:52:16,911 DEBUG   HandlerThread:14256 [meta.py:_save_pip():67] save pip done
+2022-10-24 10:52:16,911 DEBUG   HandlerThread:14256 [meta.py:probe():253] probe done
+2022-10-24 10:52:17,127 DEBUG   SenderThread:14256 [sender.py:send():303] send: files
+2022-10-24 10:52:17,127 INFO    SenderThread:14256 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-10-24 10:52:17,167 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:52:17,168 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:52:17,369 DEBUG   SenderThread:14256 [sender.py:send():303] send: telemetry
+2022-10-24 10:52:17,675 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\output.log
+2022-10-24 10:52:17,676 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\wandb-metadata.json
+2022-10-24 10:52:17,676 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\requirements.txt
+2022-10-24 10:52:17,677 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\wandb-summary.json
+2022-10-24 10:52:17,764 INFO    Thread-27 :14256 [upload_job.py:push():143] Uploaded file C:\Users\adams\AppData\Local\Temp\tmpdkzp9gi7wandb\3ffimzrz-wandb-metadata.json
+2022-10-24 10:52:19,673 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\output.log
+2022-10-24 10:52:22,208 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-24 10:52:22,216 DEBUG   SenderThread:14256 [sender.py:send():303] send: history
+2022-10-24 10:52:22,216 DEBUG   SenderThread:14256 [sender.py:send():303] send: summary
+2022-10-24 10:52:22,224 INFO    SenderThread:14256 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-24 10:52:22,696 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\wandb-summary.json
+2022-10-24 10:52:23,703 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\output.log
+2022-10-24 10:52:27,452 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-24 10:52:27,457 DEBUG   SenderThread:14256 [sender.py:send():303] send: history
+2022-10-24 10:52:27,459 DEBUG   SenderThread:14256 [sender.py:send():303] send: summary
+2022-10-24 10:52:27,467 INFO    SenderThread:14256 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-24 10:52:27,735 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\wandb-summary.json
+2022-10-24 10:52:29,753 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\output.log
+2022-10-24 10:52:32,384 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:52:32,389 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:52:47,478 DEBUG   SenderThread:14256 [sender.py:send():303] send: stats
+2022-10-24 10:52:47,623 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:52:47,625 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:52:47,890 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\config.yaml
+2022-10-24 10:53:02,860 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:53:02,860 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:53:18,127 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:53:18,127 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:53:20,190 DEBUG   SenderThread:14256 [sender.py:send():303] send: stats
+2022-10-24 10:53:33,349 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:53:33,349 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:53:48,570 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:53:48,570 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:53:52,919 DEBUG   SenderThread:14256 [sender.py:send():303] send: stats
+2022-10-24 10:54:03,817 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:54:03,817 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:54:19,148 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:54:19,150 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:54:25,770 DEBUG   SenderThread:14256 [sender.py:send():303] send: stats
+2022-10-24 10:54:34,402 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:54:34,402 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:54:49,670 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:54:49,670 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:54:58,538 DEBUG   SenderThread:14256 [sender.py:send():303] send: stats
+2022-10-24 10:55:04,890 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:55:04,890 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:55:11,188 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\output.log
+2022-10-24 10:55:20,122 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:55:20,122 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:55:25,288 INFO    Thread-23 :14256 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\wandb\run-20221024_105215-2n9uqjjf\files\output.log
+2022-10-24 10:55:31,165 DEBUG   SenderThread:14256 [sender.py:send():303] send: stats
+2022-10-24 10:55:35,344 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:55:35,344 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:55:50,577 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:55:50,577 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:56:03,871 DEBUG   SenderThread:14256 [sender.py:send():303] send: stats
+2022-10-24 10:56:05,829 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:56:05,829 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status
+2022-10-24 10:56:21,061 DEBUG   HandlerThread:14256 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-24 10:56:21,061 DEBUG   SenderThread:14256 [sender.py:send_request():317] send_request: stop_status

@@ -24,6 +24,9 @@ from ray.rllib.utils.torch_utils import apply_grad_clipping, sequence_mask
 from ray.rllib.utils.typing import AgentID, TensorType
 torch, nn = try_import_torch()
 
+torch.autograd.set_detect_anomaly(True)
+
+
 # p(s_ij)
 class A3CTorchPolicy(ValueNetworkMixin, LearningRateSchedule, EntropyCoeffSchedule, TorchPolicyV2):
     """PyTorch Policy class used with A3C."""

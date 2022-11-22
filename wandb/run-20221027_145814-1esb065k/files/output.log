@@ -1,0 +1,10 @@
+2022-10-27 14:58:15,405	INFO trainable.py:160 -- Trainable.setup took 12.087 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-10-27 14:58:15,406	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+Backend QtAgg is interactive backend. Turning interactive mode on.
+training epoch 0 402 0.8 0.4057213930348259
+Main training step 1
+training epoch 1 643 0.8 0.6334370139968896
+
+100%|███| 10/10 [00:00<00:00, 11.65it/s, Episode=9, Accumulated Reward=-1.6, Average Reward=-.0593, Length=27, Steps=487]
+Job done

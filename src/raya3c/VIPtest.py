@@ -1,10 +1,34 @@
+import sys, os
+sys.path.append(os.path.normpath( os.path.dirname(__file__) +"/../" ))
 import gym
 from mazeenv import maze_register
-import matplotlib.pyplot as plt
+from a3c import A3CConfig
+# import farmer
+#from dtufarm import DTUCluster
+from irlc import Agent, train, VideoMonitor
 import numpy as np
+from ray import tune
+from ray.tune.logger import pretty_print
+from raya3c.my_callback import MyCallbacks
+
+from ray.rllib.models.torch.misc import SlimFC, AppendBiasLayer, normc_initializer
+
+import copy
+
+
+
+# The custom model that will be wrapped by an LSTM.
+from ray.rllib.models import ModelCatalog
+from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
 import torch
+#import torchvision
+from torch import nn
+import matplotlib.pyplot as plt
+
+import wandb
 
 
+phi = SlimFC(3,3)
 
 for i in range(10):
     env = gym.make("MazeDeterministic_empty4-v0")
@@ -14,6 +38,14 @@ for i in range(10):
     print(s[:,:,0])
     print(s[:,:,1])
     print(s[:,:,2], "\n")
+    
+    print("")
+    print(s[1,1,0])
+    input = (int(s[1,1,0]),int(s[1,1,1]),int(s[1,1,2]))
+    t = torch.tensor(input)
+    print(t)
+    #print(phi(s[1,1,0],s[1,1,0],s[1,1,0]))
+
 
 
 

@@ -1,0 +1,68 @@
+2022-10-14 13:26:24,251	INFO trainable.py:160 -- Trainable.setup took 39.094 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-10-14 13:26:24,253	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main trainign step 0
+training epoch 0 67 0.8 -0.7686567164179093
+Main trainign step 1
+training epoch 1 204 0.8 0.532843137254902
+Main trainign step 2
+training epoch 2 237 0.8 0.6497890295358649
+Main trainign step 3
+training epoch 3 239 0.8 0.6284518828451884
+Main trainign step 4
+training epoch 4 240 0.8 0.6454166666666666
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 173, in <module>
+    res.append(wfun(a))
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 107, in my_experiment
+    matplotlib.use('TkAgg')
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\pydev_ipython\matplotlibtools.py", line 69, in patched_use
+    matplotlib.real_use(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\__init__.py", line 1156, in use
+    plt.switch_backend(name)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\pyplot.py", line 273, in switch_backend
+    raise ImportError(
+ImportError: Cannot load backend 'TkAgg' which requires the 'tk' interactive framework, as 'qt' is currently running
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 173, in <module>
+    res.append(wfun(a))
+  File "c:\Users\adams\OneDrive\Desktop\Masters\MasterThesis\mavi-main\src\raya3c\example_vin.py", line 107, in my_experiment
+    matplotlib.use('TkAgg')
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.16.0\pythonFiles\lib\python\debugpy\_vendored\pydevd\pydev_ipython\matplotlibtools.py", line 69, in patched_use
+    matplotlib.real_use(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\__init__.py", line 1156, in use
+    plt.switch_backend(name)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\matplotlib\pyplot.py", line 273, in switch_backend
+    raise ImportError(
+ImportError: Cannot load backend 'TkAgg' which requires the 'tk' interactive framework, as 'qt' is currently running

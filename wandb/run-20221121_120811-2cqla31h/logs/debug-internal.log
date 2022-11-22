@@ -1,0 +1,44 @@
+2022-11-21 12:08:11,324 INFO    StreamThr :17240 [internal.py:wandb_internal():88] W&B internal server running at pid: 17240, started at: 2022-11-21 12:08:11.323766
+2022-11-21 12:08:11,332 DEBUG   HandlerThread:17240 [handler.py:handle_request():138] handle_request: status
+2022-11-21 12:08:11,337 DEBUG   SenderThread:17240 [sender.py:send_request():317] send_request: status
+2022-11-21 12:08:11,343 DEBUG   SenderThread:17240 [sender.py:send():303] send: header
+2022-11-21 12:08:11,343 INFO    WriterThread:17240 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\run-2cqla31h.wandb
+2022-11-21 12:08:11,384 DEBUG   SenderThread:17240 [sender.py:send():303] send: run
+2022-11-21 12:08:11,864 DEBUG   HandlerThread:17240 [handler.py:handle_request():138] handle_request: check_version
+2022-11-21 12:08:11,881 INFO    SenderThread:17240 [dir_watcher.py:__init__():216] watching files in: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files
+2022-11-21 12:08:11,882 INFO    SenderThread:17240 [sender.py:_start_run_threads():928] run started: 2cqla31h with start time 1669028891.319766
+2022-11-21 12:08:11,882 DEBUG   SenderThread:17240 [sender.py:send():303] send: summary
+2022-11-21 12:08:11,883 INFO    SenderThread:17240 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-21 12:08:11,884 DEBUG   SenderThread:17240 [sender.py:send_request():317] send_request: check_version
+2022-11-21 12:08:12,002 DEBUG   HandlerThread:17240 [handler.py:handle_request():138] handle_request: run_start
+2022-11-21 12:08:12,012 DEBUG   HandlerThread:17240 [meta.py:__init__():34] meta init
+2022-11-21 12:08:12,013 DEBUG   HandlerThread:17240 [meta.py:__init__():49] meta init done
+2022-11-21 12:08:12,020 DEBUG   HandlerThread:17240 [meta.py:probe():215] probe
+2022-11-21 12:08:12,038 DEBUG   HandlerThread:17240 [meta.py:_setup_git():205] setup git
+2022-11-21 12:08:12,139 DEBUG   HandlerThread:17240 [meta.py:_setup_git():212] setup git done
+2022-11-21 12:08:12,139 DEBUG   HandlerThread:17240 [meta.py:_save_pip():53] save pip
+2022-11-21 12:08:12,141 DEBUG   HandlerThread:17240 [meta.py:_save_pip():67] save pip done
+2022-11-21 12:08:12,141 DEBUG   HandlerThread:17240 [meta.py:probe():253] probe done
+2022-11-21 12:08:12,405 DEBUG   SenderThread:17240 [sender.py:send():303] send: files
+2022-11-21 12:08:12,405 INFO    SenderThread:17240 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-21 12:08:12,406 DEBUG   HandlerThread:17240 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-21 12:08:12,409 DEBUG   SenderThread:17240 [sender.py:send_request():317] send_request: stop_status
+2022-11-21 12:08:12,792 DEBUG   SenderThread:17240 [sender.py:send():303] send: telemetry
+2022-11-21 12:08:12,897 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\requirements.txt
+2022-11-21 12:08:12,898 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\wandb-metadata.json
+2022-11-21 12:08:12,899 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\output.log
+2022-11-21 12:08:12,900 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\wandb-summary.json
+2022-11-21 12:08:12,989 INFO    Thread-29 :17240 [upload_job.py:push():143] Uploaded file C:\Users\adams\AppData\Local\Temp\tmp1wzmae_lwandb\1z5levh6-wandb-metadata.json
+2022-11-21 12:08:14,905 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\output.log
+2022-11-21 12:08:16,920 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\output.log
+2022-11-21 12:08:18,952 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\output.log
+2022-11-21 12:08:42,916 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:08:43,168 INFO    Thread-23 :17240 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221121_120811-2cqla31h\files\config.yaml
+2022-11-21 12:09:15,870 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:09:48,956 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:10:22,027 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:10:55,091 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:11:27,995 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:12:00,966 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:12:34,128 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats
+2022-11-21 12:13:07,157 DEBUG   SenderThread:17240 [sender.py:send():303] send: stats

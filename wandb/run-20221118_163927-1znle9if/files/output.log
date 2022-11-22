@@ -1,0 +1,253 @@
+2022-11-18 16:39:28,606	INFO trainable.py:160 -- Trainable.setup took 43.130 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-18 16:39:28,622	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+Running custom evaluation function...
+training epoch 0 10 1.0 -0.8199999999999994
+Main training step 1
+Running custom evaluation function...
+training epoch 1 14 1.0 -0.7499999999999998
+Main training step 2
+Running custom evaluation function...
+training epoch 2 16 1.0 -2.4062499999999973
+Main training step 3
+Running custom evaluation function...
+training epoch 3 21 1.0 -2.5904761904761875
+Main training step 4
+Running custom evaluation function...
+training epoch 4 23 1.0 -3.195652173913041
+Main training step 5
+Running custom evaluation function...
+training epoch 5 24 1.0 -3.895833333333332
+Main training step 6
+Running custom evaluation function...
+training epoch 6 26 1.0 -4.338461538461538
+Main training step 7
+Running custom evaluation function...
+training epoch 7 27 1.0 -4.9185185185185185
+Main training step 8
+Running custom evaluation function...
+training epoch 8 28 1.0 -5.457142857142857
+Main training step 9
+Running custom evaluation function...
+training epoch 9 29 1.0 -5.958620689655173
+Main training step 10
+Running custom evaluation function...
+training epoch 10 30 1.0 -6.426666666666667
+Main training step 11
+2022-11-18 16:55:19,575	ERROR worker.py:399 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RolloutWorker.set_weights()[39m (pid=1872, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x00000222F9A85160>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.07 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+1872	9.24GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+18524	0.43GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe c:\Users\adams\.vscode\extensions\m
+9952	0.26GiB	C:\Program Files\Microsoft OneDrive\OneDrive.exe /background
+12596	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+14008	0.18GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir=C:\
+1572	0.15GiB	C:\Users\adams\AppData\Local\Programs\Messenger\Messenger.exe
+8904	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+6740	0.11GiB	C:\WINDOWS\Explorer.EXE
+988	0.09GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+9984	0.08GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+2022-11-18 16:55:29,621	ERROR worker.py:399 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RolloutWorker.set_weights()[39m (pid=1872, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x00000222F9A85160>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.09 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+1872	9.25GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+18524	0.43GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe c:\Users\adams\.vscode\extensions\m
+9952	0.26GiB	C:\Program Files\Microsoft OneDrive\OneDrive.exe /background
+12596	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+14008	0.18GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir=C:\
+1572	0.15GiB	C:\Users\adams\AppData\Local\Programs\Messenger\Messenger.exe
+8904	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+6740	0.11GiB	C:\WINDOWS\Explorer.EXE
+988	0.09GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+9984	0.08GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+2022-11-18 16:55:35,014	ERROR worker.py:399 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RolloutWorker.set_weights()[39m (pid=1872, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x00000222F9A85160>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.19 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+1872	9.32GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+18524	0.43GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe c:\Users\adams\.vscode\extensions\m
+9952	0.26GiB	C:\Program Files\Microsoft OneDrive\OneDrive.exe /background
+12596	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+14008	0.18GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir=C:\
+1572	0.15GiB	C:\Users\adams\AppData\Local\Programs\Messenger\Messenger.exe
+8904	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+6740	0.11GiB	C:\WINDOWS\Explorer.EXE
+988	0.09GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+9984	0.08GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=gpu-process --gpu-preferences=UAAAAAAAA
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+2022-11-18 16:55:40,304	ERROR worker.py:399 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RolloutWorker.set_weights()[39m (pid=1872, ip=127.0.0.1, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x00000222F9A85160>)
+  File "python\ray\_raylet.pyx", line 620, in ray._raylet.execute_task
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\memory_monitor.py", line 162, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node Surface4Beilin is used (15.24 / 15.85 GB). The top 10 memory consumers are:
+PID	MEM	COMMAND
+1872	9.38GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe C:\Users\adams\AppData\Local\Progra
+18524	0.43GiB	C:\Users\adams\AppData\Local\Programs\Python\Python39\python.exe c:\Users\adams\.vscode\extensions\m
+9952	0.26GiB	C:\Program Files\Microsoft OneDrive\OneDrive.exe /background
+12596	0.19GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+14008	0.18GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --user-data-dir=C:\
+1572	0.15GiB	C:\Users\adams\AppData\Local\Programs\Messenger\Messenger.exe
+8904	0.14GiB	C:\Program Files\Google\Chrome\Application\chrome.exe
+6740	0.11GiB	C:\WINDOWS\Explorer.EXE
+988	0.09GiB	C:\Program Files\Google\Chrome\Application\chrome.exe --type=renderer --display-capture-permissions-
+13528	0.08GiB	C:\Users\adams\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=gpu-process --user-data-dir=
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+Running custom evaluation function...
+training epoch 11 31 1.0 -6.864516129032259
+Main training step 12
+Running custom evaluation function...
+training epoch 12 32 1.0 -7.275000000000002
+Main training step 13
+Running custom evaluation function...
+training epoch 13 33 1.0 -7.660606060606063
+Main training step 14
+Running custom evaluation function...
+training epoch 14 36 1.0 -7.3611111111111125
+Main training step 15
+Running custom evaluation function...
+training epoch 15 37 1.0 -7.702702702702704
+Main training step 16
+Running custom evaluation function...
+training epoch 16 40 1.0 -7.4275
+Main training step 17
+Running custom evaluation function...
+training epoch 17 41 1.0 -7.734146341463415
+Main training step 18
+Running custom evaluation function...
+training epoch 18 43 1.0 -7.613953488372093
+Main training step 19
+Running custom evaluation function...
+training epoch 19 44 1.0 -7.895454545454546
+Main training step 20
+Running custom evaluation function...
+training epoch 20 47 1.0 -8.036170212765958
+Main training step 21
+Running custom evaluation function...
+training epoch 21 49 1.0 -8.108163265306123
+Main training step 22
+Running custom evaluation function...
+training epoch 22 50 1.0 -8.346000000000002
+Main training step 23
+Running custom evaluation function...
+training epoch 23 51 1.0 -8.57450980392157
+Main training step 24
+Running custom evaluation function...
+training epoch 24 53 1.0 -8.622641509433963
+Main training step 25
+Running custom evaluation function...
+training epoch 25 57 1.0 -8.328070175438597
+Main training step 26
+Running custom evaluation function...
+training epoch 26 60 1.0 -7.8950000000000005
+Main training step 27
+Running custom evaluation function...
+training epoch 27 64 1.0 -7.8828125
+Main training step 28
+Running custom evaluation function...
+training epoch 28 69 1.0 -7.505797101449277
+Main training step 29
+Running custom evaluation function...
+training epoch 29 73 1.0 -7.230136986301369
+Main training step 30
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 360, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 336, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 167, in get_ready
+    ready_requests, self._pending_remotes = ray.wait(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2461, in wait
+    ready_ids, remaining_ids = worker.core_worker.wait(
+  File "python\ray\_raylet.pyx", line 1414, in ray._raylet.CoreWorker.wait
+  File "python\ray\_raylet.pyx", line 173, in ray._raylet.check_status
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None, #here?
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\__main__.py", line 39, in <module>
+    cli.main()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 430, in main
+    run()
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy/..\debugpy\server\cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "c:\Users\adams\.vscode\extensions\ms-python.python-2022.18.2\pythonFiles\lib\python\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 360, in <module>
+    my_experiment(1)
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\example_vin.py", line 336, in my_experiment
+    result = trainer.train()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\tune\trainable\trainable.py", line 347, in train
+    result = self.step()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 661, in step
+    results, train_iter_ctx = self._run_one_training_iteration()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\algorithms\algorithm.py", line 2373, in _run_one_training_iteration
+    results = self.training_step()
+  File "c:\Users\adams\OneDrive\Documents\GitHub\Mavi\src\raya3c\a3c.py", line 219, in training_step
+    async_results = self._worker_manager.get_ready()
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\rllib\execution\parallel_requests.py", line 167, in get_ready
+    ready_requests, self._pending_remotes = ray.wait(
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\adams\AppData\Local\Programs\Python\Python39\lib\site-packages\ray\_private\worker.py", line 2461, in wait
+    ready_ids, remaining_ids = worker.core_worker.wait(
+  File "python\ray\_raylet.pyx", line 1414, in ray._raylet.CoreWorker.wait
+  File "python\ray\_raylet.pyx", line 173, in ray._raylet.check_status
+KeyboardInterrupt

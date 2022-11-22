@@ -1,0 +1,64 @@
+2022-11-21 12:08:12,375	INFO trainable.py:160 -- Trainable.setup took 54.335 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2022-11-21 12:08:12,379	WARNING util.py:65 -- Install gputil for GPU system monitoring.
+Main training step 0
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.6234, 0.2278, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.6234, 0.2278, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+tensor([[0.8191, 0.1750, 0.1750, 0.8191],
+        [0.5715, 0.0000, 0.0000, 0.1750],
+        [0.0000, 0.5715, 0.0000, 0.1750],
+        [0.4822, 0.7039, 0.1750, 0.8191]])
+dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.6234, 0.2278, 0.0826]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.2278]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.2278],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.0826]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.2278]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+tensor([[0.8191, 0.1750, 0.1750, 0.8191],
+        [0.1750, 0.5715, 0.0000, 0.1750],
+        [0.7039, 0.0000, 0.5715, 0.1750],
+        [0.0945, 0.7039, 0.1750, 0.8191]])
+dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.2278],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.0826]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.6234, 0.2278, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.6234, 0.2278, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.0000]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
+2022-11-21 12:08:16,757	WARNING algorithm.py:2178 -- Worker crashed during training or evaluation! To try to continue without failed worker(s), set `ignore_worker_failures=True`. To try to recover the failed worker(s), set `recreate_failed_workers=True`.
+[36m(RolloutWorker pid=11832)[39m tensor([[0.0000, 0.0000, 0.0000, 0.0000],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.6234],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.6234, 0.2278],
+[36m(RolloutWorker pid=11832)[39m         [0.0000, 0.0000, 0.0000, 0.0826]], grad_fn=<SelectBackward0>)
+[36m(RolloutWorker pid=11832)[39m dim4 is not zero
