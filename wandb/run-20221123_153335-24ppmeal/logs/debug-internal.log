@@ -1,0 +1,50 @@
+2022-11-23 15:33:36,069 INFO    StreamThr :22776 [internal.py:wandb_internal():88] W&B internal server running at pid: 22776, started at: 2022-11-23 15:33:36.066783
+2022-11-23 15:33:36,078 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: status
+2022-11-23 15:33:36,086 DEBUG   SenderThread:22776 [sender.py:send_request():317] send_request: status
+2022-11-23 15:33:36,183 DEBUG   SenderThread:22776 [sender.py:send():303] send: header
+2022-11-23 15:33:36,183 INFO    WriterThread:22776 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\run-24ppmeal.wandb
+2022-11-23 15:33:36,222 DEBUG   SenderThread:22776 [sender.py:send():303] send: run
+2022-11-23 15:33:36,822 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: check_version
+2022-11-23 15:33:36,834 INFO    SenderThread:22776 [dir_watcher.py:__init__():216] watching files in: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files
+2022-11-23 15:33:36,837 INFO    SenderThread:22776 [sender.py:_start_run_threads():928] run started: 24ppmeal with start time 1669214016.058765
+2022-11-23 15:33:36,837 DEBUG   SenderThread:22776 [sender.py:send():303] send: summary
+2022-11-23 15:33:36,839 INFO    SenderThread:22776 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-23 15:33:36,840 DEBUG   SenderThread:22776 [sender.py:send_request():317] send_request: check_version
+2022-11-23 15:33:36,976 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: run_start
+2022-11-23 15:33:36,988 DEBUG   HandlerThread:22776 [meta.py:__init__():34] meta init
+2022-11-23 15:33:36,988 DEBUG   HandlerThread:22776 [meta.py:__init__():49] meta init done
+2022-11-23 15:33:37,001 DEBUG   HandlerThread:22776 [meta.py:probe():215] probe
+2022-11-23 15:33:37,026 DEBUG   HandlerThread:22776 [meta.py:_setup_git():205] setup git
+2022-11-23 15:33:37,153 DEBUG   HandlerThread:22776 [meta.py:_setup_git():212] setup git done
+2022-11-23 15:33:37,154 DEBUG   HandlerThread:22776 [meta.py:_save_pip():53] save pip
+2022-11-23 15:33:37,156 DEBUG   HandlerThread:22776 [meta.py:_save_pip():67] save pip done
+2022-11-23 15:33:37,156 DEBUG   HandlerThread:22776 [meta.py:probe():253] probe done
+2022-11-23 15:33:37,440 DEBUG   SenderThread:22776 [sender.py:send():303] send: files
+2022-11-23 15:33:37,440 INFO    SenderThread:22776 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-11-23 15:33:37,440 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-23 15:33:37,440 DEBUG   SenderThread:22776 [sender.py:send_request():317] send_request: stop_status
+2022-11-23 15:33:37,659 DEBUG   SenderThread:22776 [sender.py:send():303] send: telemetry
+2022-11-23 15:33:37,851 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\wandb-summary.json
+2022-11-23 15:33:37,853 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\requirements.txt
+2022-11-23 15:33:37,853 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\wandb-metadata.json
+2022-11-23 15:33:37,853 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\output.log
+2022-11-23 15:33:38,100 INFO    Thread-29 :22776 [upload_job.py:push():143] Uploaded file C:\Users\adams\AppData\Local\Temp\tmpd_g5g4o2wandb\17dj5u4f-wandb-metadata.json
+2022-11-23 15:33:39,859 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\output.log
+2022-11-23 15:33:52,665 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-23 15:33:52,665 DEBUG   SenderThread:22776 [sender.py:send_request():317] send_request: stop_status
+2022-11-23 15:33:55,709 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-23 15:33:55,715 DEBUG   SenderThread:22776 [sender.py:send():303] send: history
+2022-11-23 15:33:55,715 DEBUG   SenderThread:22776 [sender.py:send():303] send: summary
+2022-11-23 15:33:55,724 INFO    SenderThread:22776 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-23 15:33:56,003 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\wandb-summary.json
+2022-11-23 15:33:58,019 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\output.log
+2022-11-23 15:34:07,689 DEBUG   SenderThread:22776 [sender.py:send():303] send: stats
+2022-11-23 15:34:07,907 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: stop_status
+2022-11-23 15:34:07,908 DEBUG   SenderThread:22776 [sender.py:send_request():317] send_request: stop_status
+2022-11-23 15:34:08,128 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\config.yaml
+2022-11-23 15:34:16,504 DEBUG   HandlerThread:22776 [handler.py:handle_request():138] handle_request: partial_history
+2022-11-23 15:34:16,512 DEBUG   SenderThread:22776 [sender.py:send():303] send: history
+2022-11-23 15:34:16,512 DEBUG   SenderThread:22776 [sender.py:send():303] send: summary
+2022-11-23 15:34:16,520 INFO    SenderThread:22776 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-23 15:34:17,219 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\wandb-summary.json
+2022-11-23 15:34:18,237 INFO    Thread-23 :22776 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_153335-24ppmeal\files\output.log

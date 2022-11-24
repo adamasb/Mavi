@@ -28,23 +28,42 @@ import matplotlib.pyplot as plt
 import wandb
 
 
-phi = SlimFC(3,3)
+phi = SlimFC(3,3,activation_fn="relu")
 
-for i in range(10):
-    env = gym.make("MazeDeterministic_empty4-v0")
+# for i in range(10):
+env = gym.make("MazeDeterministic_empty4-v0")
 
-    s = env.reset()
+s = env.reset()
 
-    print(s[:,:,0])
-    print(s[:,:,1])
-    print(s[:,:,2], "\n")
-    
-    print("")
-    print(s[1,1,0])
-    input = (int(s[1,1,0]),int(s[1,1,1]),int(s[1,1,2]))
-    t = torch.tensor(input)
-    print(t)
-    #print(phi(s[1,1,0],s[1,1,0],s[1,1,0]))
+print(s[:,:,0])
+print(s[:,:,1])
+print(s[:,:,2], "\n")
+
+
+test = torch.tensor(np.arange(16)).view(4,4)
+
+def shift(v,dir):
+
+    if (dir == 1):
+        v_shift = torch.roll(v, -1, 1) # shift left
+    elif (dir == -1):
+        v_shift = torch.roll(v, -1, 0) # shift down
+
+    return v_shift
+
+
+
+
+shift(test,)
+
+
+
+    # print("")
+    # print(s[1,1,0])
+    # input = (int(s[1,1,0]),int(s[1,1,1]),int(s[1,1,2]))
+    # t = torch.tensor(input)
+    # print(t)
+    # #print(phi(s[1,1,0],s[1,1,0],s[1,1,0]))
 
 
 

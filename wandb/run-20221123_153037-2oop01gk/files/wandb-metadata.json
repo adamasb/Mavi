@@ -1,0 +1,22 @@
+{
+    "os": "Windows-10-10.0.22000-SP0",
+    "python": "3.9.0",
+    "heartbeatAt": "2022-11-23T14:30:38.416441",
+    "startedAt": "2022-11-23T14:30:37.493312",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\adams\\OneDrive\\Documents\\GitHub\\Mavi\\src\\raya3c\\example_vin.py",
+    "codePath": "src\\raya3c\\example_vin.py",
+    "git": {
+        "remote": "https://github.com/adamasb/Mavi.git",
+        "commit": "263bbbe622d2cae2d299306f6d03a7cf5e5c0d40"
+    },
+    "email": "adamsbeilin@gmail.com",
+    "root": "C:/Users/adams/OneDrive/Documents/GitHub/Mavi",
+    "host": "Surface4Beilin",
+    "username": "adams",
+    "executable": "C:\\Users\\adams\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+}

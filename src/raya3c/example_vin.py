@@ -30,6 +30,7 @@ import wandb
 #dont know where this should be defined
 torch.autograd.set_detect_anomaly(True)
 
+
 vin_label = "vin_network_model"
 # Kig paa: FullyConnectedNetwork som er den Model-klassen bruger per default.
 # alt. copy-paste FullyConnectedNetwork-koden ind i denne klasse og modififer gradvist (check at den virker paa simple gridworld)
@@ -41,6 +42,9 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self.num_outputs = 5 #int(np.product(self.obs_space.shape))
         self._last_batch_size = None
         
+        
+
+
         #not being used right now
         self.nn = SlimFC(4*4*4, self.num_outputs)#  generalize input dimensions
 
@@ -55,14 +59,14 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         #is this really all it is?
         # consider using SlimConv2d instead (from misc.py as well)
-        self.Phi = SlimFC(3, 3, activation_fn = "swish") # input 3 output 3
+        self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
         
 
-        self.Phi2 = nn.Sequential(nn.Linear(3, 3),#input, hiddens. hiddens = 3 is arbitrary for now
-                      nn.ReLU(),
-                      nn.Linear(3, 3),#hiddens, output
-                      nn.Sigmoid())
-        self.optimizer = torch.optim.Adam(self.Phi2.parameters(), lr=0.001)
+        # self.Phi2 = nn.Sequential(nn.Linear(3, 3),#input, hiddens. hiddens = 3 is arbitrary for now
+        #               nn.ReLU(),
+        #               nn.Linear(3, 3),#hiddens, output
+        #               nn.Sigmoid())
+        # self.optimizer = torch.optim.Adam(self.Phi2.parameters(), lr=0.001)
 
         #lets try to remove all debug_vin stuff
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
@@ -156,7 +160,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         vp = np.concatenate((s,dim4),axis=2)
         vp = torch.from_numpy(vp.flatten())
         vp = vp.type(torch.FloatTensor)
-
+    
         return vp
 
 
@@ -165,59 +169,49 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     #     rin,rout,p = self.Phi(w,a,g)
     #     return rin,rout,p
 
-    def VP_nn(self,s,phi,K=16):
+    def VP_nn(self,s,phi,K=10):
         
-        
+        #can also be defined based on phi
         h, w = s[:, :, 0].shape[0], s[:, :, 0].shape[1] #height and width of map
-        vp = torch.zeros((h,w,4))
-        v = torch.zeros((h,w,K+1)) 
-
-        phi_vals = phi
+        
+        #vp = torch.zeros((h,w,4)) #maybe i dont need to instantiate this
+        
+        v = torch.zeros((h,w,K+1))  # wanna pad or roll over this, i think
 
         for k in range(K): #number of "convolutions", or times the algorithm is applied
             for i in range(h):
                 for j in range(w):
+                    #do a version of this without assignments
                     v[i,j, k+1] = v[i,j,k]
                     for di, dj in [ (-1, 0), (1, 0), (0, -1), (0, 1)]:
                         if di + i < 0 or dj + j < 0:
                             continue
                         if di + i >= h or dj + j >= w:
-                            continue    
+                            continue  
+                        
+                        
                         ip = i + di
                         jp = j + dj
                         
-                        # if k == 0:
-                        #     phi_vals[i,j,:] = self.Phi(torch.tensor((s[i,j,0] , s[i,j,1] ,s[i,j,2])))
-                        #     phi_vals[ip,jp,:]  = self.Phi(torch.tensor((s[ip,jp,0],s[ip,jp,1],s[ip,jp,2])))
-                        #     if phi_vals.any() != 0:
-                        #         print(phi_vals)
-                            #overrides some of already learnt values, but should be fine
 
+                        # fixes issue of overriding tensor with gradients
+                        # p_ij,rij_in,rij_out = float(phi[i,j,0]),float(phi[i,j,1]),float(phi[i,j,2])
+                        # p_p,rp_in,rp_out = float(phi[ip,jp,0]), float(phi[ip,jp,1]), float(phi[ip,jp,2])
 
-                        #calling the entire Phi nn here is not the way... basically making 2000 calls to the nn
-                        #is the split order arbitrary?
-                        #p_ij,rij_in,rij_out = self.Phi(torch.tensor((s[i,j,0] , s[i,j,1] ,s[i,j,2])))
+                        p_ij,rij_in,rij_out = phi[i,j,:]
+                        p_p,rp_in,rp_out = phi[ip,jp,:]
 
-                        #p_p,rp_in,rp_out = self.Phi(torch.tensor((s[ip,jp,0],s[ip,jp,1],s[ip,jp,2])))
-                        # #Do i mess with the weights by using same phi for both ij and pij?
-                        
-                        #p_ij,rij_in,rij_out = self.Phi(torch.zeros(3))
-                        #p_p,rp_in,rp_out = self.Phi(torch.zeros(3))
-
-                        p_ij,rij_in,rij_out = phi_vals[i,j,:]
-                        p_p,rp_in,rp_out = phi_vals[ip,jp,:]
+                        #nv should be calculated with a roll from the previous v
 
                         nv = p_ij * v[ip, jp,k] + rp_in - rij_out
-                        v[i,j,k+1] = max( v[i,j,k+1], nv)
+                        v[i,j,k+1] = max( v[i,j,k+1], nv) 
 
-        s[:,:,0]= 1 - s[:, :, 0]
+                        pass
 
+        s[:,:,0]= 1 - s[:, :, 0] #walls
         dim4 = torch.unsqueeze(v[:,:,-1],dim=2)
         vp = torch.flatten(torch.cat((s,dim4),dim=2)) #concatenating the 3d tensor with the 2d tensor, and flattening it
-
-        # if dim4.any() != 0:
-        #     print(v[:,:,-1])
-        #     print("dim4 is not zero")
+        return dim4
         return vp
 
 
@@ -228,16 +222,27 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # Store last batch size for value_function output.
         self._last_batch_size = obs.shape[0]
         
-        vp = torch.zeros((obs.shape[0],int(obs.shape[1]/3*4))) # generalize dimensions
-
-        phi_vals = self.Phi(input_dict["obs"][0].squeeze()) #only use the first obs, as it is the same for all (for now)
-
-        if phi_vals.any() != 0:
-            print(phi_vals)
+        #vp = torch.zeros((obs.shape[0],int(obs.shape[1]/3*4))) # generalize dimensions
+        vp = [] # np.array([])
+        phi = self.Phi(input_dict["obs"][0].squeeze()) #only use the first obs, as it is the same for all (for now)
+        # fixes issue of overriding tensor with gradients
+        phi_vals = phi.detach().numpy() #convert to np array to remove gradients
+    
+        dim4 = []
 
         for ii in range(obs.shape[0]):
-
-            vp[ii] = self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals)
+            
+            
+            #do this with append instead of this assignment
+            # vp[ii] = self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals)
+            #vp.append(self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
+            
+            dim4.append(self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
+            
+            s = obs[ii].reshape((4,4,3))
+            s[:,:,0]= 1 - s[:, :, 0] #walls
+            vp.append(torch.flatten(torch.cat((s,dim4[-1]),dim=2))) #concatenating the 3d tensor with the 2d tensor, and flattening it
+            # np.append(vp,self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
             #vp[ii] = self.VP_nn(copy.deepcopy(obs)[ii].reshape((4,4,3)))
 
             #self.VP_nn(copy.deepcopy(obs)[ii].reshape((4,4,3)))
@@ -246,12 +251,25 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #    V_np = []
         #    assert( (V_np - V_torch.numpy())< 1e-8 )
 
+            pass
+
+        #global plot_this
+        #plot_this  = dim4[-1].detach().numpy()
+        # if plot_this.any() != 0:
+        #     #wandb.init()
+        #     #images = wandb.Image(plot_this, caption="Top: Output, Bottom: Input")
+        #     #wandb.log({"image of v": images})
+        #     plt.imshow(plot_this)
+        #     plt.show()
 
     
         """ consider passing just the values of the 3x3 neighbourhood around the agent into the network"""
-        self._last_flat_in = vp.reshape(vp.shape[0], -1) 
+        self._last_flat_in = torch.stack(vp)
+        
+        #.reshape(vp.shape[0], -1) 
         #mat1 and mat2 shapes cannot be multiplied (32x64 and 48x24)
-      
+        # get i,j locations for agent as I, J
+        # self.value_cache = tensor of size B x 1 corresponding to v[b, I, J], b = [0, 1, 2, 3, ..., B]
 
         #stolen right from FCNet  
         # self._last_flat_in = obs.reshape(obs.shape[0], -1)
@@ -264,7 +282,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     
     def value_function(self): #dont think this is currently being used
         #consider pass value function through a neural network
-
+        # return self.value_cache
         return self._value_branch(self._features).squeeze(1) #
         
 
@@ -318,17 +336,17 @@ def my_experiment(a):
         def my_pol_fun(a3policy, *args, a3c=None, **kwargs):
             print(args, kwargs)
             # cb = a3policy.callbacks
-            a3c.callbacks.evaluation_call(a3policy )
-
+            a3c.callbacks.evaluation_call(a3policy ) #my evaluation_call calls a funciton that needs a variable to be defined
+            # value_function_for_env_state should include p,rin,rout,v,
 
             # a3policy.callbacks
             # a = 234
             return {}
 
         #this gives me an error: functools is not defined
-        #import functools #maybe this is it? -> causes all kinds of weird problems, leave it out for now
+        import functools #maybe this is it? -> causes all kinds of weird problems, leave it out for now
         #worker_set.foreach_policy(functools.partial(my_pol_fun, a3c=a3c) )
-
+        
         return dict(my_eval_metric=123)
 
     config.custom_evaluation_function = my_eval_fun
@@ -356,33 +374,26 @@ def my_experiment(a):
             int(result['episode_reward_mean'])
         except:
             print("whoops")#just want to catch when the result is nan
-        
-
-        """ I would like to only train phi here """
-        # loss = 
-        
-        # loss_function(pred_y, data_y)
-        # losses.append(loss.item())
-
-        # model.zero_grad()
-        # loss.backward()
-
-        # VINNetwork.optimizer.step()
 
         print("training epoch", t, len(rewards), max(rewards) if len(rewards) > 0 else -1, result['episode_reward_mean'], result["episode_len_mean"])
+        
+        
+        
+        
 
     # config.save
 
     #plt.imshow(v)
     #plt.show()
 
-    #images = wandb.Image(v, caption="Top: Output, Bottom: Input")
-    #wandb.log({"image of v": images})
+    # images = wandb.Image(plot_this, caption="Top: Output, Bottom: Input")
+    # wandb.log({"image of v": images})
 
 
 
 if __name__ == "__main__":
-   
+    global plot_this
+
     res = []
     DISABLE = True
     
