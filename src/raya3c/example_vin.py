@@ -1,4 +1,7 @@
 import sys, os
+
+"""export /zhome/8b/7/122640/Mavi/src/raya3c PYTHONPATH='$PYTHONPATH:/zhome/8b/7/122640/Mavi/src' """
+
 sys.path.append(os.path.normpath( os.path.dirname(__file__) +"/../" ))
 import gym
 from mazeenv import maze_register
@@ -42,31 +45,19 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self.num_outputs = 5 #int(np.product(self.obs_space.shape))
         self._last_batch_size = None
         
-        
+
 
 
         #not being used right now
         self.nn = SlimFC(4*4*4, self.num_outputs)#  generalize input dimensions
 
-        #maybe expand on this nn
-        #self.nn = nn.Sequential(
-        #    nn.Linear(4*4*4, 5),   
-        #    nn.ReLU(),
-        #    nn.Linear(5, 5),
-        #    nn.ReLU(),
-        #    nn.Linear(5, 5),
-        #)
 
         #is this really all it is?
         # consider using SlimConv2d instead (from misc.py as well)
         self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
         
 
-        # self.Phi2 = nn.Sequential(nn.Linear(3, 3),#input, hiddens. hiddens = 3 is arbitrary for now
-        #               nn.ReLU(),
-        #               nn.Linear(3, 3),#hiddens, output
-        #               nn.Sigmoid())
-        # self.optimizer = torch.optim.Adam(self.Phi2.parameters(), lr=0.001)
+
 
         #lets try to remove all debug_vin stuff
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
@@ -130,6 +121,27 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
         """ Everythin above (until comment) is stolen straight from fcnet"""
+
+
+    """What the heck is this?"""
+    # def value_function_for_env_state(self, state):
+    #     """WHAR IS THIS SUPPOSED TO BE?"""
+    #     stats = {}
+    #     # value_function_for_env_state should include p,rin,rout,v,
+    #     # self.value_function_for_env_state = {}
+    #     stats["p"] = np.ones((4,4))
+    #     stats["rin"] = np.ones((4,4))
+    #     stats["rout"] = np.ones((4,4))
+    #     stats["v"] = np.ones((4,4))
+    #     # value_function_for_env_state
+    #     # self.value_function_for_env_state["p"] = phi_vals[0,0,0]
+    #     # self.value_function_for_env_state["rin"] = phi_vals[0,0,1]
+    #     # self.value_function_for_env_state["rout"] = phi_vals[0,0,2]
+    #     # self.value_function_for_env_state["v"] = dim4[0].detach().numpy()
+
+    #     return stats
+
+
 
     def VP_simple(self,s):
         #s[:, :, 0] = walls, s[:, :, 1] = agent, s[:, :, 2] = goal
@@ -219,39 +231,63 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     def forward(self, input_dict, state, seq_lens): #dont think this is currently being used
         obs = input_dict["obs_flat"]
 
+
         # Store last batch size for value_function output.
         self._last_batch_size = obs.shape[0]
         
+
+
+        """ Consider turning this into a tensor, and using mapv to parrelelize it"""
         #vp = torch.zeros((obs.shape[0],int(obs.shape[1]/3*4))) # generalize dimensions
         vp = [] # np.array([])
-        phi = self.Phi(input_dict["obs"][0].squeeze()) #only use the first obs, as it is the same for all (for now)
-        # fixes issue of overriding tensor with gradients
-        phi_vals = phi.detach().numpy() #convert to np array to remove gradients
-    
+
+
+
+
+        phi=[]
         dim4 = []
+        a_index = []
 
         for ii in range(obs.shape[0]):
+
+            phi.append(self.Phi(input_dict["obs"][ii].squeeze())) #only use the first obs, as it is the same for all (for now)
+            # fixes issue of overriding tensor with gradients
+            phi_vals = phi[ii].detach().numpy() #convert to np array to remove gradients
+    
             
             
             #do this with append instead of this assignment
             # vp[ii] = self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals)
             #vp.append(self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
             
-            dim4.append(self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
+            width = len(input_dict["obs"][0][:,:,0])
+            #generalize dimensions
+            dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi_vals))
             
-            s = obs[ii].reshape((4,4,3))
+            s = obs[ii].reshape((width,width,3))
             s[:,:,0]= 1 - s[:, :, 0] #walls
             vp.append(torch.flatten(torch.cat((s,dim4[-1]),dim=2))) #concatenating the 3d tensor with the 2d tensor, and flattening it
             # np.append(vp,self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
             #vp[ii] = self.VP_nn(copy.deepcopy(obs)[ii].reshape((4,4,3)))
 
             #self.VP_nn(copy.deepcopy(obs)[ii].reshape((4,4,3)))
-
-                                 
+            if obs[ii].any() !=0:
+                a_index.append(input_dict["obs"][ii][:,:,1].nonzero().detach().numpy()[0]) #get the index of the agent
+                # if len(a_index) > 1:
+                #     print('more than one batch')
+            else:
+                a_index.append([0,0])
+            
         #    V_np = []
         #    assert( (V_np - V_torch.numpy())< 1e-8 )
 
             pass
+
+
+
+
+        
+
 
         #global plot_this
         #plot_this  = dim4[-1].detach().numpy()
@@ -262,16 +298,55 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #     plt.imshow(plot_this)
         #     plt.show()
 
+
     
         """ consider passing just the values of the 3x3 neighbourhood around the agent into the network"""
+                
+        #should be a list of tensors of size (5*3) (maybe * batch size)
+    #     neighbourhood = []
+    #     matrix = []
+    #     neib= []
+    #     result = [ [] for _ in obs.shape[0] ] 
+    #     for ii in range(obs.shape[0]):
+    #         matrix.append(torch.nn.functional.pad(vp[ii],(1,1,1,1))) #dont wanna override tensors
+    #         # rowNumber = a_index[ii][0] #numpy array so okay to override
+    #         # colNumber = a_index[ii][1]
+    #         # result = []
+    #         # for rowAdd in range(-1, 2):
+    #         #     newRow = rowNumber + rowAdd
+    #         #     if newRow >= 0 and newRow <= len(matrix[ii])-1:
+    #         #         for colAdd in range(-1, 2):
+    #         #             newCol = colNumber + colAdd
+    #         #             if newCol >= 0 and newCol <= len(matrix[ii])-1:
+    #         #                 if newCol == colNumber and newRow == rowNumber:
+    #         #                     continue
+    #         #                 result.append(matrix[ii][newCol][newRow])
+            
+
+    #         neighbourhood.append(result)
+    # # return result
+
+
+        
+        # if obs.shape[0] > 1:
+        #     if obs.any() !=0:
+        #         #print(neighbourhood[-1])
+        #         pass
+        
+        
+        
+        
+        
+        
         self._last_flat_in = torch.stack(vp)
         
         #.reshape(vp.shape[0], -1) 
         #mat1 and mat2 shapes cannot be multiplied (32x64 and 48x24)
         # get i,j locations for agent as I, J
+
+
         # self.value_cache = tensor of size B x 1 corresponding to v[b, I, J], b = [0, 1, 2, 3, ..., B]
 
-        #stolen right from FCNet  
         # self._last_flat_in = obs.reshape(obs.shape[0], -1)
         self._features = self._hidden_layers(self._last_flat_in)
         logits = self._logits(self._features) if self._logits else self._features
@@ -283,7 +358,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     def value_function(self): #dont think this is currently being used
         #consider pass value function through a neural network
         # return self.value_cache
-        return self._value_branch(self._features).squeeze(1) #
+        return self._value_branch(self._features).squeeze(1) #torch.Size([32])
         
 
     #pi from agent.py
@@ -366,7 +441,7 @@ def my_experiment(a):
     # else:
 
     trainer = config.build(env="MazeDeterministic_empty4-v0")
-    for t in range(400): #200 is not enough for good performance,yet
+    for t in range(600): #Seems to converge to 2.5 after 500-600 iterations
         print("Main training step", t)
         result = trainer.train()
         rewards = result['hist_stats']['episode_reward']
