@@ -1,6 +1,6 @@
 import sys, os
 
-"""export /zhome/8b/7/122640/Mavi/src/raya3c PYTHONPATH='$PYTHONPATH:/zhome/8b/7/122640/Mavi/src' """
+"""export PYTHONPATH='$PYTHONPATH:/zhome/8b/7/122640/Mavi/src' """
 
 sys.path.append(os.path.normpath( os.path.dirname(__file__) +"/../" ))
 import gym
@@ -45,28 +45,15 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self.num_outputs = 5 #int(np.product(self.obs_space.shape))
         self._last_batch_size = None
         
-
-
-
-        #not being used right now
-        self.nn = SlimFC(3*3*4, self.num_outputs)#  generalize input dimensions
-
-
-        #is this really all it is?
         # consider using SlimConv2d instead (from misc.py as well)
         self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
         
-
-
-
-        #lets try to remove all debug_vin stuff
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
         #    self.debug_vin = model_config['debug_vin']
 
         hiddens = list(model_config.get("fcnet_hiddens", [])) + list(
             model_config.get("post_fcnet_hiddens", [])
         )
-
 
         layers = []
                          #can hardcode the value because it will always be 3x3*4
@@ -120,27 +107,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # Holds the last input, in case value branch is separate.
         self._last_flat_in = None
 
-
-    """What the heck is this?"""
-    # def value_function_for_env_state(self, state):
-    #     """WHAR IS THIS SUPPOSED TO BE?"""
-    #     stats = {}
-    #     # value_function_for_env_state should include p,rin,rout,v,
-    #     # self.value_function_for_env_state = {}
-    #     stats["p"] = np.ones((4,4))
-    #     stats["rin"] = np.ones((4,4))
-    #     stats["rout"] = np.ones((4,4))
-    #     stats["v"] = np.ones((4,4))
-    #     # value_function_for_env_state
-    #     # self.value_function_for_env_state["p"] = phi_vals[0,0,0]
-    #     # self.value_function_for_env_state["rin"] = phi_vals[0,0,1]
-    #     # self.value_function_for_env_state["rout"] = phi_vals[0,0,2]
-    #     # self.value_function_for_env_state["v"] = dim4[0].detach().numpy()
-
-    #     return stats
-
-
-
     def VP_simple(self,s):
         #s[:, :, 0] = walls, s[:, :, 1] = agent, s[:, :, 2] = goal
         rout = s[:, :, 2]
@@ -174,18 +140,11 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         return vp
 
 
-    # def phi(self, w,a,g): #could use funciton to clean it up a bit
-    #     #w,a,g = s[i, j, 0], s[i, j, 1], s[i, j, 2] #walls, agent, goal
-    #     rin,rout,p = self.Phi(w,a,g)
-    #     return rin,rout,p
-
     def VP_nn(self,s,phi,K=10):
         
         #can also be defined based on phi
-        h, w = s[:, :, 0].shape[0], s[:, :, 0].shape[1] #height and width of map
-        
-        #vp = torch.zeros((h,w,4)) #maybe i dont need to instantiate this
-        
+        h, w = phi[:, :, 0].shape[0], phi[:, :, 0].shape[1] #height and width of map
+                
         v = torch.zeros((h,w,K+1))  # wanna pad or roll over this, i think
 
         for k in range(K): #number of "convolutions", or times the algorithm is applied
@@ -199,15 +158,9 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                         if di + i >= h or dj + j >= w:
                             continue  
                         
-                        
                         ip = i + di
                         jp = j + dj
                         
-
-                        # fixes issue of overriding tensor with gradients
-                        # p_ij,rij_in,rij_out = float(phi[i,j,0]),float(phi[i,j,1]),float(phi[i,j,2])
-                        # p_p,rp_in,rp_out = float(phi[ip,jp,0]), float(phi[ip,jp,1]), float(phi[ip,jp,2])
-
                         p_ij,rij_in,rij_out = phi[i,j,:]
                         p_p,rp_in,rp_out = phi[ip,jp,:]
 
@@ -218,11 +171,11 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
                         pass
 
-        s[:,:,0]= 1 - s[:, :, 0] #walls
+        # s[:,:,0]= 1 - s[:, :, 0] #walls
         dim4 = torch.unsqueeze(v[:,:,-1],dim=2)
-        vp = torch.flatten(torch.cat((s,dim4),dim=2)) #concatenating the 3d tensor with the 2d tensor, and flattening it
+        # vp = torch.flatten(torch.cat((s,dim4),dim=2)) #concatenating the 3d tensor with the 2d tensor, and flattening it
         return dim4
-        return vp
+        # return vp
 
 
     
@@ -233,7 +186,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         for ii in range(obs.shape[0]):
             v_matrix.append(torch.nn.functional.pad(dim4[ii].squeeze(),(1,1,1,1))) #dont wanna override tensors
-            w_matrix.append(torch.nn.functional.pad(obs[ii][:,:,0],(1,1,1,1))) #change padding to 1's (or invert 1s and 0s all over)
+            w_matrix.append(torch.nn.functional.pad(obs[ii][:,:,0],(1,1,1,1)))
             a_matrix.append(torch.nn.functional.pad(obs[ii][:,:,1],(1,1,1,1)))
             g_matrix.append(torch.nn.functional.pad(obs[ii][:,:,2],(1,1,1,1)))
 
@@ -247,39 +200,28 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                     for colAdd in range(-1, 2):
                         newCol = colNumber + colAdd
                         if newCol >= 0 and newCol <= len(v_matrix[ii])-1:
-                            if newCol == colNumber and newRow == rowNumber:
-                                pass# this is the agent location itself
-                                #continue
+                           
                             v_result.append(v_matrix[ii][newRow][newCol])                      
                             w_result.append(w_matrix[ii][newRow][newCol])
                             a_result.append(a_matrix[ii][newRow][newCol])
                             g_result.append(g_matrix[ii][newRow][newCol])
             
             neighborhood.append(torch.tensor([w_result, a_result, g_result, v_result]).flatten())
-    
-            
         return torch.stack(neighborhood)
 
 
     def forward(self, input_dict, state, seq_lens): #dont think this is currently being used
         obs = input_dict["obs_flat"]
 
-
         # Store last batch size for value_function output.
         self._last_batch_size = obs.shape[0]
-        
-
-
         """ Consider turning this into a tensor, and using mapv to parrelelize it"""
-        #vp = torch.zeros((obs.shape[0],int(obs.shape[1]/3*4))) # generalize dimensions
-        vp = [] # np.array([])
-
-
-
 
         phi=[]
         dim4 = []
         a_index = []
+
+        v_c = []
 
         for ii in range(obs.shape[0]):
 
@@ -287,87 +229,28 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             # fixes issue of overriding tensor with gradients
             phi_vals = phi[ii].detach().numpy() #convert to np array to remove gradients
     
-            
-            
-            #do this with append instead of this assignment
-            # vp[ii] = self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals)
-            #vp.append(self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
-            
             width = len(input_dict["obs"][0][:,:,0])
             #generalize dimensions
             dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi_vals))
             
 
-            """ removed these lines because using the get_neighborhood function instead"""
-            s = input_dict["obs"][ii]
-            s[:,:,0]= 1 - s[:, :, 0] #walls
-            vp.append(torch.flatten(torch.cat((s,dim4[-1]),dim=2))) #concatenating the 3d tensor with the 2d tensor, and flattening it
-            # np.append(vp,self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
-            #vp[ii] = self.VP_nn(copy.deepcopy(obs)[ii].reshape((4,4,3)))
-
-            #self.VP_nn(copy.deepcopy(obs)[ii].reshape((4,4,3)))
             if obs[ii].any() !=0:
                 a_index.append(input_dict["obs"][ii][:,:,1].nonzero().detach().numpy()[0]) #get the index of the agent
-                # if len(a_index) > 1:
-                #     print('more than one batch')
             else:
-                a_index.append([1,1]) #this doesnt really matter
+                a_index.append([0,0]) #this doesnt really matter
             
+            v_c.append(dim4[ii][a_index[ii][0],a_index[ii][1]])
         #    V_np = []
         #    assert( (V_np - V_torch.numpy())< 1e-8 )
-
             pass
-
-
-
-
         
-
-
-        #global plot_this
-        #plot_this  = dim4[-1].detach().numpy()
-        # if plot_this.any() != 0:
-        #     #wandb.init()
-        #     #images = wandb.Image(plot_this, caption="Top: Output, Bottom: Input")
-        #     #wandb.log({"image of v": images})
-        #     plt.imshow(plot_this)
-        #     plt.show()
-
-
-    
-        """ consider passing just the values of the 3x3 neighbourhood around the agent into the network"""
-                
-        # should be a list of tensors of size (5*3) (maybe * batch size)
-
-        # print(input_dict["obs"].shape)
-        # print(dim4.shape)
-        #print(type(a_index))
-        #neighborhood = self.get_neighborhood(input_dict["obs"],dim4,a_index)
-
-        # print(self.get_neighborhood(input_dict["obs"],dim4,a_index))
-        # print("a")
-        #neighborhood[0][:9].reshape(3,3)
-
-        
-        # if obs.shape[0] > 1:
-        #     if obs.any() !=0:
-        #         #print(neighbourhood[-1])
-        #         pass
-        
-        """has shape (batch size, 3*3*4)"""
-        # vp = self.get_neighborhood(input_dict["obs"],dim4,a_index)
-        
-        
-        self._last_flat_in = self.get_neighborhood(input_dict["obs"],dim4,a_index)
-        # self._last_flat_in = torch.stack(vp)
-        
-        #.reshape(vp.shape[0], -1) 
-        #mat1 and mat2 shapes cannot be multiplied (32x64 and 48x24)
-        # get i,j locations for agent as I, J
-
+       
 
         # self.value_cache = tensor of size B x 1 corresponding to v[b, I, J], b = [0, 1, 2, 3, ..., B]
+        self.value_cache = torch.stack(v_c) 
 
+
+        self._last_flat_in = self.get_neighborhood(input_dict["obs"],dim4,a_index)
         # self._last_flat_in = obs.reshape(obs.shape[0], -1)
         self._features = self._hidden_layers(self._last_flat_in)
         logits = self._logits(self._features) if self._logits else self._features
@@ -378,7 +261,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     
     def value_function(self): #dont think this is currently being used
         #consider pass value function through a neural network
-        # return self.value_cache
+       #return self.value_cache #slight formatting issue
         return self._value_branch(self._features).squeeze(1) #torch.Size([32])
         
 
@@ -472,11 +355,6 @@ def my_experiment(a):
             print("whoops")#just want to catch when the result is nan
 
         print("training epoch", t, len(rewards), max(rewards) if len(rewards) > 0 else -1, result['episode_reward_mean'], result["episode_len_mean"])
-        
-        
-        
-        
-
     # config.save
 
     #plt.imshow(v)
@@ -484,8 +362,6 @@ def my_experiment(a):
 
     # images = wandb.Image(plot_this, caption="Top: Output, Bottom: Input")
     # wandb.log({"image of v": images})
-
-
 
 if __name__ == "__main__":
     global plot_this
