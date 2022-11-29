@@ -4,7 +4,7 @@ voltash
 
 source virt1/bin/activate
 
-export /zhome/8b/7/122640/Mavi/src/raya3c PYTHONPATH='$PYTHONPATH:/zhome/8b/7/122640/Mavi/src'
+export PYTHONPATH='$PYTHONPATH:/zhome/8b/7/122640/Mavi/src'
 
 module load cuda
 

@@ -49,7 +49,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
         #not being used right now
-        self.nn = SlimFC(4*4*4, self.num_outputs)#  generalize input dimensions
+        self.nn = SlimFC(3*3*4, self.num_outputs)#  generalize input dimensions
 
 
         #is this really all it is?
@@ -69,7 +69,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
         layers = []
-        prev_layer_size = int(np.product(obs_space.shape)*4/3) #hacky way to get the right input size
+                         #can hardcode the value because it will always be 3x3*4
+        prev_layer_size = 36# int(np.product(obs_space.shape)*4/3) #hacky way to get the right input size
         self._logits = None
 
         # Create layers 0 to second-last.
@@ -118,9 +119,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self._features = None
         # Holds the last input, in case value branch is separate.
         self._last_flat_in = None
-
-
-        """ Everythin above (until comment) is stolen straight from fcnet"""
 
 
     """What the heck is this?"""
@@ -227,6 +225,41 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         return vp
 
 
+    
+    def get_neighborhood(self, obs,dim4,a_index):
+
+        neighborhood = []
+        v_matrix, w_matrix, a_matrix,g_matrix = [], [], [], []
+
+        for ii in range(obs.shape[0]):
+            v_matrix.append(torch.nn.functional.pad(dim4[ii].squeeze(),(1,1,1,1))) #dont wanna override tensors
+            w_matrix.append(torch.nn.functional.pad(obs[ii][:,:,0],(1,1,1,1))) #change padding to 1's (or invert 1s and 0s all over)
+            a_matrix.append(torch.nn.functional.pad(obs[ii][:,:,1],(1,1,1,1)))
+            g_matrix.append(torch.nn.functional.pad(obs[ii][:,:,2],(1,1,1,1)))
+
+            rowNumber = a_index[ii][0] +1 #numpy array so okay to override
+            colNumber = a_index[ii][1] +1 #plus 1 to account for padding
+            v_result, w_result, a_result, g_result = [], [], [], []
+
+            for rowAdd in range(-1, 2):
+                newRow = rowNumber + rowAdd
+                if newRow >= 0 and newRow <= len(v_matrix[ii])-1:
+                    for colAdd in range(-1, 2):
+                        newCol = colNumber + colAdd
+                        if newCol >= 0 and newCol <= len(v_matrix[ii])-1:
+                            if newCol == colNumber and newRow == rowNumber:
+                                pass# this is the agent location itself
+                                #continue
+                            v_result.append(v_matrix[ii][newRow][newCol])                      
+                            w_result.append(w_matrix[ii][newRow][newCol])
+                            a_result.append(a_matrix[ii][newRow][newCol])
+                            g_result.append(g_matrix[ii][newRow][newCol])
+            
+            neighborhood.append(torch.tensor([w_result, a_result, g_result, v_result]).flatten())
+    
+            
+        return torch.stack(neighborhood)
+
 
     def forward(self, input_dict, state, seq_lens): #dont think this is currently being used
         obs = input_dict["obs_flat"]
@@ -264,7 +297,9 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             #generalize dimensions
             dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi_vals))
             
-            s = obs[ii].reshape((width,width,3))
+
+            """ removed these lines because using the get_neighborhood function instead"""
+            s = input_dict["obs"][ii]
             s[:,:,0]= 1 - s[:, :, 0] #walls
             vp.append(torch.flatten(torch.cat((s,dim4[-1]),dim=2))) #concatenating the 3d tensor with the 2d tensor, and flattening it
             # np.append(vp,self.VP_nn(obs[ii].reshape((4,4,3)),phi_vals))
@@ -276,7 +311,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                 # if len(a_index) > 1:
                 #     print('more than one batch')
             else:
-                a_index.append([0,0])
+                a_index.append([1,1]) #this doesnt really matter
             
         #    V_np = []
         #    assert( (V_np - V_torch.numpy())< 1e-8 )
@@ -302,30 +337,16 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     
         """ consider passing just the values of the 3x3 neighbourhood around the agent into the network"""
                 
-        #should be a list of tensors of size (5*3) (maybe * batch size)
-    #     neighbourhood = []
-    #     matrix = []
-    #     neib= []
-    #     result = [ [] for _ in obs.shape[0] ] 
-    #     for ii in range(obs.shape[0]):
-    #         matrix.append(torch.nn.functional.pad(vp[ii],(1,1,1,1))) #dont wanna override tensors
-    #         # rowNumber = a_index[ii][0] #numpy array so okay to override
-    #         # colNumber = a_index[ii][1]
-    #         # result = []
-    #         # for rowAdd in range(-1, 2):
-    #         #     newRow = rowNumber + rowAdd
-    #         #     if newRow >= 0 and newRow <= len(matrix[ii])-1:
-    #         #         for colAdd in range(-1, 2):
-    #         #             newCol = colNumber + colAdd
-    #         #             if newCol >= 0 and newCol <= len(matrix[ii])-1:
-    #         #                 if newCol == colNumber and newRow == rowNumber:
-    #         #                     continue
-    #         #                 result.append(matrix[ii][newCol][newRow])
-            
+        # should be a list of tensors of size (5*3) (maybe * batch size)
 
-    #         neighbourhood.append(result)
-    # # return result
+        # print(input_dict["obs"].shape)
+        # print(dim4.shape)
+        #print(type(a_index))
+        #neighborhood = self.get_neighborhood(input_dict["obs"],dim4,a_index)
 
+        # print(self.get_neighborhood(input_dict["obs"],dim4,a_index))
+        # print("a")
+        #neighborhood[0][:9].reshape(3,3)
 
         
         # if obs.shape[0] > 1:
@@ -333,12 +354,12 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #         #print(neighbourhood[-1])
         #         pass
         
+        """has shape (batch size, 3*3*4)"""
+        # vp = self.get_neighborhood(input_dict["obs"],dim4,a_index)
         
         
-        
-        
-        
-        self._last_flat_in = torch.stack(vp)
+        self._last_flat_in = self.get_neighborhood(input_dict["obs"],dim4,a_index)
+        # self._last_flat_in = torch.stack(vp)
         
         #.reshape(vp.shape[0], -1) 
         #mat1 and mat2 shapes cannot be multiplied (32x64 and 48x24)
