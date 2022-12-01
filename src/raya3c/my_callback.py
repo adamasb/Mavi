@@ -41,7 +41,8 @@ class MyCallbacks(DefaultCallbacks):
             wandb.config = {
                 "learning_rate": 0.001,
                 "epochs": 100,
-                "batch_size": 128
+                "batch_size": 128,
+                "dir": "/tmp" # not sure if this will fix
             }
             # for loss in range(10):
             #     wandb.log({"loss": np.sqrt(loss)})
@@ -154,8 +155,18 @@ class MyCallbacks(DefaultCallbacks):
         image_array = [i*255 for i in image_array]
         import PIL
         images = [PIL.Image.fromarray(image.astype(np.uint8)) for image in image_array]
+        
         # images = self.wandb.Image(image_array, caption="Top: Output, Bottom: Input")
-        self.wandb.log({"Layout (Green=agent) | V | V_norm | p | rin | rout ":  [self.wandb.Image(image) for image in images]})
+        # for ii in range(len(images)):
+        try:
+            #self.wandb.log({"examples": [self.wandb.Image(image) for image in images]})
+            self.wandb.log({"layout, v, v_norm, p, rin, rout ": [self.wandb.Image(image) for image in images]})
+        except Exception as e:
+            print(e) #hopefully we dont get here too often
+            for ii, image in enumerate(images):
+                self.wandb.log({f"image {ii}": self.wandb.Image(image)})
+
+        #self.wandb.log({"Layout (Green=agent) | V | V_norm | p | rin | rout ":  [self.wandb.Image(image) for image in images]})
         # import torchvision
         pass
 
