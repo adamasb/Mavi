@@ -194,16 +194,65 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # return vp
 
     def VP_new(self,s,phi,K=10):
-        
-        try:
-            p,rin,rout = torch.unsqueeze(phi[:,:,0],dim=2), torch.unsqueeze(phi[:,:,1],dim=2), torch.unsqueeze(phi[:,:,2],dim=2)
+        # p,rin,rout = phi[:,:,0],phi[:,:,1],phi[:,:,2]
+        p,rin,rout = torch.unsqueeze(phi[:,:,0],dim=2), torch.unsqueeze(phi[:,:,1],dim=2), torch.unsqueeze(phi[:,:,2],dim=2)
 
-            v = torch.zeros((p.shape[0],p.shape[1],1))  # wanna pad or roll over this, i think
+        # p2,rin2,rout2 = torch.cat((p,p),dim=2), torch.cat((rin,rin),dim=2), torch.cat((rout,rout),dim=2)
+
+        v = torch.zeros((p.shape[0],p.shape[1],1))  # wanna pad or roll over this, i think
+
+        r_in_pad = torch.nn.functional.pad(rin,  (1,1) + (1,1), 'constant', 0)
+
+        """ Tues code starts here"""
+        for tt in range(K):
+            vm = []
+            if tt > 0:
+                vm.append(v)
+
+            v_pad = torch.nn.functional.pad(v,  (1,1) + (1,1), 'constant', 0)
+            for ax, shift in [ (1, -1), (1, 1), (2, -1), (2, 1)]:
+                # torch.pad(v, )
+                v_shift = torch.roll(v_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
+                r_shift = torch.roll(r_in_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
+                vm.append(p[:,:,:] * v_shift + r_shift - rout[:,:,:] )
+                #RuntimeError: The size of tensor a (4) must match the size of tensor b (32) at non-singleton dimension 1
+
+
+            self.debug_vin = False #debug flag
+
+            v, _ = torch.stack(vm).max(axis=0)
+            if self.debug_vin:
+                # diff = np.abs( V_db[:,:,:,tt+1] - v.detach().numpy() ).sum() #only used for comparing with the "bad VP"
+                diff = np.abs( self.VP_simple(s) - v.detach().numpy() ).sum() #this isnt actually worth anything yet (fix)
+                if diff > 1e-4:
+                    print(tt, "large diff", diff)
+                    assert False
+
+        # II = oa.nonzero().numpy()
+        # v_pad = torch.nn.functional.pad(v, (1, 1) + (1, 1), 'constant', 0)
+        # o_pad = torch.nn.functional.pad(o, (0,0) + (1, 1) + (1, 1), 'constant', 0)
+        # self.v_raw = v
+        """" tues code^^"""
+        
+        return v
+
+
+
+
+    def VP_batch(self, phi, K=10):
+        try:
+            # p,rin,rout = phi[:,:,0],phi[:,:,1],phi[:,:,2]
+            #p,rin,rout = torch.unsqueeze(phi[:,:,0],dim=2), torch.unsqueeze(phi[:,:,1],dim=2), torch.unsqueeze(phi[:,:,2],dim=2)
+            p,rin,rout = phi[:,:,:,0],phi[:,:,:,1],phi[:,:,:,2]
+
+            # all have shape ([32,4,3])
+
+            # p2,rin2,rout2 = torch.cat((p,p),dim=2), torch.cat((rin,rin),dim=2), torch.cat((rout,rout),dim=2)
+
+            v = torch.zeros((p.shape[0],p.shape[1],p.shape[2]))  
 
             r_in_pad = torch.nn.functional.pad(rin,  (1,1) + (1,1), 'constant', 0)
 
-
-            """ Tues code starts here"""
             for tt in range(K):
                 vm = []
                 if tt > 0:
@@ -216,25 +265,23 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                     r_shift = torch.roll(r_in_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
                     vm.append(p[:,:,:] * v_shift + r_shift - rout[:,:,:] )
 
-
-                self.debug_vin = False
                 v, _ = torch.stack(vm).max(axis=0)
-                if self.debug_vin:
-                    # diff = np.abs( V_db[:,:,:,tt+1] - v.detach().numpy() ).sum() #only used for comparing with the "bad VP"
-                    diff = np.abs( self.VP_simple(s) - v.detach().numpy() ).sum() #this isnt actually worth anything yet (fix)
-                    if diff > 1e-4:
-                        print(tt, "large diff", diff)
-                        assert False
 
-            # II = oa.nonzero().numpy()
-            # v_pad = torch.nn.functional.pad(v, (1, 1) + (1, 1), 'constant', 0)
-            # o_pad = torch.nn.functional.pad(o, (0,0) + (1, 1) + (1, 1), 'constant', 0)
-            # self.v_raw = v
-            """" tues code^^"""
-        except:
+        except Exception as e:
+            print(e)
             return 1
 
         return v
+        #  # Create a tensor with size (32, 4, 4)
+        # tensor = torch.randn(32, 4, 4)
+
+        # # Split the tensor into a list of tensors with size (4, 4)
+        # tensors = tensor.split(4, dim=0)
+
+        # # Apply the function to each tensor in the list using PyTorch's map function
+        # results = torch.stack(list(map(VP_new, tensors)))
+
+       
     
     def get_neighborhood(self, obs,dim4,a_index):
 
@@ -243,9 +290,11 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         for ii in range(obs.shape[0]):
             v_matrix.append(torch.nn.functional.pad(dim4[ii].squeeze(),(1,1,1,1))) #dont wanna override tensors
-            w_matrix.append(torch.nn.functional.pad(obs[ii][:,:,0],(1,1,1,1)))
+            w_matrix.append(torch.nn.functional.pad(obs[ii][:,:,0],(1,1,1,1), 'constant', 1)) #pad walls with ones
             a_matrix.append(torch.nn.functional.pad(obs[ii][:,:,1],(1,1,1,1)))
             g_matrix.append(torch.nn.functional.pad(obs[ii][:,:,2],(1,1,1,1)))
+
+
 
             rowNumber = a_index[ii][0] +1 #numpy array so okay to override
             colNumber = a_index[ii][1] +1 #plus 1 to account for padding
@@ -276,49 +325,27 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         # Store last batch size for value_function output.
         self._last_batch_size = obs.shape[0]
+        
+        
+        
         """ Consider turning this into a tensor, and using mapv to parrelelize it"""
-
         phi=[]
         dim4 = []
         a_index = []
 
         v_c = []
         v_new = []
-        """ consider throwing tues new scrab (shitft) functions into here"""
+        v_test = []
+       
+        try:
+            v_batch = self.VP_batch(self.Phi(obs))
 
-        """
-        for tt in range(self.K):
-            vm = []
-            if tt > 0:
-                vm.append(v)
-
-
-            v_pad = torch.nn.functional.pad(v,  (1,1) + (1,1), 'constant', 0)
-            for ax, shift in [ (1, -1), (1, 1), (2, -1), (2, 1)]:
-                # torch.pad(v, )
-                v_shift = torch.roll(v_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
-                r_shift = torch.roll(r_in_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
-                vm.append(p[:,:,:] * v_shift + r_shift - rout[:,:,:] )
-
-            v, _ = torch.stack(vm).max(axis=0)
-            if self.debug_vin:
-                diff = np.abs( V_db[:,:,:,tt+1] - v.detach().numpy() ).sum()
-                if diff > 1e-4:
-                    print(tt, "large diff", diff)
-                    assert False
-
-        II = oa.nonzero().numpy()
-        v_pad = torch.nn.functional.pad(v, (1, 1) + (1, 1), 'constant', 0)
-        o_pad = torch.nn.functional.pad(o, (0,0) + (1, 1) + (1, 1), 'constant', 0)
-        self.v_raw = v
-
-
-        """
-
+        except Exception as e:
+            print(e)
 
         for ii in range(obs.shape[0]):
 
-            phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
+            # phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
             # fixes issue of overriding tensor with gradients
 
 
@@ -330,7 +357,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             #dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi[ii])) #trying without the detach.numpu
             
 
-            v_new.append(self.VP_new(obs[-1],phi[-1]))
+            # v_new.append(self.VP_new(obs[-1],phi[-1]))
 
             if obs[ii].any() !=0:
                 a_index.append(obs[ii][:,:,1].nonzero().detach().numpy()[0]) #get the index of the agent
@@ -338,16 +365,41 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                 a_index.append([0,0]) #this doesnt really matter
             
             # v_c.append(dim4[ii][a_index[ii][0],a_index[ii][1]])
-            v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
-        #    V_np = []
-        #    assert( (V_np - V_torch.numpy())< 1e-8 )
-         
+            # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
+            
+            # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
+            v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
+            # assert(v_c[ii] == torch.stack(v_test).any())
+
+        #     if obs.any()!= 0:
+        #         if ii > 1:
+        #             print(ii)
+        # # if v_c[ii] != 0:
+        #     if ii == 31:
+        #         # assert False
+        #         print(torch.stack(v_new).squeeze())
+        #         print(v_batch)
+        #         print(v_c[ii] == v_test[ii])
+        #         assert(torch.stack(v_new).squeeze() == v_batch).all()
+        #         assert(v_c[ii] == v_test[ii])
+                
+        #             # assert(v_c[ii] == v_test[ii])
+        # #    V_np = []
+        # #    assert( (V_np - V_torch.numpy())< 1e-8 )
+        
+            """loop ends here"""
+
+
 
         # self.value_cache = tensor of size B x 1 corresponding to v[b, I, J], b = [0, 1, 2, 3, ..., B]
-        self.value_cache = torch.stack(v_c) 
+        # self.value_cache = torch.stack(v_c) # if i squeeze i get an error
+        self.value_cache = torch.unsqueeze(torch.stack(v_test),dim=1)
+
+        # self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_new,a_index) 
+        self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_batch,a_index) 
 
 
-        self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_new,a_index)
+
         # self._last_flat_in = obs.reshape(obs.shape[0], -1)
         self._features = self._hidden_layers(self._last_flat_in)
         logits = self._logits(self._features) if self._logits else self._features
@@ -373,11 +425,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         # v.append(self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals))
         v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy()
-        # = np.zeros((4,4))
-        p = phi_vals[:,:,0]
-        rin = phi_vals[:,:,1]
-        rout = phi_vals[:,:,2]
-        stats = {"v": v.squeeze(), "phi": phi_vals, "p": p, "rin": rin, "rout": rout}
+       
+        stats = {"v": v.squeeze(), "phi": phi_vals, "p": phi_vals[:,:,0], "rin": phi_vals[:,:,1], "rout": phi_vals[:,:,2]}
         return stats
 
 
