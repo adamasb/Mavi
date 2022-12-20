@@ -14,7 +14,7 @@ from ray import tune
 from ray.tune.logger import pretty_print
 from raya3c.my_callback import MyCallbacks
 
-from ray.rllib.models.torch.misc import SlimFC, AppendBiasLayer, normc_initializer
+from ray.rllib.models.torch.misc import SlimFC, AppendBiasLayer, normc_initializer, SlimConv2d
 
 import copy
 
@@ -47,7 +47,17 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         
         # consider using SlimConv2d instead (from misc.py as well)
         self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
-        
+
+
+        #create simple NN for speaker agent - what should be input and output size?
+        self.speaker = SlimFC(3, 3, activation_fn = "relu")
+
+
+
+
+        # self.Phi = SlimConv2d(3, 3, kernel, stride, activation_fn = "relu") #define kernel and stride
+
+
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
         #    self.debug_vin = model_config['debug_vin']
 
@@ -107,12 +117,19 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # Holds the last input, in case value branch is separate.
         self._last_flat_in = None
 
-    def VP_simple(self,s):
+    def VP_simple(self,s, phi = None, K=10):
         #s[:, :, 0] = walls, s[:, :, 1] = agent, s[:, :, 2] = goal
-        rout = s[:, :, 2]
-        rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
-        p = 1 - s[:, :, 0] 
-        K=20
+        phi2 = copy.deepcopy(phi)
+        try:
+            p,rin,rout = phi2(s)
+            p = p.detach().numpy()
+            rin = rin.detach().numpy()
+            rout = rout.detach().numpy()
+        except:
+            rout = s[:, :, 2]
+            rin = s[:, :, 2] - 0.05  # Simulate a small transition cost.
+            p = 1 - s[:, :, 0]
+        
         h, w = p.shape[0], p.shape[1]
         #we get issues with wandb showing the v plot when using tensors instead of np array
         v = torch.zeros((h,w, K+1)) 
@@ -130,14 +147,14 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                         nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
                         v[i,j,k+1] = max( v[i,j,k+1], nv)
                         
-        s[:,:,0] = p
+        # s[:,:,0] = p
         dim4 = v[:,:,-1]
-        dim4 = np.expand_dims(dim4,axis=2) 
-        vp = np.concatenate((s,dim4),axis=2)
-        vp = torch.from_numpy(vp.flatten())
-        vp = vp.type(torch.FloatTensor)
+        # dim4 = np.expand_dims(dim4,axis=2) 
+        # vp = np.concatenate((s,dim4),axis=2)
+        # vp = torch.from_numpy(vp.flatten())
+        # vp = vp.type(torch.FloatTensor)
     
-        return vp
+        return dim4
 
 
     def VP_nn(self,s,phi,K=10):
@@ -148,20 +165,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         #consider initializing this as a minimum of something, so that its not just 0s. Force it to calculate some gradients        
         v = torch.zeros((h,w,K+1))  # wanna pad or roll over this, i think
-
-        """ IF I WANT TO TRY TO CREATE A SHIFT FUNCTION
-        for tt in range(self.K)
-            vm = []
-            vm.append(v)
-        # v_pad = pad v (dont pad with 0, but veeeery negative number)
-            for ax, shift in [ (1,-1), (1,1), (2,-1), (2,1)]:
-                v_shift = torch.roll(v_pad, dims=ax-0,shifts=shift)[:,1:-1]
-                r_shift = torch.roll(r_in_pad, dims=ax-0,shifts=shift)[:,1:-1]
-                vn.append(p[:,:,:] * v_shift + r_shift -rout[:,:,:])
-            v,_ = torch.stack(vm).max(dim=0)
-
-        """
-
 
         for k in range(K): #number of "convolutions", or times the algorithm is applied
             for i in range(h):
@@ -221,12 +224,18 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             self.debug_vin = False #debug flag
 
             v, _ = torch.stack(vm).max(axis=0)
-            if self.debug_vin:
-                # diff = np.abs( V_db[:,:,:,tt+1] - v.detach().numpy() ).sum() #only used for comparing with the "bad VP"
-                diff = np.abs( self.VP_simple(s) - v.detach().numpy() ).sum() #this isnt actually worth anything yet (fix)
-                if diff > 1e-4:
-                    print(tt, "large diff", diff)
-                    assert False
+
+            # if self.debug_vin: #never really got it working
+            #     vp = self.VP_simple(s, phi, K = tt+1)
+            #     # diff = np.abs( V_db[:,:,:,tt+1] - v.detach().numpy() ).sum() #only used for comparing with the "bad VP"
+            #     diff = np.abs(vp - v.detach().numpy() ).sum() #this isnt actually worth anything yet (fix)
+            #     print("==================V=====================")
+            #     print(v)
+            #     print("==================VP=====================")
+            #     print(vp)
+            #     if diff > 1e-4:
+            #         print(tt, "large diff", diff)
+            #         assert False
 
         # II = oa.nonzero().numpy()
         # v_pad = torch.nn.functional.pad(v, (1, 1) + (1, 1), 'constant', 0)
@@ -240,37 +249,42 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
     def VP_batch(self, phi, K=10):
-        try:
-            # p,rin,rout = phi[:,:,0],phi[:,:,1],phi[:,:,2]
-            #p,rin,rout = torch.unsqueeze(phi[:,:,0],dim=2), torch.unsqueeze(phi[:,:,1],dim=2), torch.unsqueeze(phi[:,:,2],dim=2)
-            p,rin,rout = phi[:,:,:,0],phi[:,:,:,1],phi[:,:,:,2]
+        # p,rin,rout = phi[:,:,0],phi[:,:,1],phi[:,:,2]
+        #p,rin,rout = torch.unsqueeze(phi[:,:,0],dim=2), torch.unsqueeze(phi[:,:,1],dim=2), torch.unsqueeze(phi[:,:,2],dim=2)
+        p,rin,rout = phi[:,:,:,0],phi[:,:,:,1],phi[:,:,:,2]
 
-            # all have shape ([32,4,3])
+        # all have shape ([32,4,3])
 
-            # p2,rin2,rout2 = torch.cat((p,p),dim=2), torch.cat((rin,rin),dim=2), torch.cat((rout,rout),dim=2)
+        # p2,rin2,rout2 = torch.cat((p,p),dim=2), torch.cat((rin,rin),dim=2), torch.cat((rout,rout),dim=2)
 
-            v = torch.zeros((p.shape[0],p.shape[1],p.shape[2]))  
+        v = torch.zeros((p.shape[0],p.shape[1],p.shape[2]))  
 
-            r_in_pad = torch.nn.functional.pad(rin,  (1,1) + (1,1), 'constant', 0)
+        r_in_pad = torch.nn.functional.pad(rin,  (1,1) + (1,1), 'constant', 0)
 
-            for tt in range(K):
-                vm = []
-                if tt > 0:
-                    vm.append(v)
+        for tt in range(K):
+            vm = []
+            if tt > 0: # i think this might be the reason why its all black?, maybe force positive values in another way
+                vm.append(v)
 
-                v_pad = torch.nn.functional.pad(v,  (1,1) + (1,1), 'constant', 0)
-                for ax, shift in [ (1, -1), (1, 1), (2, -1), (2, 1)]:
-                    # torch.pad(v, )
-                    v_shift = torch.roll(v_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
-                    r_shift = torch.roll(r_in_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
-                    vm.append(p[:,:,:] * v_shift + r_shift - rout[:,:,:] )
+            v_pad = torch.nn.functional.pad(v,  (1,1) + (1,1), 'constant', 0)
+            for ax, shift in [ (1, -1), (1, 1), (2, -1), (2, 1)]:
+                # torch.pad(v, )
+                v_shift = torch.roll(v_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
+                r_shift = torch.roll(r_in_pad, dims=ax-0, shifts=shift)[:,1:-1, 1:-1]
+                vm.append(p[:,:,:] * v_shift + r_shift - rout[:,:,:] )
 
-                v, _ = torch.stack(vm).max(axis=0)
+            v, _ = torch.stack(vm).max(axis=0)
 
-        except Exception as e:
-            print(e)
-            return 1
+            # test = self.VP_simple(np.zeros((4,4,3), phi, K = tt+1), phi, K=20) #
+            # diff = np.abs( test - v.detach().numpy() ).sum()
+            # if diff > 1e-4:
+            #     print(tt, "large diff", diff)
+            #     assert False
 
+
+
+
+            
         return v
         #  # Create a tensor with size (32, 4, 4)
         # tensor = torch.randn(32, 4, 4)
@@ -345,20 +359,30 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         for ii in range(obs.shape[0]):
 
-            # phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
+            # try:
+                # phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
             # fixes issue of overriding tensor with gradients
 
 
             # Not used after implementing shift-vprop-function
             #probably dont want to detach this
             # phi_vals = phi[ii].detach().numpy() #convert to np array to remove gradients
-            # width = len(obs[0][:,:,0])
+                # width = len(obs[0][:,:,0])
             # dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi_vals))
-            #dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi[ii])) #trying without the detach.numpu
+            # print(obs.shape)
             
-
+                # dim4.append(self.VP_new(obs[ii].reshape((width,width,3)),phi[ii],K = 5)) #trying without the detach.numpu
+                # if (obs.shape[0] > 1):
+                #     test = self.VP_simple(obs[ii].reshape((width,width,3)),phi[ii], K = 5) #test the simple vprop function
+                    
+                #     diff = np.abs(test - dim4[-1].detach().numpy() ).sum() #this isnt actually worth anything yet (fix)
+                #     if diff > 1e-4:
+                #         # print("large diff", diff)
+                #         assert False
+            # except:
+            #     pass                
             # v_new.append(self.VP_new(obs[-1],phi[-1]))
-
+            
             if obs[ii].any() !=0:
                 a_index.append(obs[ii][:,:,1].nonzero().detach().numpy()[0]) #get the index of the agent
             else:
@@ -369,6 +393,10 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             
             # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
             v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
+
+
+            self.v_raw = v_batch[-1]
+
             # assert(v_c[ii] == torch.stack(v_test).any())
 
         #     if obs.any()!= 0:
@@ -391,6 +419,14 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
 
 
+         # try:
+        #     diff2 = np.abs(torch.sum(v_batch).detach().numpy() - torch.sum(dim4.detach().numpy()) ).sum()
+        #     # print(diff2)
+        #     if diff2 > 1e-4:
+        #         print("large diff", diff2)
+        #         assert False
+        # except:
+        #     pass
         # self.value_cache = tensor of size B x 1 corresponding to v[b, I, J], b = [0, 1, 2, 3, ..., B]
         # self.value_cache = torch.stack(v_c) # if i squeeze i get an error
         self.value_cache = torch.unsqueeze(torch.stack(v_test),dim=1)
@@ -424,8 +460,11 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         phi_vals = self.Phi(info_dict.float()).detach().numpy() #convert to np array to remove gradients
 
         # v.append(self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals))
-        v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy()
-       
+        # v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy() 
+
+        #alternatively define v like this
+        v = self.v_raw.detach().numpy()
+        
         stats = {"v": v.squeeze(), "phi": phi_vals, "p": phi_vals[:,:,0], "rin": phi_vals[:,:,1], "rout": phi_vals[:,:,2]}
         return stats
 
@@ -469,6 +508,7 @@ def my_experiment(a):
     config.model['custom_model_config']['env_shape'] = hw
     config.evaluation_interval = 1
 
+
     def my_eval_fun(a3c, worker_set, **kwargs):
         # print("Evaluating...", args, kwargs)
         # s = args[1].local_worker().sample()
@@ -504,10 +544,42 @@ def my_experiment(a):
     #     # trainer = A3C(env=env_name, config=config.to_dict())
     #     while True:
     #         print(trainer.train())
-    # else:
+    # else: 
 
     trainer = config.build(env="MazeDeterministic_empty4-v0")
-    for t in range(600): #Seems to converge to 2.5 after 500-600 iterations
+    
+    # """ Multi agent stuff - mostly inspired by tictactoe example"""
+    # multi_agent = False
+    
+    # if multi_agent:
+    #     trained_policy = trainer + '_policy' #this is exactly from tictactoe
+    #     speaker_policy = trainer + '_speaker_policy' #this is just a placeholder for now
+        
+    #     def policy_mapping_fn(agent_id): #this is a function that maps agent id to policy id
+    #         mapping = {env.listener: trained_policy,
+    #                 env.speaker: speaker_policy}
+    #         return mapping[agent_id]
+
+    #     # add a multiagent config
+    #     config = config.multi_agent(
+    #         { # This is placeholder code
+
+    #             "policies_to_train": [trained_policy, speaker_policy], #not sure if we need a policy for the speaker, other than repeat goal location
+    #             "policies": {
+    #                 "policy_0": (None, env.obs_space, env.act_space, mconf), #seperate policy for speaker and listenener
+    #                 "policy_1": (None, env.obs_space, env.act_space, mconf),
+    #             },
+    #             "policy_mapping_fn": policy_mapping_fn # lambda agent_id: "policy_0", #function that maps listener id to listener policy etc.
+    #         }
+            #Alternatively something like this:
+            #    {
+    #             "policies": set(env.agents),
+    #             "policy_mapping_fn": (
+    #                 lambda agent_id, episode, worker, **kwargs: agent_id
+    #           }
+    #      )
+
+    for t in range(3000): #Seems to converge to 2.5 after 500-600 iterations
         print("Main training step", t)
         result = trainer.train()
         rewards = result['hist_stats']['episode_reward']

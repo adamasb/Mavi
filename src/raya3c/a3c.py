@@ -203,6 +203,8 @@ class A3C(Algorithm):
             # print("computing a gradient") #added 
 
             #check if the gradients is actually being calculated?? is the variable empty
+            # self._counters["grads"] += 1 #how many grads do we calc
+
 
             return {
                 "grads": grads,

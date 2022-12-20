@@ -41,6 +41,77 @@ logging.getLogger().setLevel(logging.DEBUG)
 pp = PrettyPrinter(indent=2, width=160)
 from gym.spaces.discrete import Discrete
 
+from ray.rllib.env.multi_agent_env import make_multi_agent
+from mazeenv.maze_environment import MazeEnvironment
+
+
+
+
+class MazeListenerSpeakerEnv(Env): #argument used to be: 'MultiEnv' -> not sure why we have this as an argument
+
+    def __init__(self):
+        self.listener_name = "listener"
+        self.speaker_name = "speaker"
+        self.base_env = MazeEnvironment()
+        self.goals = ["red", "blue"]
+        self.speakers_last_action = 0.5
+
+
+        #define action space for each agent
+        self.listener_action_space = Discrete(5)
+        self.speaker_action_space = Discrete(2) #number of goals?? how does the communication happen
+        #override observation space for each agent (kinda)
+
+
+
+
+    def reset(self):
+        self.current_turn = self.speaker_name
+
+        # Reset og valgt korrekt maal.
+        s = self.base_env.reset()
+        self.goal_index = np.random.choice(2)
+        # goal_color = self.goals[ ]
+        self.s = s
+        # Fjern information fra s om hvor
+        return {
+            self.speaker_name: np.asarray([self.goal_index])}
+
+    def step(self, action_dict):
+        # udregn reward alt efter om der er vundet eller ej. Dvs. reward = 0 hvis vi finder maal med forkert farve, og 1 hvis rigtig farve, og evt. -0.01 hvis ingen har vundet.
+        # udregn ogsaa done.
+        reward = 0
+        done = False
+        rewards = {self.listener_name: reward, self.speaker_name: reward}
+        dones = {self.listener_name: done, self.speaker_name: done}
+        infos = {self.listener_name: {}, self.speaker_name: {}}
+
+        if self.speaker_name in action_dict:
+            sp, r, done, info = self.base_env.step(action_dict[self.speaker_name])
+
+
+
+            rewards = {self.listener_name: r, self.speaker_name: r}
+            dones = {self.listener_name: done, self.speaker_name: done}
+            infos = {self.listener_name: {}, self.speaker_name: {}}
+
+            s0 = {self.speaker_name: np.asarray([self.goal_index])}
+            return s0, rewards, dones, infos
+            # listeners turn
+        else:
+            # speakers turn
+            action_speaker = action_dict[self.speaker_name]
+            s = np.stack([self.s, np.zeros( self.s.shape + (1,), ) + action_speaker ])
+            s0 = {self.listener_name: s}
+            return s0, rewards, dones, infos
+
+
+
+
+
+
+
+
 class MazeEnvironment(Env):
     # My attempt at making a maze-environment
     metadata = {
@@ -54,7 +125,6 @@ class MazeEnvironment(Env):
     def __init__(self, size=10, blockpct=0.3, living_reward=-0.05, seed=None, render_mode='native'):
         self.living_reward = living_reward
         sz = (size,) * 4
-        # sz = (4, size, 4, size) #try to utilize curriculum
         self.seed = seed
         # if self.seed is not None:
         #     np.random.seed(seed)
@@ -65,7 +135,7 @@ class MazeEnvironment(Env):
             living_reward=living_reward,
             curriculums={
                 'map_size': games.curriculum.MapSizeCurriculum(
-                    sz, sz, (28,) * 4 #initial, minimum, maximum
+                    sz, sz, sz
                 )
             }
         )
@@ -117,8 +187,6 @@ class MazeEnvironment(Env):
             self.mdp = GridworldMDP(self._get_grid(), living_reward=self.living_reward)
         # s = self._state()
         # self.state = s
-        
-
         return self._state()
 
     @property
@@ -153,15 +221,9 @@ class MazeEnvironment(Env):
         done = game.is_over()
         info = {}
 
-        # if done:
-        if done and self.render_mode == 'human':
 
-            #maybe this is where i wanna make harder, like the following?
-            # if reward > 0: 
-            #     game.make_harder()
-            # self.game.make_harder() # this only works when running the game from here, not through example_vin.py
+        if done and self.render_mode == 'human':
             self._reset_display()
-        
         return sp, reward, done, info
 
 
@@ -319,7 +381,7 @@ if __name__ == "__main__":
     # train(env, agent, num_episodes=100)
     # env.close()
 
-    env = MazeEnvironment(size=10, blockpct=.3, render_mode='human')
+    env = ma_MazeEnvironment(size=10, blockpct=.3, render_mode='human')
     # agent = ValueIterationAgent2(env, gamma=0.99)
     agent = Agent(env)
     agent = PlayWrapper(agent, env)

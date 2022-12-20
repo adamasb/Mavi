@@ -31,6 +31,7 @@ def CurriculumWrappedGame(cls, curriculums=None, **kwargs):
         for cur in curriculums:
             cur.make_easiest()
 
+
     def make_hardest(self):
         for cur in curriculums:
             cur.make_hardest()
