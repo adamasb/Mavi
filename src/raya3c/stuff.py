@@ -48,6 +48,13 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # consider using SlimConv2d instead (from misc.py as well)
         self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
 
+
+        #create simple NN for speaker agent - what should be input and output size?
+        self.speaker = SlimFC(3, 3, activation_fn = "relu")
+
+
+
+
         # self.Phi = SlimConv2d(3, 3, kernel, stride, activation_fn = "relu") #define kernel and stride
 
 
@@ -140,12 +147,12 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                         nv = p[i,j] * v[ip, jp,k] + rin[ip, jp] - rout[i,j]
                         v[i,j,k+1] = max( v[i,j,k+1], nv)
                         
-        s[:,:,0] = p
+        # s[:,:,0] = p
         dim4 = v[:,:,-1]
-        dim4 = np.expand_dims(dim4,axis=2) 
-        vp = np.concatenate((s,dim4),axis=2)
-        vp = torch.from_numpy(vp.flatten())
-        vp = vp.type(torch.FloatTensor)
+        # dim4 = np.expand_dims(dim4,axis=2) 
+        # vp = np.concatenate((s,dim4),axis=2)
+        # vp = torch.from_numpy(vp.flatten())
+        # vp = vp.type(torch.FloatTensor)
     
         return dim4
 
@@ -268,7 +275,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
             v, _ = torch.stack(vm).max(axis=0)
 
-
             # test = self.VP_simple(np.zeros((4,4,3), phi, K = tt+1), phi, K=20) #
             # diff = np.abs( test - v.detach().numpy() ).sum()
             # if diff > 1e-4:
@@ -354,7 +360,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         for ii in range(obs.shape[0]):
 
             # try:
-                # phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
+            phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
             # fixes issue of overriding tensor with gradients
 
 
@@ -375,7 +381,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                 #         assert False
             # except:
             #     pass                
-            # v_new.append(self.VP_new(obs[-1],phi[-1]))
+            v_new.append(self.VP_new(obs[-1],phi[-1]))
             
             if obs[ii].any() !=0:
                 a_index.append(obs[ii][:,:,1].nonzero().detach().numpy()[0]) #get the index of the agent
@@ -385,8 +391,12 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             # v_c.append(dim4[ii][a_index[ii][0],a_index[ii][1]])
             # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
             
-            # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
-            v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
+            v_test.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
+            # v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
+
+
+            self.v_raw = v_batch[-1]
+
             # assert(v_c[ii] == torch.stack(v_test).any())
 
         #     if obs.any()!= 0:
@@ -418,11 +428,13 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # except:
         #     pass
         # self.value_cache = tensor of size B x 1 corresponding to v[b, I, J], b = [0, 1, 2, 3, ..., B]
-        # self.value_cache = torch.stack(v_c) # if i squeeze i get an error
-        self.value_cache = torch.unsqueeze(torch.stack(v_test),dim=1)
+        
+        
+        self.value_cache = torch.stack(v_test) # if i squeeze i get an error
+        # self.value_cache = torch.unsqueeze(torch.stack(v_test),dim=1)
 
         # self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_new,a_index) 
-        self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_batch,a_index) 
+        self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_new,a_index) 
 
 
 
@@ -450,7 +462,10 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         phi_vals = self.Phi(info_dict.float()).detach().numpy() #convert to np array to remove gradients
 
         # v.append(self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals))
-        v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy() 
+        # v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy() 
+
+        #alternatively define v like this
+        v = self.v_raw.detach().numpy()
         
         stats = {"v": v.squeeze(), "phi": phi_vals, "p": phi_vals[:,:,0], "rin": phi_vals[:,:,1], "rout": phi_vals[:,:,2]}
         return stats
@@ -557,11 +572,16 @@ def my_experiment(a):
     #                 "policy_1": (None, env.obs_space, env.act_space, mconf),
     #             },
     #             "policy_mapping_fn": policy_mapping_fn # lambda agent_id: "policy_0", #function that maps listener id to listener policy etc.
-            
     #         }
-    #     )
+            #Alternatively something like this:
+            #    {
+    #             "policies": set(env.agents),
+    #             "policy_mapping_fn": (
+    #                 lambda agent_id, episode, worker, **kwargs: agent_id
+    #           }
+    #      )
 
-    for t in range(30): #Seems to converge to 2.5 after 500-600 iterations
+    for t in range(3000): #Seems to converge to 2.5 after 500-600 iterations
         print("Main training step", t)
         result = trainer.train()
         rewards = result['hist_stats']['episode_reward']
@@ -589,4 +609,3 @@ if __name__ == "__main__":
    
     print("Job done")
     sys.exit()
-

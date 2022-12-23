@@ -34,7 +34,7 @@ import mazebase.games as games
 from mazebase.games import featurizers
 from mazebase.games import curriculum
 import logging
-
+from gym.spaces import Box
 
 logging.getLogger().setLevel(logging.DEBUG)
 
@@ -78,16 +78,29 @@ class MazeEnvironment(Env):
         self.zoom = 0.5
         self.view_mode = 0
         self.display = None
-        self.reset()
-        from gym.spaces import Box
-        self.observation_space = Box(low=0, high=1, shape=self.state.shape, dtype=np.float)
+        self.resets = 0
 
-    def reset(self):
-        # if self.seed is None or self.game is None:
+
         self.game = games.MazeGame(
             self.all_games,
             featurizer=featurizers.GridFeaturizer()
         )
+
+
+        self.reset()
+
+    @property
+    def observation_space(self):
+        return Box(low=0, high=1, shape=self.state.shape, dtype=np.float)
+
+    def reset(self):
+        # if self.seed is None or self.game is None:
+        self.resets += 1
+        print("num resets", self.resets)
+        if self.resets % 5 == 0:
+            self.game.make_harder() #determine when to make harder
+            print("making harder") # looks like it crashes when the pid worker hits make harder
+        self.game.reset()
         # else:
         if self.seed is not None:
             # seed = np.random.seed()
@@ -117,8 +130,6 @@ class MazeEnvironment(Env):
             self.mdp = GridworldMDP(self._get_grid(), living_reward=self.living_reward)
         # s = self._state()
         # self.state = s
-        
-
         return self._state()
 
     @property

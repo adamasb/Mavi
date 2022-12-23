@@ -251,7 +251,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     def VP_batch(self, phi, K=10):
         # p,rin,rout = phi[:,:,0],phi[:,:,1],phi[:,:,2]
         #p,rin,rout = torch.unsqueeze(phi[:,:,0],dim=2), torch.unsqueeze(phi[:,:,1],dim=2), torch.unsqueeze(phi[:,:,2],dim=2)
-        # needs shape (batch w h 3)
         p,rin,rout = phi[:,:,:,0],phi[:,:,:,1],phi[:,:,:,2]
 
         # all have shape ([32,4,3])
@@ -320,8 +319,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                 if newRow >= 0 and newRow <= len(v_matrix[ii])-1:
                     for colAdd in range(-1, 2):
                         newCol = colNumber + colAdd
-                        if newCol >= 0 and newCol <= len(v_matrix[ii][0])-1: # i think the error arrises because its no longer a square, try this dim then the other if it doesnt work
-                    
+                        if newCol >= 0 and newCol <= len(v_matrix[ii])-1:
+                           
                             v_result.append(v_matrix[ii][newRow][newCol])                      
                             w_result.append(w_matrix[ii][newRow][newCol])
                             a_result.append(a_matrix[ii][newRow][newCol])
@@ -330,10 +329,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             neighborhood.append(torch.tensor([w_result, a_result, g_result, v_result]).flatten())
 
             #sometimes the output is not 36 shape, but 24 instead. FIgure out why that is... That will fix the shape mismath of changing env size
-        # print(torch.stack(neighborhood).shape[1])
-        if torch.stack(neighborhood).shape[1] != 36:
-            print("neighborhood shape is not 36")
-            assert False
+
 
         return torch.stack(neighborhood)
 
@@ -441,7 +437,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         # self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_new,a_index) 
         self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_batch,a_index) 
-        # print(self._last_flat_in.shape)
+        print(self._last_flat_in.shape)
 
 
         # self._last_flat_in = obs.reshape(obs.shape[0], -1)
@@ -464,20 +460,14 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         obs = env_state[np.newaxis, :]
         info_dict = torch.tensor(env_state)# {"obs": torch.tensor(env_state)}
         #self.forward(info_dict, [],[])
-        _phi = self.Phi(info_dict.float()) 
-        # _phi = _phi.unsqueeze(0)
-
-        vp = self.VP_batch(_phi.unsqueeze(0)).detach().numpy() 
-        # print(vp.shape)
-        v = vp.squeeze()
         
-        phi_vals = _phi.detach().numpy() #convert to np array to remove gradients
+        phi_vals = self.Phi(info_dict.float()).detach().numpy() #convert to np array to remove gradients
 
         # v.append(self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals))
         # v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy() 
 
         #alternatively define v like this
-        # v = self.v_raw.detach().numpy()
+        v = self.v_raw.detach().numpy()
         
         stats = {"v": v.squeeze(), "phi": phi_vals, "p": phi_vals[:,:,0], "rin": phi_vals[:,:,1], "rout": phi_vals[:,:,2]}
         return stats
@@ -573,7 +563,7 @@ def my_experiment(a):
     """ maybe consider speaker having deterministic policy, simply always give the result as is."""
 
     """ the new space for listener adds two dimensions, one for the additional goal, and one that should represent what the listener has said"""
-    multi_agent = False
+    multi_agent = True
     
     if multi_agent:
 
@@ -643,8 +633,6 @@ def my_experiment(a):
               }
          )
         trainer = config.build(env="MA_Maze-v0")
-    else:
-        trainer = config.build(env="MazeDeterministic_empty4-v0")
 
     for t in range(3000): #Seems to converge to 2.5 after 500-600 iterations
         print("Main training step", t)

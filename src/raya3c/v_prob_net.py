@@ -251,7 +251,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     def VP_batch(self, phi, K=10):
         # p,rin,rout = phi[:,:,0],phi[:,:,1],phi[:,:,2]
         #p,rin,rout = torch.unsqueeze(phi[:,:,0],dim=2), torch.unsqueeze(phi[:,:,1],dim=2), torch.unsqueeze(phi[:,:,2],dim=2)
-        # needs shape (batch w h 3)
         p,rin,rout = phi[:,:,:,0],phi[:,:,:,1],phi[:,:,:,2]
 
         # all have shape ([32,4,3])
@@ -320,8 +319,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
                 if newRow >= 0 and newRow <= len(v_matrix[ii])-1:
                     for colAdd in range(-1, 2):
                         newCol = colNumber + colAdd
-                        if newCol >= 0 and newCol <= len(v_matrix[ii][0])-1: # i think the error arrises because its no longer a square, try this dim then the other if it doesnt work
-                    
+                        if newCol >= 0 and newCol <= len(v_matrix[ii][0])-1:
+                           
                             v_result.append(v_matrix[ii][newRow][newCol])                      
                             w_result.append(w_matrix[ii][newRow][newCol])
                             a_result.append(a_matrix[ii][newRow][newCol])
@@ -330,10 +329,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             neighborhood.append(torch.tensor([w_result, a_result, g_result, v_result]).flatten())
 
             #sometimes the output is not 36 shape, but 24 instead. FIgure out why that is... That will fix the shape mismath of changing env size
-        # print(torch.stack(neighborhood).shape[1])
-        if torch.stack(neighborhood).shape[1] != 36:
-            print("neighborhood shape is not 36")
-            assert False
+
+       
 
         return torch.stack(neighborhood)
 
@@ -403,7 +400,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
             v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
 
 
-            self.v_raw = v_batch[-1]
+            # self.v_raw = v_batch[-1]
 
             # assert(v_c[ii] == torch.stack(v_test).any())
 
@@ -460,7 +457,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
   
     def value_function_for_env_state(self, env_state):
-        
+                
         obs = env_state[np.newaxis, :]
         info_dict = torch.tensor(env_state)# {"obs": torch.tensor(env_state)}
         #self.forward(info_dict, [],[])
@@ -481,6 +478,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         
         stats = {"v": v.squeeze(), "phi": phi_vals, "p": phi_vals[:,:,0], "rin": phi_vals[:,:,1], "rout": phi_vals[:,:,2]}
         return stats
+
 
 
 
@@ -562,10 +560,6 @@ def my_experiment(a):
     # else: 
 
 
-    
-    # """ Multi agent stuff - mostly inspired by tictactoe example"""
-
-
     """ if i cant make it work, its probably wrongly configured or vin issue, then try the traffic environment. If i cant make that work either then bad bad"""
 
     """ consider trying without doing VPN first, just wto simple A3C, then try to add the VPN"""
@@ -573,78 +567,8 @@ def my_experiment(a):
     """ maybe consider speaker having deterministic policy, simply always give the result as is."""
 
     """ the new space for listener adds two dimensions, one for the additional goal, and one that should represent what the listener has said"""
-    multi_agent = False
     
-    if multi_agent:
-
-        mconf = dict(custom_model=vin_label, use_lstm=False)
-
-        def gen_policy(i):
-            if i == 0:
-                config = A3CConfig.override(model=dict(custom_model=vin_label, use_lstm=False))
-                return PolicySpec(config=config, action_space=None, observation_space=None) # Definer action og observation space
-                pass
-            if i == 1:
-                config = A3CConfig()
-                return PolicySpec(config=config, action_space=None, observation_space=None)
-                pass
-
-            pass
-
-        listenerID= 'listener'
-        speakerID = 'speaker'
-        my_policies = {spakerID: gen_policy(1), listenerID: gen_policy(0)}
-        """
-        Gode eksempler: Multi_agent_cartpole.py fra git
-        MultiAgentTrafficEnv fra ray rllib documentation online.
-
-        """
-        def my_policy_mapping_fn(agent_id, episode, worker, **kwargs):
-            print(agent_id)
-            if agent_id == 'listener':
-                return listenerID
-            elif agent_id == 'speaker':
-                return speakerID
-            else:
-                raise Exception()
-
-        # mconf = {}
-        config = (A3CConfig().training(lr=0.01/10, grad_clip=30.0).resources(num_gpus=0).rollouts(num_rollout_workers=1)
-            .multi_agent(policies=my_policies, policy_mapping_fn=my_policy_mapping_fn))
-        # etc. 
-
-        config = config.framework('torch')
-        trainer = config.build(env="MA_Maze-v0")
-
-        trained_policy = trainer + '_policy' #this is exactly from tictactoe
-        speaker_policy = trainer + '_speaker_policy' #this is just a placeholder for now
-        
-        def policy_mapping_fn(agent_id): #this is a function that maps agent id to policy id
-            mapping = {env.listener: trained_policy,
-                    env.speaker: speaker_policy}
-            return mapping[agent_id]
-
-        # add a multiagent config
-        config = config.multi_agent(
-            { # This is placeholder code
-
-                "policies_to_train": [trained_policy, speaker_policy], #not sure if we need a policy for the speaker, other than repeat goal location
-                "policies": {
-                    "policy_0": (None, env.obs_space, env.act_space, mconf), #seperate policy for speaker and listenener
-                    "policy_1": (None, env.obs_space, env.act_space, mconf),
-                },
-                "policy_mapping_fn": policy_mapping_fn # lambda agent_id: "policy_0", #function that maps listener id to listener policy etc.
-            # }
-            # #Alternatively something like this:
-            #    {
-            #     "policies": set(env.agents),
-            #     "policy_mapping_fn": (
-            #         lambda agent_id, episode, worker, **kwargs: agent_id }
-              }
-         )
-        trainer = config.build(env="MA_Maze-v0")
-    else:
-        trainer = config.build(env="MazeDeterministic_empty4-v0")
+    trainer = config.build(env="MazeDeterministic_empty4-v0")
 
     for t in range(3000): #Seems to converge to 2.5 after 500-600 iterations
         print("Main training step", t)
