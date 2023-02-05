@@ -47,10 +47,10 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self.num_outputs = 5 #int(np.product(self.obs_space.shape))
         self._last_batch_size = None
         
-
-
         # consider using SlimConv2d instead (from misc.py as well)
         # self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
+        # self.Phi = SlimFC(5, 3, activation_fn = "relu") # input 3 output 3
+
 
 
         #create simple NN for speaker agent - what should be input and output size?
@@ -64,7 +64,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
         #    self.debug_vin = model_config['debug_vin']
-
 
         hiddens = list(model_config.get("fcnet_hiddens", [])) + list(
             model_config.get("post_fcnet_hiddens", [])
@@ -302,7 +301,7 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
 
        
     
-    def get_neighborhood(self, obs,dim4,a_index):
+    def get_neighborhood(self, obs, dim4,a_index):
 
         neighborhood = []
         v_matrix, w_matrix, a_matrix,g_matrix = [], [], [], []
@@ -344,12 +343,11 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         try:
             obs = input_dict["obs"]
         except:
-            obs = input_dict #this is for when using the get_env_state_value_function method thing       
-
-        # print(obs.shape)
-        # print(obs) 
-
+            obs = input_dict #this is for when using the get_env_state_value_function method thing        
         
+        print(obs.shape)
+
+
         # # Store last batch size for value_function output.
         # self._last_batch_size = obs.shape[0]
         
@@ -408,27 +406,27 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #     v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
 
 
-        #     # self.v_raw = v_batch[-1]
+            # self.v_raw = v_batch[-1]
 
-        #     # assert(v_c[ii] == torch.stack(v_test).any())
+            # assert(v_c[ii] == torch.stack(v_test).any())
 
-        # #     if obs.any()!= 0:
-        # #         if ii > 1:
-        # #             print(ii)
-        # # # if v_c[ii] != 0:
-        # #     if ii == 31:
-        # #         # assert False
-        # #         print(torch.stack(v_new).squeeze())
-        # #         print(v_batch)
-        # #         print(v_c[ii] == v_test[ii])
-        # #         assert(torch.stack(v_new).squeeze() == v_batch).all()
-        # #         assert(v_c[ii] == v_test[ii])
+        #     if obs.any()!= 0:
+        #         if ii > 1:
+        #             print(ii)
+        # # if v_c[ii] != 0:
+        #     if ii == 31:
+        #         # assert False
+        #         print(torch.stack(v_new).squeeze())
+        #         print(v_batch)
+        #         print(v_c[ii] == v_test[ii])
+        #         assert(torch.stack(v_new).squeeze() == v_batch).all()
+        #         assert(v_c[ii] == v_test[ii])
                 
-        # #             # assert(v_c[ii] == v_test[ii])
-        # # #    V_np = []
-        # # #    assert( (V_np - V_torch.numpy())< 1e-8 )
+        #             # assert(v_c[ii] == v_test[ii])
+        # #    V_np = []
+        # #    assert( (V_np - V_torch.numpy())< 1e-8 )
         
-        #     """loop ends here"""
+            # """loop ends here"""
 
 
 
@@ -445,11 +443,11 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # self.value_cache = torch.unsqueeze(torch.stack(v_test),dim=1)
 
         # self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_new,a_index) 
-        self._last_flat_in = obs.reshape(obs.shape[0], -1)
+        # self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_batch,a_index) 
         # print(self._last_flat_in.shape)
 
 
-        # self._last_flat_in = obs.reshape(obs.shape[0], -1)
+        self._last_flat_in = obs.reshape(obs.shape[0], -1)
         self._features = self._hidden_layers(self._last_flat_in)
         logits = self._logits(self._features) if self._logits else self._features
         
@@ -478,7 +476,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         
         phi_vals = _phi.detach().numpy() #convert to np array to remove gradients
 
-
         # v.append(self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals))
         # v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy() 
 
@@ -504,8 +501,6 @@ def my_experiment(a):
     config = A3CConfig().training(lr=0.01/10, grad_clip=30.0, model=mconf).resources(num_gpus=0).rollouts(num_rollout_workers=1)
 
     config = config.framework('torch')
-
-
 
 
     config.min_train_timesteps_per_iteration = 200
@@ -541,14 +536,14 @@ def my_experiment(a):
         def my_pol_fun(a3policy, *args, a3c=None, **kwargs):
             print(args, kwargs)
             # cb = a3policy.callbacks
-            # a3c.callbacks.evaluation_call(a3policy ) #my evaluation_call calls a funciton that needs a variable to be defined
+            a3c.callbacks.evaluation_call(a3policy ) #my evaluation_call calls a funciton that needs a variable to be defined
             # value_function_for_env_state should include p,rin,rout,v,
 
             # a3policy.callbacks
             # a = 234
             return {}
 
-        # worker_set.foreach_policy(functools.partial(my_pol_fun, a3c=a3c) )
+        worker_set.foreach_policy(functools.partial(my_pol_fun, a3c=a3c) )
         
         return dict(my_eval_metric=123)
 

@@ -6,7 +6,9 @@ from ray.rllib.env.multi_agent_env import make_multi_agent
 
 gym.envs.register(
      id="MA_Maze-v0",
-     entry_point='mazeenv.MazeListenerSpeakerEnv:MazeListenerSpeakerEnv',
+     # entry_point='mazeenv.MazeListenerSpeakerEnv:MazeListenerSpeakerEnv',
+     entry_point='mazeenv.MazeListenerSpeakerEnv:SimpleMAEnv',
+
      max_episode_steps=200,
      kwargs=dict(size=4, blockpct=0, seed = 0),  #size=4 is default, change this to change size of map, remove seed = 0 to randomize
 )

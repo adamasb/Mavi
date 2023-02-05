@@ -1,21 +1,21 @@
 import random
-from irlc.gridworld.gridworld_environments import BookGridEnvironment, BridgeGridEnvironment, FrozenLake
+# from irlc.gridworld.gridworld_environments import BookGridEnvironment, BridgeGridEnvironment, FrozenLake
 from irlc.utils.video_monitor import VideoMonitor
 from irlc.ex01.agent import train
-from irlc.gridworld.hidden_agents import ValueIterationAgent2
+# from irlc.gridworld.hidden_agents import ValueIterationAgent2
 import numpy as np
 from collections import defaultdict
-from pyglet.window import key
-from gym.envs.toy_text.frozen_lake import FrozenLakeEnv
+# from pyglet.window import key
+# from gym.envs.toy_text.frozen_lake import FrozenLakeEnv
 from gym.spaces.discrete import Discrete
-from irlc.ex09.mdp import MDP2GymEnv
-from irlc.gridworld.gridworld_mdp import GridworldMDP, FrozenGridMDP
-from irlc.gridworld import gridworld_graphics_display
-from irlc import Timer
+# from irlc.ex09.mdp import MDP2GymEnv
+# from irlc.gridworld.gridworld_mdp import GridworldMDP, FrozenGridMDP
+# from irlc.gridworld import gridworld_graphics_display
+# from irlc import Timer
 
 
 
-from irlc.gridworld.gridworld_environments import GridworldEnvironment
+# from irlc.gridworld.gridworld_environments import GridworldEnvironment
 import matplotlib.pyplot as plt
 from gym import Env
 # from __future__ import absolute_import
@@ -47,9 +47,9 @@ class MazeEnvironment(Env):
         'render.modes': ['native', 'human', 'rgb_array'],
         'video.frames_per_second': 10,
     }
-    def get_keys_to_action(self):
-        #      amap = {0: 'down', 1: 'left', 2:'right', 3:'up', 4:'pass'}
-        return {(key.LEFT,): 1, (key.RIGHT,): 2, (key.UP,): 3, (key.DOWN,): 0, (key.S,): 4}
+    # def get_keys_to_action(self):
+    #     #      amap = {0: 'down', 1: 'left', 2:'right', 3:'up', 4:'pass'}
+    #     return {(key.LEFT,): 1, (key.RIGHT,): 2, (key.UP,): 3, (key.DOWN,): 0, (key.S,): 4}
 
     def __init__(self, size=10, blockpct=0.3, living_reward=-0.05, seed=None, render_mode='native'):
         self.living_reward = living_reward
@@ -165,121 +165,120 @@ class MazeEnvironment(Env):
         info = {}
 
         # if done:
-        if done and self.render_mode == 'human':
+        # if done and self.render_mode == 'human':
 
             #maybe this is where i wanna make harder, like the following?
             # if reward > 0: 
             #     game.make_harder()
             # self.game.make_harder() # this only works when running the game from here, not through example_vin.py
-            self._reset_display()
+            # self._reset_display()
         
         return sp, reward, done, info
 
 
-    def render(self, mode='human', state=None, agent=None, v=None, Q=None, pi=None, policy=None, v2Q=None, gamma=0, method_label="", label=None):
-        # Render function from the course. State is a tuple (i,j)
-        # if state is not None:
+    # def render(self, mode='human', state=None, agent=None, v=None, Q=None, pi=None, policy=None, v2Q=None, gamma=0, method_label="", label=None):
+    #     # Render function from the course. State is a tuple (i,j)
+    #     # if state is not None:
 
-        state = self.state
-        I,J = state[:,:,1].nonzero()
-        if len(I) == 0:
-            print(I, state)
-        state = (J[0], I[0])
-        print(state)
-        self.render_as_text()
+    #     state = self.state
+    #     I,J = state[:,:,1].nonzero()
+    #     if len(I) == 0:
+    #         print(I, state)
+    #     state = (J[0], I[0])
+    #     print(state)
+    #     self.render_as_text()
 
-        self.agent = agent
-        self.render_steps = 0 # for vizualization
-        if label is None:
-            label = f"{method_label} AFTER {self.render_steps} STEPS"
-        speed = 1
-        if self.display is None:
-            self._reset_display()
-        # print("In environment - render")
+    #     self.agent = agent
+    #     self.render_steps = 0 # for vizualization
+    #     if label is None:
+    #         label = f"{method_label} AFTER {self.render_steps} STEPS"
+    #     speed = 1
+    #     if self.display is None:
+    #         self._reset_display()
+    #     # print("In environment - render")
 
-        if state is None:
-            state = self.state
+    #     if state is None:
+    #         state = self.state
 
-        avail_modes = []
-        if agent != None:
-            label = (agent.label if hasattr(agent, 'label') else method_label) if label is None else label
-            v = agent.v if hasattr(agent, 'v') else None
-            Q = agent.Q if hasattr(agent, 'Q') else None
-            policy = agent.policy if hasattr(agent, 'policy') else None
-            v2Q = agent.v2Q if hasattr(agent, 'v2Q') else None
-            avail_modes = []
-            if Q is not None:
-                avail_modes.append("Q")
-                avail_modes.append("v")
-            elif v is not None:
-                avail_modes.append("v")
+    #     avail_modes = []
+    #     if agent != None:
+    #         label = (agent.label if hasattr(agent, 'label') else method_label) if label is None else label
+    #         v = agent.v if hasattr(agent, 'v') else None
+    #         Q = agent.Q if hasattr(agent, 'Q') else None
+    #         policy = agent.policy if hasattr(agent, 'policy') else None
+    #         v2Q = agent.v2Q if hasattr(agent, 'v2Q') else None
+    #         avail_modes = []
+    #         if Q is not None:
+    #             avail_modes.append("Q")
+    #             avail_modes.append("v")
+    #         elif v is not None:
+    #             avail_modes.append("v")
 
-        if len(avail_modes) > 0:
-            self.view_mode = self.view_mode % len(avail_modes)
-            if avail_modes[self.view_mode] == 'v':
-                preferred_actions = None
+    #     if len(avail_modes) > 0:
+    #         self.view_mode = self.view_mode % len(avail_modes)
+    #         if avail_modes[self.view_mode] == 'v':
+    #             preferred_actions = None
 
-                if v == None:
-                    preferred_actions = {}
-                    v = {s: Q.max(s) for s in self.mdp.nonterminal_states}
-                    for s in self.mdp.nonterminal_states:
-                        acts, values = Q.get_Qs(s)
-                        preferred_actions[s] = [a for (a,w) in zip(acts, values) if np.round(w, 2) == np.round(v[s], 2)]
+    #             if v == None:
+    #                 preferred_actions = {}
+    #                 v = {s: Q.max(s) for s in self.mdp.nonterminal_states}
+    #                 for s in self.mdp.nonterminal_states:
+    #                     acts, values = Q.get_Qs(s)
+    #                     preferred_actions[s] = [a for (a,w) in zip(acts, values) if np.round(w, 2) == np.round(v[s], 2)]
 
-                if v2Q is not None:
-                    preferred_actions = {}
-                    for s in self.mdp.nonterminal_states:
-                        q = v2Q(s)
-                        mv = np.round( max( q.values() ), 2)
-                        preferred_actions[s] = [k for k, v in q.items() if np.round(v, 2) == mv]
+    #             if v2Q is not None:
+    #                 preferred_actions = {}
+    #                 for s in self.mdp.nonterminal_states:
+    #                     q = v2Q(s)
+    #                     mv = np.round( max( q.values() ), 2)
+    #                     preferred_actions[s] = [k for k, v in q.items() if np.round(v, 2) == mv]
 
-                if agent != None and hasattr(agent, 'policy') and agent.policy is not None and state in agent.policy and isinstance(agent.policy[state], dict):
-                    for s in self.mdp.nonterminal_states:
-                        preferred_actions[s] = [a for a, v in agent.policy[s].items() if v == max(agent.policy[s].values()) ]
+    #             if agent != None and hasattr(agent, 'policy') and agent.policy is not None and state in agent.policy and isinstance(agent.policy[state], dict):
+    #                 for s in self.mdp.nonterminal_states:
+    #                     preferred_actions[s] = [a for a, v in agent.policy[s].items() if v == max(agent.policy[s].values()) ]
 
-                if hasattr(agent, 'returns_count'):
-                    returns_count = agent.returns_count
-                else:
-                    returns_count = None
-                if hasattr(agent, 'returns_sum'):
-                    returns_sum = agent.returns_sum
-                else:
-                    returns_sum = None
-                self.display.displayValues(mdp=self.mdp, v=v, preferred_actions=preferred_actions, currentState=state, message=label, returns_count=returns_count, returns_sum=returns_sum)
+    #             if hasattr(agent, 'returns_count'):
+    #                 returns_count = agent.returns_count
+    #             else:
+    #                 returns_count = None
+    #             if hasattr(agent, 'returns_sum'):
+    #                 returns_sum = agent.returns_sum
+    #             else:
+    #                 returns_sum = None
+    #             self.display.displayValues(mdp=self.mdp, v=v, preferred_actions=preferred_actions, currentState=state, message=label, returns_count=returns_count, returns_sum=returns_sum)
 
-            elif avail_modes[self.view_mode] == 'Q':
+    #         elif avail_modes[self.view_mode] == 'Q':
 
-                if hasattr(agent, 'e') and isinstance(agent.e, defaultdict):
-                    eligibility_trace = defaultdict(float)
-                    for k, v in agent.e.items():
-                        eligibility_trace[k] = v
+    #             if hasattr(agent, 'e') and isinstance(agent.e, defaultdict):
+    #                 eligibility_trace = defaultdict(float)
+    #                 for k, v in agent.e.items():
+    #                     eligibility_trace[k] = v
 
-                else:
-                    eligibility_trace = None
-                    # raise Exception("bad")
-                # print(eligibility_trace)
-                self.display.displayQValues(self.mdp, Q, currentState=state, message=label, eligibility_trace=eligibility_trace)
-            else:
-                raise Exception("No view mode selected")
-        else:
-            self.display.displayNullValues(self.mdp, currentState=state)
+    #             else:
+    #                 eligibility_trace = None
+    #                 # raise Exception("bad")
+    #             # print(eligibility_trace)
+    #             self.display.displayQValues(self.mdp, Q, currentState=state, message=label, eligibility_trace=eligibility_trace)
+    #         else:
+    #             raise Exception("No view mode selected")
+    #     else:
+    #         self.display.displayNullValues(self.mdp, currentState=state)
 
-        self.display.end_frame()
-        render_out = self.viewer.render(return_rgb_array=mode == 'rgb_array')
-        return render_out
+    #     self.display.end_frame()
+    #     render_out = self.viewer.render(return_rgb_array=mode == 'rgb_array')
+    #     return render_out
 
-    def _reset_display(self):
-        if hasattr(self, 'viewer') and self.viewer is not None:
-            self.viewer.close()
-            self.viewer = None
+    # def _reset_display(self):
+    #     if hasattr(self, 'viewer') and self.viewer is not None:
+    #         self.viewer.close()
+    #         self.viewer = None
 
-            # self.display.close()
+    #         # self.display.close()
 
-        # if self.display is None:
-        gridSize = int(150 * self.zoom)
-        #SELF.MDP
-        self.display = gridworld_graphics_display.GraphicsGridworldDisplay(self.mdp, gridSize) #cant visualize ( env.render() ) #
-        self.viewer = self.display.ga.gc.viewer
+    #     # if self.display is None:
+    #     gridSize = int(150 * self.zoom)
+    #     self.display = gridworld_graphics_display.GraphicsGridworldDisplay(self.mdp, gridSize) #cant visualize ( env.render() ) #
+    #     self.viewer = self.display.ga.gc.viewer
 
 
     def render_as_text(self):
@@ -319,10 +318,10 @@ class MazeEnvironment(Env):
 # agent = PlayWrapper(agent, cenv)
 # train(cenv, agent)
 if __name__ == "__main__":
-    from irlc.gridworld.gridworld_environments import CliffGridEnvironment, BookGridEnvironment
+    # from irlc.gridworld.gridworld_environments import CliffGridEnvironment, BookGridEnvironment
     cenv = CliffGridEnvironment()
-    from irlc import PlayWrapper, VideoMonitor
-    from irlc import Agent, train
+    # from irlc import PlayWrapper, VideoMonitor
+    # from irlc import Agent, train
 
     # env = BookGridEnvironment()
     # agent = PlayWrapper(Agent(env), env)

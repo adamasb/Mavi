@@ -6,5 +6,15 @@ source virt1/bin/activate
 
 export PYTHONPATH='$PYTHONPATH:/zhome/8b/7/122640/Mavi/src'
 
+export PYTHONPATH='$PYTHONPATH:/work3/s170780/Mavi/src'
+
+
 module load cuda
 
+
+
+ssh s170780@login2.hpc.dtu.dk
+
+getquota_zhome.sh
+
+du -d 2 -h | sort -hs

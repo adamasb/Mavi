@@ -6,6 +6,8 @@ sys.path.append(os.path.normpath( os.path.dirname(__file__) +"/../" ))
 import gym
 from mazeenv import maze_register
 from a3c import A3CConfig
+from mazeenv import ma_maze_register
+
 # import farmer
 #from dtufarm import DTUCluster
 from irlc import Agent, train, VideoMonitor
@@ -13,12 +15,12 @@ import numpy as np
 from ray import tune
 from ray.tune.logger import pretty_print
 from raya3c.my_callback import MyCallbacks
+from gym.spaces.discrete import Discrete
+
 
 from ray.rllib.models.torch.misc import SlimFC, AppendBiasLayer, normc_initializer, SlimConv2d
 
 import copy
-
-
 
 # The custom model that will be wrapped by an LSTM.
 from ray.rllib.models import ModelCatalog
@@ -29,6 +31,16 @@ from torch import nn
 import matplotlib.pyplot as plt
 
 import wandb
+
+
+
+from ray.rllib.policy.policy import PolicySpec
+
+from ray.rllib.algorithms.registry import get_algorithm_class # i think this one is needed for the multi agent stuff (used in tictactoe get_agent_class)
+from a3c_torch_policy import A3CTorchPolicy
+
+from mazeenv.MazeListenerSpeakerEnv import MazeListenerSpeakerEnv #maybe this isnt the way, but lets try
+
 
 #dont know where this should be defined
 torch.autograd.set_detect_anomaly(True)
@@ -241,7 +253,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         # v_pad = torch.nn.functional.pad(v, (1, 1) + (1, 1), 'constant', 0)
         # o_pad = torch.nn.functional.pad(o, (0,0) + (1, 1) + (1, 1), 'constant', 0)
         # self.v_raw = v
-        """" tues code^^"""
         
         return v
 
@@ -563,33 +574,47 @@ def my_experiment(a):
     """ maybe consider speaker having deterministic policy, simply always give the result as is."""
 
     """ the new space for listener adds two dimensions, one for the additional goal, and one that should represent what the listener has said"""
-    multi_agent = True
-    
+
+
+def multi_experiment():
+
+    multi_agent = True #this will always be true for this env
+
+    from gym.spaces import Box    
+    # Posible example: github.com/daa
     if multi_agent:
 
         mconf = dict(custom_model=vin_label, use_lstm=False)
+        from ray.rllib.algorithms.ppo import PPOConfig
 
         def gen_policy(i):
             if i == 0:
-                config = A3CConfig.override(model=dict(custom_model=vin_label, use_lstm=False))
-                return PolicySpec(config=config, action_space=None, observation_space=None) # Definer action og observation space
-                pass
-            if i == 1:
-                config = A3CConfig()
-                return PolicySpec(config=config, action_space=None, observation_space=None)
-                pass
+                #config = A3CConfig().overwrite(model=dict(custom_model=vin_label, use_lstm=False))
+                # config = PPOConfig()
+                config = PPOConfig().training(model=dict(conv_filters=None))
+                config = config.to_dict()
+                observation_space = Box(low=0, high=1, shape=(4, 4, 5), dtype=np.float32)
+                config = {'model': {'conv_filters':   [] }}
 
-            pass
+                # return PolicySpec(config=dict(model=dict(custom_model=vin_label, use_lstm=False)), action_space= Discrete(5), observation_space=observation_space) # Definer action og observation space
+                return PolicySpec(config=config, action_space= Discrete(5), observation_space=observation_space) # Definer action og observation space
+            if i == 1:
+                config = PPOConfig().training(model=dict(conv_filters=None))
+                config = config.to_dict()
+                config = {'model': {'conv_filters':   [] }}
+                observation_space = Box(low=0, high=1, shape=(1,), dtype=np.float32) 
+                return PolicySpec(config=config, action_space=Discrete(2), observation_space=observation_space)
 
         listenerID= 'listener'
         speakerID = 'speaker'
-        my_policies = {spakerID: gen_policy(1), listenerID: gen_policy(0)}
+        my_policies = {speakerID: gen_policy(1), listenerID: gen_policy(0)}
         """
         Gode eksempler: Multi_agent_cartpole.py fra git
         MultiAgentTrafficEnv fra ray rllib documentation online.
 
         """
         def my_policy_mapping_fn(agent_id, episode, worker, **kwargs):
+            raise Exception()
             print(agent_id)
             if agent_id == 'listener':
                 return listenerID
@@ -599,13 +624,81 @@ def my_experiment(a):
                 raise Exception()
 
         # mconf = {}
-        config = (A3CConfig().training(lr=0.01/10, grad_clip=30.0).resources(num_gpus=0).rollouts(num_rollout_workers=1)
-            .multi_agent(policies=my_policies, policy_mapping_fn=my_policy_mapping_fn))
+        # disable_env_checking=True, env_config={'disable_env_checking': True}
+        # config = (PPOConfig().framework('torch').environment(env='MA_Maze-v0').rollouts(num_rollout_workers=1)
+        #     .multi_agent(policies=my_policies, policy_mapping_fn=my_policy_mapping_fn)).training(model=dict(conv_filters=None)) #this is some tue stuff 
         # etc. 
 
-        config = config.framework('torch')
-        trainer = config.build(env="MA_Maze-v0")
 
+        # config = A3CConfig().framework("torch").environment(env="MA_Maze-v0")
+        # config = config.framework('torch')
+        # trainer = config.build(env="MA_Maze-v0")
+
+
+        # config.build() #i think i die here.... #also some tue stuff
+        # why are we even using build()?, and why before the config multi agent stuff
+
+
+
+
+
+        """ppo_config = (
+            PPOConfig()
+            .environment("MA_Maze-v0")
+            .framework('torch')
+            # disable filters, otherwise we would need to synchronize those
+            # as well to the DQN agent
+            .rollouts(observation_filter="MeanStdFilter")
+            .training(
+                model={"vf_share_layers": True},
+                vf_loss_coeff=0.01,
+                num_sgd_iter=6,
+            )
+            .multi_agent(
+                policies=my_policies,
+                policy_mapping_fn=my_policy_mapping_fn,
+                policies_to_train=["ppo_policy"],
+            )
+            # Use GPUs iff `RLLIB_NUM_GPUS` env var set to > 0.
+            .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
+        )
+        ppo = ppo_config.build()"""
+
+
+
+        """This approach results in a problem with the curriculum that i cant"""
+        def temp_fn():
+            return "A3C_policy"
+
+        
+        observation_space =  Box(low=0, high=1, shape=[80])#shape=(4, 4, 5), dtype=np.float32)
+
+        """ try to build the config like a dict"""
+        config = { #maybe include some torch somewhere
+            "env":MazeListenerSpeakerEnv,# gym.make("MA_Maze-v0"),
+            "framework": "torch",
+            "multiagent": {
+                "policies_to_train": ['A3C_policy'], #hack
+                "policies": {
+                    'A3C_policy': (None, observation_space, Discrete(5), {}),
+                    'A3C_policy': (None, observation_space, Discrete(5), {})
+                    # 'A3C_policy': (A3CTorchPolicy, observation_space, Discrete(5)),
+
+                }, 
+                "policy_mapping_fn": temp_fn
+            }
+        }
+
+
+
+        #from tic_tac_toe 
+        trainer = "A3C"
+        cls = get_algorithm_class(trainer) if isinstance(trainer, str) else trainer
+        trainer_obj = cls(config=config) #envContext is a config dict (from algorithms.py)
+        env = trainer_obj.workers.local_worker().env
+
+        # env = MazeListenerSpeakerEnv #this is my env
+        return #just to debug
         trained_policy = trainer + '_policy' #this is exactly from tictactoe
         speaker_policy = trainer + '_speaker_policy' #this is just a placeholder for now
         
@@ -633,6 +726,19 @@ def my_experiment(a):
               }
          )
         trainer = config.build(env="MA_Maze-v0")
+    
+
+    #stuff from tictactoe that needs to go somewhere
+    # trainer_obj = cls(config=config)
+    # env = trainer_obj.workers.local_worker().env
+
+    """maybe include the following in the loop:
+
+    results = trainer_obj.train()
+    results.pop('config')
+    """
+
+
 
     for t in range(3000): #Seems to converge to 2.5 after 500-600 iterations
         print("Main training step", t)
@@ -657,8 +763,8 @@ if __name__ == "__main__":
 
     res = []
     DISABLE = True
-    
-    my_experiment(1)
+    multi_experiment()
+    # my_experiment(1)
    
     print("Job done")
     sys.exit()

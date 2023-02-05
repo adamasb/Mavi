@@ -47,14 +47,12 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         self.num_outputs = 5 #int(np.product(self.obs_space.shape))
         self._last_batch_size = None
         
-
-
         # consider using SlimConv2d instead (from misc.py as well)
-        # self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
+        self.Phi = SlimFC(3, 3, activation_fn = "relu") # input 3 output 3
 
 
         #create simple NN for speaker agent - what should be input and output size?
-        # self.speaker = SlimFC(3, 3, activation_fn = "relu")
+        self.speaker = SlimFC(3, 3, activation_fn = "relu")
 
 
 
@@ -65,14 +63,13 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #if model_config['debug_vin']: #changed from model_conf, think that was a typo
         #    self.debug_vin = model_config['debug_vin']
 
-
         hiddens = list(model_config.get("fcnet_hiddens", [])) + list(
             model_config.get("post_fcnet_hiddens", [])
         )
 
         layers = []
                          #can hardcode the value because it will always be 3x3*4
-        prev_layer_size = int(np.product(obs_space.shape))#36# int(np.product(obs_space.shape)*4/3) #hacky way to get the right input size
+        prev_layer_size = 36# int(np.product(obs_space.shape)*4/3) #hacky way to get the right input size
         self._logits = None
 
         # Create layers 0 to second-last.
@@ -344,91 +341,88 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         try:
             obs = input_dict["obs"]
         except:
-            obs = input_dict #this is for when using the get_env_state_value_function method thing       
+            obs = input_dict #this is for when using the get_env_state_value_function method thing        
 
-        # print(obs.shape)
-        # print(obs) 
 
-        
-        # # Store last batch size for value_function output.
-        # self._last_batch_size = obs.shape[0]
-        
+        # Store last batch size for value_function output.
+        self._last_batch_size = obs.shape[0]
         
         
-        # """ Consider turning this into a tensor, and using mapv to parrelelize it"""
-        # phi=[]
-        # dim4 = []
-        # a_index = []
+        
+        """ Consider turning this into a tensor, and using mapv to parrelelize it"""
+        phi=[]
+        dim4 = []
+        a_index = []
 
-        # v_c = []
-        # v_new = []
-        # v_test = []
+        v_c = []
+        v_new = []
+        v_test = []
        
-        # try:
-        #     v_batch = self.VP_batch(self.Phi(obs))
+        try:
+            v_batch = self.VP_batch(self.Phi(obs))
 
-        # except Exception as e:
-        #     print(e)
+        except Exception as e:
+            print(e)
 
-        # for ii in range(obs.shape[0]):
+        for ii in range(obs.shape[0]):
 
-        #     # try:
-        #         # phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
-        #     # fixes issue of overriding tensor with gradients
+            # try:
+                # phi.append(self.Phi(obs[ii].squeeze())) #only use the first obs, as it is the same for all (for now)
+            # fixes issue of overriding tensor with gradients
 
 
-        #     # Not used after implementing shift-vprop-function
-        #     #probably dont want to detach this
-        #     # phi_vals = phi[ii].detach().numpy() #convert to np array to remove gradients
-        #         # width = len(obs[0][:,:,0])
-        #     # dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi_vals))
-        #     # print(obs.shape)
+            # Not used after implementing shift-vprop-function
+            #probably dont want to detach this
+            # phi_vals = phi[ii].detach().numpy() #convert to np array to remove gradients
+                # width = len(obs[0][:,:,0])
+            # dim4.append(self.VP_nn(obs[ii].reshape((width,width,3)),phi_vals))
+            # print(obs.shape)
             
-        #         # dim4.append(self.VP_new(obs[ii].reshape((width,width,3)),phi[ii],K = 5)) #trying without the detach.numpu
-        #         # if (obs.shape[0] > 1):
-        #         #     test = self.VP_simple(obs[ii].reshape((width,width,3)),phi[ii], K = 5) #test the simple vprop function
+                # dim4.append(self.VP_new(obs[ii].reshape((width,width,3)),phi[ii],K = 5)) #trying without the detach.numpu
+                # if (obs.shape[0] > 1):
+                #     test = self.VP_simple(obs[ii].reshape((width,width,3)),phi[ii], K = 5) #test the simple vprop function
                     
-        #         #     diff = np.abs(test - dim4[-1].detach().numpy() ).sum() #this isnt actually worth anything yet (fix)
-        #         #     if diff > 1e-4:
-        #         #         # print("large diff", diff)
-        #         #         assert False
-        #     # except:
-        #     #     pass                
-        #     # v_new.append(self.VP_new(obs[-1],phi[-1]))
+                #     diff = np.abs(test - dim4[-1].detach().numpy() ).sum() #this isnt actually worth anything yet (fix)
+                #     if diff > 1e-4:
+                #         # print("large diff", diff)
+                #         assert False
+            # except:
+            #     pass                
+            # v_new.append(self.VP_new(obs[-1],phi[-1]))
             
-        #     if obs[ii].any() !=0:
-        #         a_index.append(obs[ii][:,:,1].nonzero().detach().numpy()[0]) #get the index of the agent
-        #     else:
-        #         a_index.append([0,0]) #this doesnt really matter
+            if obs[ii].any() !=0:
+                a_index.append(obs[ii][:,:,1].nonzero().detach().numpy()[0]) #get the index of the agent
+            else:
+                a_index.append([0,0]) #this doesnt really matter
             
-        #     # v_c.append(dim4[ii][a_index[ii][0],a_index[ii][1]])
-        #     # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
+            # v_c.append(dim4[ii][a_index[ii][0],a_index[ii][1]])
+            # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
             
-        #     # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
-        #     v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
+            # v_c.append(v_new[ii][a_index[ii][0],a_index[ii][1]])
+            v_test.append(v_batch[ii][a_index[ii][0],a_index[ii][1]])
 
 
-        #     # self.v_raw = v_batch[-1]
+            # self.v_raw = v_batch[-1]
 
-        #     # assert(v_c[ii] == torch.stack(v_test).any())
+            # assert(v_c[ii] == torch.stack(v_test).any())
 
-        # #     if obs.any()!= 0:
-        # #         if ii > 1:
-        # #             print(ii)
-        # # # if v_c[ii] != 0:
-        # #     if ii == 31:
-        # #         # assert False
-        # #         print(torch.stack(v_new).squeeze())
-        # #         print(v_batch)
-        # #         print(v_c[ii] == v_test[ii])
-        # #         assert(torch.stack(v_new).squeeze() == v_batch).all()
-        # #         assert(v_c[ii] == v_test[ii])
+        #     if obs.any()!= 0:
+        #         if ii > 1:
+        #             print(ii)
+        # # if v_c[ii] != 0:
+        #     if ii == 31:
+        #         # assert False
+        #         print(torch.stack(v_new).squeeze())
+        #         print(v_batch)
+        #         print(v_c[ii] == v_test[ii])
+        #         assert(torch.stack(v_new).squeeze() == v_batch).all()
+        #         assert(v_c[ii] == v_test[ii])
                 
-        # #             # assert(v_c[ii] == v_test[ii])
-        # # #    V_np = []
-        # # #    assert( (V_np - V_torch.numpy())< 1e-8 )
+        #             # assert(v_c[ii] == v_test[ii])
+        # #    V_np = []
+        # #    assert( (V_np - V_torch.numpy())< 1e-8 )
         
-        #     """loop ends here"""
+            """loop ends here"""
 
 
 
@@ -442,10 +436,10 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         #     pass
         # self.value_cache = tensor of size B x 1 corresponding to v[b, I, J], b = [0, 1, 2, 3, ..., B]
         # self.value_cache = torch.stack(v_c) # if i squeeze i get an error
-        # self.value_cache = torch.unsqueeze(torch.stack(v_test),dim=1)
+        self.value_cache = torch.unsqueeze(torch.stack(v_test),dim=1)
 
         # self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_new,a_index) 
-        self._last_flat_in = obs.reshape(obs.shape[0], -1)
+        self._last_flat_in = self.get_neighborhood(input_dict["obs"],v_batch,a_index) 
         # print(self._last_flat_in.shape)
 
 
@@ -459,8 +453,8 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
     
     def value_function(self): #dont think this is currently being used
         #consider pass value function through a neural network
-        # return self.value_cache.squeeze(1) 
-        return self._value_branch(self._features).squeeze(1) #torch.Size([32])
+        return self.value_cache.squeeze(1) 
+        # return self._value_branch(self._features).squeeze(1) #torch.Size([32])
         
 
   
@@ -477,7 +471,6 @@ class VINNetwork(TorchModelV2, torch.nn.Module):
         v = vp.squeeze()
         
         phi_vals = _phi.detach().numpy() #convert to np array to remove gradients
-
 
         # v.append(self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals))
         # v = self.VP_nn(obs[0].reshape((info_dict[:,:,0].shape[0],info_dict[:,:,0].shape[1],3)),phi_vals).detach().numpy() 
@@ -504,8 +497,6 @@ def my_experiment(a):
     config = A3CConfig().training(lr=0.01/10, grad_clip=30.0, model=mconf).resources(num_gpus=0).rollouts(num_rollout_workers=1)
 
     config = config.framework('torch')
-
-
 
 
     config.min_train_timesteps_per_iteration = 200
@@ -541,14 +532,14 @@ def my_experiment(a):
         def my_pol_fun(a3policy, *args, a3c=None, **kwargs):
             print(args, kwargs)
             # cb = a3policy.callbacks
-            # a3c.callbacks.evaluation_call(a3policy ) #my evaluation_call calls a funciton that needs a variable to be defined
+            a3c.callbacks.evaluation_call(a3policy ) #my evaluation_call calls a funciton that needs a variable to be defined
             # value_function_for_env_state should include p,rin,rout,v,
 
             # a3policy.callbacks
             # a = 234
             return {}
 
-        # worker_set.foreach_policy(functools.partial(my_pol_fun, a3c=a3c) )
+        worker_set.foreach_policy(functools.partial(my_pol_fun, a3c=a3c) )
         
         return dict(my_eval_metric=123)
 

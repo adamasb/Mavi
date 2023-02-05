@@ -44,12 +44,15 @@ from gym.spaces.discrete import Discrete
 from ray.rllib.env.multi_agent_env import make_multi_agent
 from mazeenv.maze_environment import MazeEnvironment
 
+from gym.spaces import Box
 
+from ray.rllib.env.multi_agent_env import MultiAgentEnv
 
+# class MazeListenerSpeakerEnv(Env): #argument used to be: 'MultiEnv' -> not sure why we have this as an argument
 
-class MazeListenerSpeakerEnv(Env): #argument used to be: 'MultiEnv' -> not sure why we have this as an argument
-
-    def __init__(self):
+class MazeListenerSpeakerEnv(MazeEnvironment, MultiAgentEnv):
+    # def __init__(self): #im not sure if the arguments should be passed in here or only in the base env
+    def __init__(self, size=10, blockpct=0.0, living_reward=-0.05, seed=None, render_mode='human'):
         self.listener_name = "listener"
         self.speaker_name = "speaker"
         self.base_env = MazeEnvironment()
@@ -63,23 +66,93 @@ class MazeListenerSpeakerEnv(Env): #argument used to be: 'MultiEnv' -> not sure 
         #override observation space for each agent (kinda)
 
 
+        #following code is from the original maze environment - not sure if i need it
+        sg = curriculum.CurriculumWrappedGame(
+            games.SingleGoal,
+            blockpct=blockpct,
+            waterpct=0,
+            living_reward=living_reward,
+            curriculums={
+                'map_size': games.curriculum.MapSizeCurriculum(
+                     (size,) * 4,  (size,) * 4,  (size,) * 4 #initial, minimum, maximum
+                )
+            }
+        )
+
+        self.game = None
+        self.all_games = [sg]
+        self.action_space = Discrete(5) # up, down, left, right, stand still.
+
+        self.render_mode = render_mode
+        # Rendering related stuff.
+        self.zoom = 0.5
+        self.view_mode = 0
+        self.display = None
+        self.resets = 0
+
+
+        self.game = games.MazeGame(
+            self.all_games,
+            featurizer=featurizers.GridFeaturizer()
+        )
+  
+
 
 
     def reset(self):
         self.current_turn = self.speaker_name
-
+        # raise Exception("RESET EXCEPTION HIT. ")
         # Reset og valgt korrekt maal.
         s = self.base_env.reset()
         self.goal_index = np.random.choice(2)
         # goal_color = self.goals[ ]
         self.s = s
         # Fjern information fra s om hvor
-        return {
-            self.speaker_name: np.asarray([self.goal_index])}
+        return {self.speaker_name: np.asarray([self.goal_index]), 
+                self.listener_name: self.observation_space.sample()} #temp sample. 
+
+
+        #some of this code is needed to run the program, but maybe they should be included differenly
+        #the following is from the original maze environment reset function 
+        self.game.reset()
+        # else:
+        if self.seed is not None:
+            # seed = np.random.seed()
+            r_state = random.getstate()
+            np_state = np.random.get_state()
+
+            np.random.seed(self.seed)
+            random.seed(self.seed)
+
+            self.game.reset()
+            if self.render_mode == 'human':
+                self.render_as_text()
+            np.random.set_state(np_state)
+            random.setstate(r_state)
+
+            # np.random.seed(seed)
+        else:
+            self.game.reset()
+        # if self.seed is not None:
+        # else:
+        #     self.game.reset()
+
+        # max_w, max_h = game.get_max_bounds()
+        # self.game = game
+
+        if self.render_mode == 'human':
+            self.mdp = GridworldMDP(self._get_grid(), living_reward=self.living_reward)
+        # s = self._state()
+        # self.state = s
+        return self._state()
+
+
+
 
     def step(self, action_dict):
         # udregn reward alt efter om der er vundet eller ej. Dvs. reward = 0 hvis vi finder maal med forkert farve, og 1 hvis rigtig farve, og evt. -0.01 hvis ingen har vundet.
         # udregn ogsaa done.
+        raise Exception("Took a single step")
         reward = 0
         done = False
         rewards = {self.listener_name: reward, self.speaker_name: reward}
@@ -108,8 +181,29 @@ class MazeListenerSpeakerEnv(Env): #argument used to be: 'MultiEnv' -> not sure 
 
 
 
+    def _state(self): # Multi agent/goal version - 5 dimensions (+2, 1 for goal2 and one for the "correct goal")
+            game = self.game
+            x = np.zeros((game.height, game.width, 5)) 
+            #random.choice([0,1]) #decide if the "correct goal" is dim 2 or 3
+            x[:,:,4] = 0 #initially just force it to be 0 
+            for i in range(len( game._map )):
+                for j in range(len(game._map[i])):
+                    for t in game._map[i][j]:
+                        if isinstance(t, MovingAgent):
+                            x[j,i,1] = 1
+                            x[j,i,0] = 0
+                        elif isinstance(t, Goal):
+                            x[j,i,2] = 1
+                            x[j,i,0] = 0
+                            x[j,i,3] = 1 #this is the "second goal"
+                        else:
+                            x[j,i,0] = 1 #1 originally, what happens now: No major change, i think. (no corner walls tho)
+            return x
 
 
+
+
+""" original """
 
 
 class MazeEnvironment(Env):
@@ -122,7 +216,7 @@ class MazeEnvironment(Env):
         #      amap = {0: 'down', 1: 'left', 2:'right', 3:'up', 4:'pass'}
         return {(key.LEFT,): 1, (key.RIGHT,): 2, (key.UP,): 3, (key.DOWN,): 0, (key.S,): 4}
 
-    def __init__(self, size=10, blockpct=0.3, living_reward=-0.05, seed=None, render_mode='native'):
+    def __init__(self, size=10, blockpct=0.0, living_reward=-0.05, seed=None, render_mode='native'):
         self.living_reward = living_reward
         sz = (size,) * 4
         self.seed = seed
@@ -135,7 +229,7 @@ class MazeEnvironment(Env):
             living_reward=living_reward,
             curriculums={
                 'map_size': games.curriculum.MapSizeCurriculum(
-                    sz, sz, sz
+                    sz, sz, sz # not planning on using variable map sizes for multi-agent
                 )
             }
         )
@@ -149,8 +243,13 @@ class MazeEnvironment(Env):
         self.view_mode = 0
         self.display = None
         self.reset()
-        from gym.spaces import Box
         self.observation_space = Box(low=0, high=1, shape=self.state.shape, dtype=np.float)
+
+        
+        self.game = games.MazeGame(
+            self.all_games,
+            featurizer=featurizers.GridFeaturizer()
+        )
 
     def reset(self):
         # if self.seed is None or self.game is None:
@@ -193,6 +292,7 @@ class MazeEnvironment(Env):
     def state(self):
         return self._state() # visualization purposes.
 
+   
     def _state(self):
         game = self.game
         x = np.zeros((game.height, game.width, 3))
@@ -208,6 +308,8 @@ class MazeEnvironment(Env):
                     else:
                         x[j,i,0] = 1 #1 originally, what happens now: No major change, i think. (no corner walls tho)
         return x
+
+    
 
     def step(self, action):
         game = self.game
@@ -381,7 +483,8 @@ if __name__ == "__main__":
     # train(env, agent, num_episodes=100)
     # env.close()
 
-    env = ma_MazeEnvironment(size=10, blockpct=.3, render_mode='human')
+    env = MazeListenerSpeakerEnv(size=10, blockpct=.3, render_mode='human')
+    # env = MazeEnvironment(size=10, blockpct=.3, render_mode='human')
     # agent = ValueIterationAgent2(env, gamma=0.99)
     agent = Agent(env)
     agent = PlayWrapper(agent, env)

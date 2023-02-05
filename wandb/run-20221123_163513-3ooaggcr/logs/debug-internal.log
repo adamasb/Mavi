@@ -1,7 +1,0 @@
-2022-11-23 16:35:13,202 INFO    StreamThr :30340 [internal.py:wandb_internal():88] W&B internal server running at pid: 30340, started at: 2022-11-23 16:35:13.201977
-2022-11-23 16:35:13,209 DEBUG   HandlerThread:30340 [handler.py:handle_request():138] handle_request: status
-2022-11-23 16:35:13,213 DEBUG   SenderThread:30340 [sender.py:send_request():317] send_request: status
-2022-11-23 16:35:13,217 DEBUG   SenderThread:30340 [sender.py:send():303] send: header
-2022-11-23 16:35:13,217 INFO    WriterThread:30340 [datastore.py:open_for_write():75] open: C:\Users\adams\OneDrive\Documents\GitHub\Mavi\wandb\run-20221123_163513-3ooaggcr\run-3ooaggcr.wandb
-2022-11-23 16:35:13,241 DEBUG   SenderThread:30340 [sender.py:send():303] send: run
-2022-11-23 16:35:18,295 DEBUG   HandlerThread:30340 [handler.py:handle_request():138] handle_request: keepalive
